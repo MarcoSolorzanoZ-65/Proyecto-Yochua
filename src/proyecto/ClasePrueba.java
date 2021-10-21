@@ -8,5 +8,6 @@ import javax.swing.JOptionPane;
 public class ClasePrueba {
     public static void main(String[] args) {
         JOptionPane.showMessageDialog(null, "hi");
+        JOptionPane.showMessageDialog(null, "Yochua");
     }
 }
