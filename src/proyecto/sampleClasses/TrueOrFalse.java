@@ -1,4 +1,4 @@
-package proyecto.TrueOrFalse;
+package proyecto.sampleClasses;
 
 import proyecto.Question;
 

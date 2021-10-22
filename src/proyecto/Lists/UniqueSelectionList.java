@@ -1,4 +1,6 @@
-package proyecto.UniqueSelection;
+package proyecto.Lists;
+
+import proyecto.sampleClasses.UniqueSelection;
 
 /**
  * @author Marco Zumbado Solorzano C18736

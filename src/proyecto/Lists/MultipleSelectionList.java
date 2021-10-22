@@ -1,4 +1,6 @@
-package proyecto.MultipleSelection;
+package proyecto.Lists;
+
+import proyecto.sampleClasses.MultipleSelection;
 
 /**
  * @author Marco Zumbado Solorzano C18736

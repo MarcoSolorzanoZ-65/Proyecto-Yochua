@@ -1,18 +1,18 @@
-package proyecto.MultipleSelection;
+package proyecto.sampleClasses;
 
 import proyecto.Question;
 
 /**
  * @author Marco Zumbado Solorzano C18736
- * @time 8:25:25 PM
+ * @time 8:24:50 PM
  * @date Oct 21, 2021
  */
-public class MultipleSelection extends Question {
-    
-    public MultipleSelection() {
+public class UniqueSelection extends Question {
+
+    public UniqueSelection() {
     }
     
-    public MultipleSelection(String question, String category, String answer, String type) {
+    public UniqueSelection(String question, String category, String answer, String type) {
         super(question, category, answer, type);
     }
     

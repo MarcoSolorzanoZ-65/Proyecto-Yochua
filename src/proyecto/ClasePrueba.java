@@ -1,7 +1,6 @@
 package proyecto;
 
-import proyecto.TrueOrFalse.TrueOrFalseList;
-import javax.swing.JOptionPane;
+import proyecto.Lists.TrueOrFalseList;
 
 /**
  * @author Marco Zumbado Solorzano C18736

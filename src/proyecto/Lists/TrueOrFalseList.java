@@ -1,4 +1,6 @@
-package proyecto.TrueOrFalse;
+package proyecto.Lists;
+
+import proyecto.sampleClasses.TrueOrFalse;
 
 /**
  * @author Marco Zumbado Solorzano C18736
