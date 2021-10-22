@@ -1,5 +1,8 @@
 package proyecto;
+
+import proyecto.TrueOrFalse.TrueOrFalseList;
 import javax.swing.JOptionPane;
+
 /**
  * @author Marco Zumbado Solorzano C18736
  * @time 8:31:18 PM
@@ -7,7 +10,15 @@ import javax.swing.JOptionPane;
  */
 public class ClasePrueba {
     public static void main(String[] args) {
-        JOptionPane.showMessageDialog(null, "hi");
-        JOptionPane.showMessageDialog(null, "Yochua");
+        TrueOrFalseList trueOrFalseList = new TrueOrFalseList();
+        
+        
+        trueOrFalseList.setTrueOrFalse(0, "?", "Deportes", "Si", "SiNo");
+        trueOrFalseList.setTrueOrFalse(1, "?", "Deportes", "Si", "SiNo");
+        trueOrFalseList.setTrueOrFalse(2, "?", "Deportes", "Si", "SiNo");
+        
+        
+        
+        System.out.println(trueOrFalseList.getAnswers());
     }
 }
