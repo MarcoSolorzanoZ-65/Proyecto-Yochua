@@ -2,10 +2,9 @@ package proyecto;
 
 /**
  * @author Marco Zumbado Solorzano carne C18736
- * @date 2021-08-26 
+ * @date 2021-08-26
  * @time 8:16:23
-*/
-
+ */
 import javax.swing.JOptionPane;
 
 public class GestorES {

@@ -1,7 +1,7 @@
 package proyecto;
 
 public abstract class Question {
-    
+
     private String question;
     private String category;
     private String answer;
@@ -18,7 +18,7 @@ public abstract class Question {
         this.type = type;
         this.id++;
     }
-    
+
     //set
     public void setAnswer(String answer) {
         this.answer = answer;
@@ -39,9 +39,8 @@ public abstract class Question {
     public void setType(String type) {
         this.type = type;
     }
-    
-    //get
 
+    //get
     public String getAnswer() {
         return answer;
     }
@@ -66,6 +65,5 @@ public abstract class Question {
     public String toString() {
         return answer + " " + category + " " + type + " " + question;
     }
-    
-    
+
 }

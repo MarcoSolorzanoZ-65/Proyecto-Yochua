@@ -48,9 +48,9 @@ public class TrueOrFalseList {
     public String getAnswers() {
         String text = "";
         for (int i = 0; i < 3; i++) {
-                    if (trueOrFalse[i].getAnswer() != null) {
-                        text += trueOrFalse[i].getAnswer();
-                    }
+                if (trueOrFalse[i].getAnswer() != null) {
+                    text += trueOrFalse[i].getAnswer();
+                }
         }
         return text;
     }
