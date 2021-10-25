@@ -27,17 +27,89 @@ public class Maintenance {
             option = option.toLowerCase();
             switch (option) {
                 case "create":
-                    int typeQuestion = gestor.solicitarValorEntero("Select the type of question you want to create(only use numbers from 1 to 3)"
-                            + "\n\n1) True or false.\n2) Unique Selection.\n3) Multiple Selection.");
-                    String categoryQuestion = gestor.solicitarValorString("Select the category of your question:\n\nArt.\nEntertainment.\nSports."
-                            + "\nHistory.\nGeography.\nScience.\nOthers.");
-                    String question = gestor.solicitarValorString("Type the question that you want to add...");
+                    boolean loopType = true;
+                    while (loopType == true) {
+                        int typeQuestion = gestor.solicitarValorEntero("Select the type of question you want to create(only use numbers from 1 to 3)"
+                                + "\n\n1) True or false.\n2) Unique Selection.\n3) Multiple Selection.");
+                        switch (typeQuestion) {
+                            case 1: {
+                                boolean loopCategory = true;
+                                while (loopCategory == true) {
+                                    String categoryQuestion = gestor.solicitarValorString("Select the category of your question:\n\nArt.\nEntertainment.\nSports."
+                                            + "\nHistory.\nGeography.\nScience.\nOthers.");
+                                    if (categoryQuestion.toLowerCase().equals("art") || categoryQuestion.toLowerCase().equals("entertainment")
+                                            || categoryQuestion.toLowerCase().equals("sports") || categoryQuestion.toLowerCase().equals("history")
+                                            || categoryQuestion.toLowerCase().equals("geography") || categoryQuestion.toLowerCase().equals("science")
+                                            || categoryQuestion.toLowerCase().equals("others")) {
+                                        loopCategory = false;
+                                        boolean loopQuestion = true;
+                                        while (loopQuestion == true) {
+
+                                            String question = gestor.solicitarValorString("Type the question that you want to add...");
+
+                                            if (question.length() <= 50 && question.length() >= 4) {
+
+                                                loopQuestion = false;
+
+                                                boolean loopAnswer = true;
+
+                                                while (loopAnswer == true) {
+
+                                                    String answer = gestor.solicitarValorString("Type the answer to you question (True or False) ");
+
+                                                    if (answer.toLowerCase().equals("true") || answer.toLowerCase().equals("false")) {
+                                                        loopAnswer = false;
+                                                        listTF.setTrueOrFalse(question, categoryQuestion, answer);
+                                                        loopType = false;
+                                                    }
+                                                }
+                                            }
+                                        }
+
+                                    }
+                                }
+
+                                break;
+                            }
+                            case 2: {
+                                String categoryQuestion = gestor.solicitarValorString("Select the category of your question:\n\nArt.\nEntertainment.\nSports."
+                                        + "\nHistory.\nGeography.\nScience.\nOthers.");
+                                if (categoryQuestion.toLowerCase().equals("art") || categoryQuestion.toLowerCase().equals("entertainment")
+                                        || categoryQuestion.toLowerCase().equals("sports") || categoryQuestion.toLowerCase().equals("history")
+                                        || categoryQuestion.toLowerCase().equals("geography") || categoryQuestion.toLowerCase().equals("science")
+                                        || categoryQuestion.toLowerCase().equals("others")) {
+                                    String question = gestor.solicitarValorString("Type the question that you want to add...");
+                                }
+                                break;
+                            }
+                            case 3: {
+                                String categoryQuestion = gestor.solicitarValorString("Select the category of your question:\n\nArt.\nEntertainment.\nSports."
+                                        + "\nHistory.\nGeography.\nScience.\nOthers.");
+                                if (categoryQuestion.toLowerCase().equals("art") || categoryQuestion.toLowerCase().equals("entertainment")
+                                        || categoryQuestion.toLowerCase().equals("sports") || categoryQuestion.toLowerCase().equals("history")
+                                        || categoryQuestion.toLowerCase().equals("geography") || categoryQuestion.toLowerCase().equals("science")
+                                        || categoryQuestion.toLowerCase().equals("others")) {
+                                    String question = gestor.solicitarValorString("Type the question that you want to add...");
+                                }
+                                break;
+                            }
+                            default:
+                                gestor.mostrarMensaje("Error: Ingrese una opcion valida.");
+                                break;
+                        }
+                    }
                     break;
                 case "read":
                     break;
                 case "update":
                     break;
                 case "delete":
+                    break;
+                case "exit":
+                    option = "exit";
+                    break;
+                default:
+                    gestor.mostrarMensaje("Error: Ingrese una opcion valida.");
                     break;
             }
         }

@@ -12,8 +12,8 @@ public class MultipleSelection extends Question {
     public MultipleSelection() {
     }
     
-    public MultipleSelection(String question, String category, String answer, String type) {
-        super(question, category, answer, type);
+    public MultipleSelection(String question, String category, String answer) {
+        super(question, category, answer, "Multiple Selection");
     }
     
     //set

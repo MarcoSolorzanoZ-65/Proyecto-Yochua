@@ -11,11 +11,8 @@ public class ClasePrueba {
 
     public static void main(String[] args) {
         TrueOrFalseList trueOrFalseList = new TrueOrFalseList();
-
-        trueOrFalseList.setTrueOrFalse(0, "?", "Deportes", "Si", "SiNo");
-        trueOrFalseList.setTrueOrFalse(1, "?", "Deportes", "Si", "SiNo");
-        trueOrFalseList.setTrueOrFalse(2, "?", "Deportes", "No", "SiNo");
-
-        System.out.println(trueOrFalseList.getAnswers());
+        Maintenance maintenance = new Maintenance();
+        
+        maintenance.menuQuestions();
     }
 }

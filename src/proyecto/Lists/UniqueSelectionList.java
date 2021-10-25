@@ -41,8 +41,8 @@ public class UniqueSelectionList {
         return text;
     }
     
-    public void setTrueOrFalse(int i, String question, String category, String answer, String type) {
-        uniqueSelections[i] = new UniqueSelection(question, category, answer, type);
+    public void setTrueOrFalse(int i, String question, String category, String answer) {
+        uniqueSelections[i] = new UniqueSelection(question, category, answer);
     }
     
     public String getAnswers() {

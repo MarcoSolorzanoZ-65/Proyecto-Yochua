@@ -12,8 +12,8 @@ public class TrueOrFalse extends Question {
     public TrueOrFalse() {
     }
     
-    public TrueOrFalse(String question, String category, String answer, String type) {
-        super(question, category, answer, type);
+    public TrueOrFalse(String question, String category, String answer) {
+        super(question, category, answer, "True or False");
     }
     
     //set

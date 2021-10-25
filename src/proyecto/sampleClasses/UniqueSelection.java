@@ -12,8 +12,8 @@ public class UniqueSelection extends Question {
     public UniqueSelection() {
     }
     
-    public UniqueSelection(String question, String category, String answer, String type) {
-        super(question, category, answer, type);
+    public UniqueSelection(String question, String category, String answer) {
+        super(question, category, answer, "Unique Selection");
     }
     
     //set

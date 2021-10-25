@@ -10,7 +10,7 @@ import proyecto.sampleClasses.TrueOrFalse;
 public class TrueOrFalseList {
     
     private TrueOrFalse[] trueOrFalse;
-
+    private int index = 0;
     public TrueOrFalseList() {
         this.trueOrFalse = new TrueOrFalse[3];
     }
@@ -41,8 +41,9 @@ public class TrueOrFalseList {
         return text;
     }
     
-    public void setTrueOrFalse(int i, String question, String category, String answer, String type) {
-        trueOrFalse[i] = new TrueOrFalse(question, category, answer, type);
+    public void setTrueOrFalse(String question, String category, String answer) {
+        trueOrFalse[index] = new TrueOrFalse(question, category, answer);
+        index++;
     }
     
     public String getAnswers() {
