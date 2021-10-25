@@ -41,7 +41,7 @@ public class MultipleSelectionList {
         return text;
     }
 
-    public void setTrueOrFalse(String question, String category, String answer) {
+    public void setMultipleSelection(String question, String category, String answer) {
         multipleSelectionList[index] = new MultipleSelection(question, category, answer);
         index++;
     }

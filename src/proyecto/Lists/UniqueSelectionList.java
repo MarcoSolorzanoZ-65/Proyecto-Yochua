@@ -42,7 +42,7 @@ public class UniqueSelectionList {
         return text;
     }
     
-    public void setTrueOrFalse(String question, String category, String answer) {
+    public void setUniqueSelection(String question, String category, String answer) {
         uniqueSelections[index] = new UniqueSelection(question, category, answer);
         index++;
     }
