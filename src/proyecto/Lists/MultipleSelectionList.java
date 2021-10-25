@@ -10,7 +10,7 @@ import proyecto.sampleClasses.MultipleSelection;
 public class MultipleSelectionList {
 
     private MultipleSelection[] multipleSelectionList;
-
+    private int index = 0;
     public MultipleSelectionList() {
         this.multipleSelectionList = new MultipleSelection[3];
     }
@@ -41,8 +41,9 @@ public class MultipleSelectionList {
         return text;
     }
 
-    public void setTrueOrFalse(int i, String question, String category, String answer) {
-        multipleSelectionList[i] = new MultipleSelection(question, category, answer);
+    public void setTrueOrFalse(String question, String category, String answer) {
+        multipleSelectionList[index] = new MultipleSelection(question, category, answer);
+        index++;
     }
 
     public String getAnswers() {

@@ -10,7 +10,8 @@ import proyecto.sampleClasses.UniqueSelection;
 public class UniqueSelectionList {
         
     private UniqueSelection[] uniqueSelections;
-
+    private int index = 0;
+    
     public UniqueSelectionList() {
         this.uniqueSelections = new UniqueSelection[3];
     }
@@ -41,8 +42,9 @@ public class UniqueSelectionList {
         return text;
     }
     
-    public void setTrueOrFalse(int i, String question, String category, String answer) {
-        uniqueSelections[i] = new UniqueSelection(question, category, answer);
+    public void setTrueOrFalse(String question, String category, String answer) {
+        uniqueSelections[index] = new UniqueSelection(question, category, answer);
+        index++;
     }
     
     public String getAnswers() {
