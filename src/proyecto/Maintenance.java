@@ -24,8 +24,7 @@ public class Maintenance {
                     + "\n\nType:\n1) (Create) to add a question.\n2) (Read) to read a question."
                     + "\n3) (Update) to update a question.\n4) (Delete) to delete a question."
                     + "\n5) (Exit) to exit the the program.");
-            option = option.toLowerCase();
-            switch (option) {
+            switch (option.toLowerCase()) {
                 case "create":
                     boolean loopType = true;
                     while (loopType == true) {
@@ -55,7 +54,7 @@ public class Maintenance {
 
                                                 while (loopAnswer == true) {
 
-                                                    String answer = gestor.solicitarValorString("Type the answer to you question (True or False) ");
+                                                    String answer = gestor.solicitarValorString("Type the answer to your question (True or False) ");
 
                                                     if (answer.toLowerCase().equals("true") || answer.toLowerCase().equals("false")) {
                                                         loopAnswer = false;
@@ -65,20 +64,45 @@ public class Maintenance {
                                                 }
                                             }
                                         }
-
+                                    } else {
+                                        gestor.mostrarMensaje("The type of category that you choose is invalid please try again.");
                                     }
                                 }
-
                                 break;
                             }
                             case 2: {
-                                String categoryQuestion = gestor.solicitarValorString("Select the category of your question:\n\nArt.\nEntertainment.\nSports."
-                                        + "\nHistory.\nGeography.\nScience.\nOthers.");
-                                if (categoryQuestion.toLowerCase().equals("art") || categoryQuestion.toLowerCase().equals("entertainment")
-                                        || categoryQuestion.toLowerCase().equals("sports") || categoryQuestion.toLowerCase().equals("history")
-                                        || categoryQuestion.toLowerCase().equals("geography") || categoryQuestion.toLowerCase().equals("science")
-                                        || categoryQuestion.toLowerCase().equals("others")) {
-                                    String question = gestor.solicitarValorString("Type the question that you want to add...");
+                                boolean loopCategory = true;
+                                while (loopCategory == true) {
+                                    String categoryQuestion = gestor.solicitarValorString("Select the category of your question:\n\nArt.\nEntertainment.\nSports."
+                                            + "\nHistory.\nGeography.\nScience.\nOthers.");
+                                    if (categoryQuestion.toLowerCase().equals("art") || categoryQuestion.toLowerCase().equals("entertainment")
+                                            || categoryQuestion.toLowerCase().equals("sports") || categoryQuestion.toLowerCase().equals("history")
+                                            || categoryQuestion.toLowerCase().equals("geography") || categoryQuestion.toLowerCase().equals("science")
+                                            || categoryQuestion.toLowerCase().equals("others")) {
+                                        loopCategory = false;
+                                        boolean loopQuestion = true;
+                                        while (loopQuestion == true) {
+
+                                            String question = gestor.solicitarValorString("Type the question that you want to add...");
+
+                                            if (question.length() <= 50 && question.length() >= 4) {
+
+                                                loopQuestion = false;
+
+                                                boolean loopAnswer = true;
+
+                                                while (loopAnswer == true) {
+
+                                                    String correctAnswer = gestor.solicitarValorString("Type the correct answer to your question.");
+                                                    String firstIncorrectAnswer = gestor.solicitarValorString("Type the first incorrect answer to your question.");
+                                                    String secondIncorrectAnswer = gestor.solicitarValorString("Type the second incorrect answer to your question.");
+                                                    String thirdIncorrectAnswer = gestor.solicitarValorString("Type the third incorrect answer to your question.");
+                                                }
+                                            }
+                                        }
+                                    } else {
+                                        gestor.mostrarMensaje("The type of category that you choose is invalid please try again.");
+                                    }
                                 }
                                 break;
                             }
@@ -90,6 +114,8 @@ public class Maintenance {
                                         || categoryQuestion.toLowerCase().equals("geography") || categoryQuestion.toLowerCase().equals("science")
                                         || categoryQuestion.toLowerCase().equals("others")) {
                                     String question = gestor.solicitarValorString("Type the question that you want to add...");
+                                } else {
+                                    gestor.mostrarMensaje("The type of category that you choose is invalid please try again.");
                                 }
                                 break;
                             }

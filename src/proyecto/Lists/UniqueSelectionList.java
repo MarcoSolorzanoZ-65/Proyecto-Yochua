@@ -47,11 +47,11 @@ public class UniqueSelectionList {
         index++;
     }
     
-    public String getAnswers() {
+    public String getQuestions() {
         String text = "";
         for (int i = 0; i < 3; i++) {
-                    if (uniqueSelections[i].getAnswer() != null) {
-                        text += uniqueSelections[i].getAnswer();
+                    if (uniqueSelections[i].getQuestion()!= null) {
+                        text += uniqueSelections[i].getQuestion();
                     }
         }
         return text;

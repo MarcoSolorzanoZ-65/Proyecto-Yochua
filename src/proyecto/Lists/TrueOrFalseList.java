@@ -46,13 +46,18 @@ public class TrueOrFalseList {
         index++;
     }
     
-    public String getAnswers() {
+    public String getQuestions() {
         String text = "";
         for (int i = 0; i < 3; i++) {
-                if (trueOrFalse[i].getAnswer() != null) {
-                    text += trueOrFalse[i].getAnswer();
+                if (trueOrFalse[i].getQuestion()!= null) {
+                    text += trueOrFalse[i].getQuestion();
                 }
         }
         return text;
     }
+
+    public void setCategory(int i, String category) {
+        trueOrFalse[i].setCategory(category);
+    }
+    
 }

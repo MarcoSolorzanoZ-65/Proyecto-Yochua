@@ -46,11 +46,11 @@ public class MultipleSelectionList {
         index++;
     }
 
-    public String getAnswers() {
+    public String getQuestions() {
         String text = "";
         for (int i = 0; i < 3; i++) {
-            if (multipleSelectionList[i].getAnswer() != null) {
-                text += multipleSelectionList[i].getAnswer();
+            if (multipleSelectionList[i].getQuestion()!= null) {
+                text += multipleSelectionList[i].getQuestion();
             }
         }
         return text;
