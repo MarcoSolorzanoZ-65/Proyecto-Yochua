@@ -8,13 +8,14 @@ import proyecto.sampleClasses.TrueOrFalse;
  * @date Oct 21, 2021
  */
 public class TrueOrFalseList {
-    
+
     private TrueOrFalse[] trueOrFalse;
     private int index = 0;
+
     public TrueOrFalseList() {
         this.trueOrFalse = new TrueOrFalse[3];
     }
-    
+
     public TrueOrFalseList(TrueOrFalse[] questionVector) {
         if (questionVector == null) {
             this.trueOrFalse = new TrueOrFalse[10];
@@ -30,7 +31,7 @@ public class TrueOrFalseList {
             trueOrFalse = new TrueOrFalse[size];
         }
     }
-    
+
     public String getVectorString() {
         String text = "";
         for (TrueOrFalse element : trueOrFalse) {
@@ -40,24 +41,34 @@ public class TrueOrFalseList {
         }
         return text;
     }
-    
+
     public void setTrueOrFalse(String question, String category, String answer) {
         trueOrFalse[index] = new TrueOrFalse(question, category, answer);
         index++;
     }
-    
+
     public String getQuestions() {
         String text = "";
+        int cont = 1;
         for (int i = 0; i < 3; i++) {
-                if (trueOrFalse[i].getQuestion()!= null) {
-                    text += trueOrFalse[i].getQuestion();
-                }
+            if (trueOrFalse[i].getQuestion() != null) {
+                text += cont + ") " + trueOrFalse[i].getQuestion();
+                cont++;
+            }
         }
         return text;
+    }
+
+    public String getSpecificQuestion(int i) {
+        return trueOrFalse[i].getQuestion();
+    }
+
+    public String getSpecificAnswer(int i) {
+        return trueOrFalse[i].getAnswer();
     }
 
     public void setCategory(int i, String category) {
         trueOrFalse[i].setCategory(category);
     }
-    
+
 }

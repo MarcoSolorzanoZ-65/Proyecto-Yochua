@@ -34,4 +34,7 @@ public class GestorES {
         return solicitarValorString(message).charAt(0);
     }
 
+    public int preguntaSiNo(String message) {
+        return JOptionPane.showConfirmDialog(null, message, "INFORMATION", JOptionPane.YES_NO_OPTION);
+    }
 }
