@@ -42,9 +42,8 @@ public class UniqueSelectionList {
         return text;
     }
 
-    public void setUniqueSelection(String question, String category, String answer1, String answer2, String answer3,
-            String answer4) {
-        uniqueSelections[index] = new UniqueSelection(question, category, answer1, answer2, answer3, answer4);
+    public void setUniqueSelection(String answer, String incAnswer1, String incAnswer2, String incAnswer3, String category, String Question) {
+        uniqueSelections[index] = new UniqueSelection(answer, incAnswer1, incAnswer2, incAnswer3, category, Question);
 
         index++;
     }

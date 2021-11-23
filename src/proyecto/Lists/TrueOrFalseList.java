@@ -1,5 +1,6 @@
 package proyecto.Lists;
 
+import proyecto.sampleClasses.MultipleSelection;
 import proyecto.sampleClasses.TrueOrFalse;
 
 /**
@@ -11,6 +12,7 @@ public class TrueOrFalseList {
 
     private TrueOrFalse[] trueOrFalse;
     private int index = 0;
+    public final int TAMANO = 10;
 
     public TrueOrFalseList() {
         this.trueOrFalse = new TrueOrFalse[3];
@@ -18,7 +20,7 @@ public class TrueOrFalseList {
 
     public TrueOrFalseList(TrueOrFalse[] questionVector) {
         if (questionVector == null) {
-            this.trueOrFalse = new TrueOrFalse[10];
+            this.trueOrFalse = new TrueOrFalse[TAMANO];
         } else {
             this.trueOrFalse = questionVector;
         }
@@ -26,7 +28,7 @@ public class TrueOrFalseList {
 
     public TrueOrFalseList(int size) {
         if (size < 0) {
-            trueOrFalse = new TrueOrFalse[10];
+            trueOrFalse = new TrueOrFalse[TAMANO];
         } else {
             trueOrFalse = new TrueOrFalse[size];
         }
@@ -42,8 +44,8 @@ public class TrueOrFalseList {
         return text;
     }
 
-    public void setTrueOrFalse(String question, String category, String answer) {
-        trueOrFalse[index] = new TrueOrFalse(question, category, answer);
+    public void setTrueOrFalse(String question, String category, Boolean answer) {
+        trueOrFalse[index] = new TrueOrFalse(answer, category, question);
         index++;
     }
 
@@ -63,12 +65,24 @@ public class TrueOrFalseList {
         return trueOrFalse[i].getQuestion();
     }
 
-    public String getSpecificAnswer(int i) {
+    public Boolean getSpecificAnswer(int i) {
         return trueOrFalse[i].getAnswer();
     }
-
+    
+    public TrueOrFalse getElemento() {
+        int elementoRandom = (int) (Math.random() * index); 
+        
+        return trueOrFalse[elementoRandom]; // falta validaciones (null, etc.. )
+    }
+    
+    public TrueOrFalse getElemento(int index) {
+        return trueOrFalse[index]; // falta validaciones (null, etc.. )
+    }
+    
     public void setCategory(int i, String category) {
         trueOrFalse[i].setCategory(category);
     }
+    
+    
 
 }

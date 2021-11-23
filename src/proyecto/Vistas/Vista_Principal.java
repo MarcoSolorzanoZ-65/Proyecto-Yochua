@@ -38,9 +38,9 @@ public class Vista_Principal extends javax.swing.JFrame {
         jMenuBar3 = new javax.swing.JMenuBar();
         jMenu5 = new javax.swing.JMenu();
         jM_agregar = new javax.swing.JMenuItem();
-        jMenuItem4 = new javax.swing.JMenuItem();
+        jM_salir = new javax.swing.JMenuItem();
         jMenu6 = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
+        jM_jugar = new javax.swing.JMenuItem();
 
         jMenu3.setText("File");
         jMenuBar2.add(jMenu3);
@@ -51,24 +51,29 @@ public class Vista_Principal extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jMenu5.setText("Manager");
-        jMenu5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenu5ActionPerformed(evt);
-            }
-        });
 
         jM_agregar.setText("Añadir Pregunta");
         jMenu5.add(jM_agregar);
 
-        jMenuItem4.setText("Salir");
-        jMenu5.add(jMenuItem4);
+        jM_salir.setText("Salir");
+        jM_salir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jM_salirActionPerformed(evt);
+            }
+        });
+        jMenu5.add(jM_salir);
 
         jMenuBar3.add(jMenu5);
 
         jMenu6.setText("Juego");
 
-        jMenuItem1.setText("Jugar");
-        jMenu6.add(jMenuItem1);
+        jM_jugar.setText("Jugar");
+        jM_jugar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jM_jugarActionPerformed(evt);
+            }
+        });
+        jMenu6.add(jM_jugar);
 
         jMenuBar3.add(jMenu6);
 
@@ -88,9 +93,13 @@ public class Vista_Principal extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jMenu5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu5ActionPerformed
-        System.exit(0);
-    }//GEN-LAST:event_jMenu5ActionPerformed
+    private void jM_jugarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jM_jugarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jM_jugarActionPerformed
+
+    private void jM_salirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jM_salirActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jM_salirActionPerformed
 
     /**
      * @param args the command line arguments
@@ -120,13 +129,13 @@ public class Vista_Principal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JMenuItem jM_agregar;
+    public javax.swing.JMenuItem jM_jugar;
+    public javax.swing.JMenuItem jM_salir;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
     public javax.swing.JMenu jMenu5;
     public javax.swing.JMenu jMenu6;
     private javax.swing.JMenuBar jMenuBar2;
     private javax.swing.JMenuBar jMenuBar3;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem4;
     // End of variables declaration//GEN-END:variables
 }

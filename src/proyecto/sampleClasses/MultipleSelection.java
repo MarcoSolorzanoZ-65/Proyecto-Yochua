@@ -9,86 +9,95 @@ import proyecto.Question;
  */
 public class MultipleSelection extends Question {
 
-    private MultipleSelectionAnswers[] multipleSelectionAnswers;
+    private String answer1;
+    private String answer2;
+    private String answer3;
+    private String answer4;
 
     public MultipleSelection() {
     }
 
-    public MultipleSelection(String question, String category, String answer1) {
-        super(question, category, answer1, "Multiple Selection");
-        this.multipleSelectionAnswers = new MultipleSelectionAnswers[4];
+    public MultipleSelection(String answer1, String answer2, String answer3, String answer4, String category, String Question) {
+        super(category, Question, "Multiple Selection");
+        this.answer1 = answer1;
+        this.answer2 = answer2;
+        this.answer3 = answer3;
+        this.answer4 = answer4;
     }
 
     // set
-
     @Override
-    public void setAnswer(String answer) {
-        super.setAnswer(answer); // To change body of generated methods, choose Tools | Templates.
+    public void setQuestion(String Question) {
+        super.setQuestion(Question); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
     public void setCategory(String category) {
-        super.setCategory(category); // To change body of generated methods, choose Tools | Templates.
+        super.setCategory(category); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public void setQuestion(String question) {
-        super.setQuestion(question); // To change body of generated methods, choose Tools | Templates.
+    public void setType(String Type) {
+        super.setType(Type); //To change body of generated methods, choose Tools | Templates.
     }
 
-    @Override
-    public void setType(String type) {
-        super.setType(type); // To change body of generated methods, choose Tools | Templates.
+    public void setAnswer4(String answer4) {
+        this.answer4 = answer4;
     }
 
-    public void setAnswers(String answer1, String answer2, String answer3, String answer4, int correctAnswer1,
-            int correctAnswer2, int correctAnswer3, int correctAnswer4) {
-        multipleSelectionAnswers[1] = new MultipleSelectionAnswers(answer1, correctAnswer1);
-        multipleSelectionAnswers[2] = new MultipleSelectionAnswers(answer2, correctAnswer2);
-        multipleSelectionAnswers[3] = new MultipleSelectionAnswers(answer3, correctAnswer3);
-        multipleSelectionAnswers[4] = new MultipleSelectionAnswers(answer4, correctAnswer4);
+    public void setAnswer3(String answer3) {
+        this.answer3 = answer3;
     }
 
+    public void setAnswer2(String answer2) {
+        this.answer2 = answer2;
+    }
+
+    public void setAnswer1(String answer1) {
+        this.answer1 = answer1;
+    }
+    
+    
     // get
-
-    public String getVectorString() {
-        String text = "";
-        for (MultipleSelectionAnswers element : multipleSelectionAnswers) {
-            if (element != null) {
-                text += element + "\n";
-            }
-        }
-        return text;
+    public String getAnswer1() {
+        return answer1;
     }
 
-    @Override
-    public String getAnswer() {
-        return super.getAnswer(); // To change body of generated methods, choose Tools | Templates.
+    public String getAnswer2() {
+        return answer2;
+    }
+
+    public String getAnswer3() {
+        return answer3;
+    }
+
+    public String getAnswer4() {
+        return answer4;
     }
 
     @Override
     public String getCategory() {
-        return super.getCategory(); // To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public int getId() {
-        return super.getId(); // To change body of generated methods, choose Tools | Templates.
+        return super.getCategory(); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
     public String getQuestion() {
-        return super.getQuestion(); // To change body of generated methods, choose Tools | Templates.
+        return super.getQuestion(); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
     public String getType() {
-        return super.getType(); // To change body of generated methods, choose Tools | Templates.
+        return super.getType(); //To change body of generated methods, choose Tools | Templates.
     }
 
+    @Override
+    public int getId() {
+        return super.getId(); //To change body of generated methods, choose Tools | Templates.
+    }
+    
     @Override
     public String toString() {
         return super.toString();
     }
-
+    
 }

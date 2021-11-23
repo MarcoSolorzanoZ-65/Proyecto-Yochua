@@ -42,11 +42,8 @@ public class MultipleSelectionList {
         return text;
     }
 
-    public void setMultipleSelection(String question, String category, String answer1, String answer2, String answer3,
-            String answer4, int correctAnswer1, int correctAnswer2, int correctAnswer3, int correctAnswer4) {
-        multipleSelectionList[index] = new MultipleSelection(question, category, answer1);
-        multipleSelectionList[index].setAnswers(answer1, answer2, answer3, answer4, correctAnswer1, correctAnswer2,
-                correctAnswer3, correctAnswer4);
+    public void setMultipleSelection(String answer1, String answer2, String answer3, String answer4, String category, String Question) {
+        multipleSelectionList[index] = new MultipleSelection(answer1, answer2, answer3, answer4, category, Question);
         index++;
     }
 

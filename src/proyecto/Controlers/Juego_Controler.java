@@ -1,13 +1,15 @@
 package proyecto.Controlers;
 
+import com.formdev.flatlaf.FlatDarkLaf;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javax.swing.JOptionPane;
+import javax.swing.UIManager;
 import proyecto.Vistas.Vista_Juego;
 import proyecto.DAO.Dao_MC;
 import proyecto.Lists.MultipleSelectionList;
 import proyecto.Lists.TrueOrFalseList;
 import proyecto.Lists.UniqueSelectionList;
+import proyecto.Vistas.Vista_Principal;
 import proyecto.sampleClasses.MultipleSelection;
 import proyecto.sampleClasses.TrueOrFalse;
 import proyecto.sampleClasses.UniqueSelection;
@@ -47,7 +49,16 @@ public class Juego_Controler implements ActionListener {
     }
 
     public void iniciarVista() {
+        try {
+            UIManager.setLookAndFeel(new FlatDarkLaf());
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(Vista_Juego.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
 
-        vista.setVisible(true);
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                vista.setVisible(true);
+            }
+        });
     }
 }

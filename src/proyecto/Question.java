@@ -1,56 +1,37 @@
 package proyecto;
 
+/**
+ * @author Marco Zumbado Solorzano carne C18736
+ * @date 2021-08-16 
+ * @time 10:13:20
+*/
 public abstract class Question {
-
-    private String question;
     private String category;
-    private String answer;
+    private String question;
     private String type;
-    private int id = 0;
+    private int id;
 
-    public Question() {
-    }
-
-    public Question(String question, String category, String answer, String type) {
-        this.question = question;
+    public Question(String category, String Question, String Type) {
         this.category = category;
-        this.answer = answer;
-        this.type = type;
-        this.id++;
-    }
-
-    //set
-    public void setAnswer(String answer) {
-        this.answer = answer;
+        this.question = Question;
+        this.type = Type;
+        id++;
     }
 
     public void setCategory(String category) {
         this.category = category;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setQuestion(String Question) {
+        this.question = Question;
     }
 
-    public void setQuestion(String question) {
-        this.question = question;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
-
-    //get
-    public String getAnswer() {
-        return answer;
+    public void setType(String Type) {
+        this.type = Type;
     }
 
     public String getCategory() {
         return category;
-    }
-
-    public int getId() {
-        return id;
     }
 
     public String getQuestion() {
@@ -61,9 +42,15 @@ public abstract class Question {
         return type;
     }
 
-    @Override
-    public String toString() {
-        return answer + " " + category + " " + type + " " + question;
+    public int getId() {
+        return id;
     }
 
+    @Override
+    public String toString() {
+        return question + " " + type + " " + category;
+    }
+    
+    
+    
 }

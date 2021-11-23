@@ -7,21 +7,24 @@ import proyecto.Question;
  * @time 8:01:56 PM
  * @date Oct 21, 2021
  */
-public class TrueOrFalse extends Question {
+public class TrueOrFalse extends Question{
+    
 
+    private Boolean answer;
+    
     public TrueOrFalse() {
     }
-    
-    public TrueOrFalse(String question, String category, String answer) {
-        super(question, category, answer, "True or False");
+
+    public TrueOrFalse(Boolean answer, String category, String Question) {
+        super(category, Question, "True or False");
+        this.answer = answer;
     }
-    
+
     //set
-    
-    @Override
-    public void setAnswer(String answer) {
-        super.setAnswer(answer); //To change body of generated methods, choose Tools | Templates.
-    }
+
+    public void setAnswer(Boolean answer) {
+        this.answer = answer;
+    }    
 
     @Override
     public void setCategory(String category) {
@@ -40,9 +43,8 @@ public class TrueOrFalse extends Question {
     
     //get
 
-    @Override
-    public String getAnswer() {
-        return super.getAnswer(); //To change body of generated methods, choose Tools | Templates.
+    public Boolean getAnswer() {
+        return answer;
     }
 
     @Override
@@ -70,5 +72,8 @@ public class TrueOrFalse extends Question {
         return super.toString();
     }
     
+    public String toFileString() {
+        return getQuestion() + "-" + answer;
+    }
     
 }

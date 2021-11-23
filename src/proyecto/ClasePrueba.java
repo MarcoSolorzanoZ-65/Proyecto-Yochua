@@ -1,8 +1,9 @@
 package proyecto;
 
-import proyecto.Lists.MultipleSelectionList;
 import proyecto.Lists.TrueOrFalseList;
-
+import proyecto.Vistas.Vista_Principal;
+import proyecto.DAO.Dao_MC;
+import proyecto.Controlers.Principal_Controler;
 /**
  * @author Marco Zumbado Solorzano C18736
  * @time 8:31:18 PM
@@ -10,13 +11,18 @@ import proyecto.Lists.TrueOrFalseList;
  */
 public class ClasePrueba {
 
-    public static MultipleSelectionList lista = new MultipleSelectionList();
+    public static TrueOrFalseList lista = new TrueOrFalseList();
     
     public static void main(String[] args) {
         
-        TrueOrFalseList trueOrFalseList = new TrueOrFalseList();
-        Maintenance maintenance = new Maintenance();
+        Vista_Principal vista_Principal = new Vista_Principal();
         
-        maintenance.menuQuestions();
+        Dao_MC dao_MC = new Dao_MC();
+        
+        Principal_Controler principal_Controler = new Principal_Controler(vista_Principal, dao_MC);
+        
+        dao_MC.cargarDatosPrueba();
+        
+        principal_Controler.iniciarTrivia();
     }
 }

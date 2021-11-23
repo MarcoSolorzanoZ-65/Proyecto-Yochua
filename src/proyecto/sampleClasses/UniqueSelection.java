@@ -9,26 +9,40 @@ import proyecto.Question;
  */
 public class UniqueSelection extends Question {
 
-    private String ianswer2;
-    private String ianswer3;
-    private String ianswer4;
+    private String answer;
+    private String incAnswer1;
+    private String incAnswer2;
+    private String incAnswer3;
 
     public UniqueSelection() {
     }
 
-    public UniqueSelection(String question, String category, String answer1, String ianswer2, String ianswer3,
-            String ianswer4) {
-        super(question, category, answer1, "Unique Selection");
-        this.ianswer2 = ianswer2;
-        this.ianswer3 = ianswer3;
-        this.ianswer4 = ianswer4;
+    public UniqueSelection(String answer, String incAnswer1, String incAnswer2, String incAnswer3, String category, String Question) {
+        super(category, Question, "Unique Selection");
+        this.answer = answer;
+        this.incAnswer1 = incAnswer1;
+        this.incAnswer2 = incAnswer2;
+        this.incAnswer3 = incAnswer3;
     }
+
+
 
     // set
 
-    @Override
+    public void setIncAnswer3(String incAnswer3) {
+        this.incAnswer3 = incAnswer3; 
+    }
+
+    public void setIncAnswer2(String incAnswer2) {
+        this.incAnswer2 = incAnswer2; 
+    }
+
+    public void setIncAnswer1(String incAnswer1) {
+        this.incAnswer1 = incAnswer1; 
+    }
+
     public void setAnswer(String answer) {
-        super.setAnswer(answer); // To change body of generated methods, choose Tools | Templates.
+        this.answer = answer; 
     }
 
     @Override
@@ -48,9 +62,20 @@ public class UniqueSelection extends Question {
 
     // get
 
-    @Override
     public String getAnswer() {
-        return super.getAnswer(); // To change body of generated methods, choose Tools | Templates.
+        return answer;
+    }
+
+    public String getIncAnswer1() {
+        return incAnswer1;
+    }
+
+    public String getIncAnswer2() {
+        return incAnswer2;
+    }
+
+    public String getIncAnswer3() {
+        return incAnswer3;
     }
 
     @Override
