@@ -13,6 +13,7 @@ import proyecto.Vistas.Vista_Principal;
 import proyecto.sampleClasses.MultipleSelection;
 import proyecto.sampleClasses.TrueOrFalse;
 import proyecto.sampleClasses.UniqueSelection;
+import proyecto.ClasePrueba;
 
 /**
  * @author Marco Zumbado Solorzano carne C18736
@@ -35,16 +36,15 @@ public class Juego_Controler implements ActionListener {
 
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == vista.jb_tf) {
-
+           TrueOrFalseList list_tf = ClasePrueba.lista;
+            System.out.println(list_tf.getVectorString());
         }
 
         if (e.getSource() == vista.jb_mc) {
 
-            vista.dispose();
         }
         if (e.getSource() == vista.jb_sc) {
 
-            vista.dispose();
         }
     }
 

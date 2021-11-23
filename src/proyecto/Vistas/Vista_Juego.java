@@ -36,8 +36,6 @@ public class Vista_Juego extends javax.swing.JDialog {
         jb_mc = new javax.swing.JButton();
         jb_sc = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
         jb_tf.setText("True/False");
         jb_tf.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -49,8 +47,18 @@ public class Vista_Juego extends javax.swing.JDialog {
         jLabel1.setText("Juego Trivia");
 
         jb_mc.setText("Multiple Choice");
+        jb_mc.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jb_mcActionPerformed(evt);
+            }
+        });
 
         jb_sc.setText("Single Choice");
+        jb_sc.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jb_scActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -88,6 +96,14 @@ public class Vista_Juego extends javax.swing.JDialog {
     private void jb_tfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_tfActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jb_tfActionPerformed
+
+    private void jb_mcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_mcActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jb_mcActionPerformed
+
+    private void jb_scActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_scActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jb_scActionPerformed
 
     /**
      * @param args the command line arguments

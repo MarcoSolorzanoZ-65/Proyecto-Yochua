@@ -12,10 +12,10 @@ public class TrueOrFalseList {
 
     private TrueOrFalse[] trueOrFalse;
     private int index = 0;
-    public final int TAMANO = 10;
+    public int TAMANO = 3;
 
     public TrueOrFalseList() {
-        this.trueOrFalse = new TrueOrFalse[3];
+        this.trueOrFalse = new TrueOrFalse[TAMANO];
     }
 
     public TrueOrFalseList(TrueOrFalse[] questionVector) {
@@ -77,6 +77,13 @@ public class TrueOrFalseList {
     
     public TrueOrFalse getElemento(int index) {
         return trueOrFalse[index]; // falta validaciones (null, etc.. )
+    }
+    
+    public void agregar(TrueOrFalse e) {
+        if (index < TAMANO) {
+            trueOrFalse[index] = e;
+            index++;
+        }
     }
     
     public void setCategory(int i, String category) {

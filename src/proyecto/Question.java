@@ -11,6 +11,10 @@ public abstract class Question {
     private String type;
     private int id;
 
+    public Question() {
+    }
+    
+    
     public Question(String category, String Question, String Type) {
         this.category = category;
         this.question = Question;

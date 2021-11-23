@@ -31,24 +31,11 @@ public class Principal_Controler implements ActionListener {
         if(e.getSource() == vista.jM_jugar){
             Vista_Juego vista_Juego = new Vista_Juego(vista, false);
             Juego_Controler jc = new Juego_Controler(vista_Juego, modelo);
+            modelo.cargarDatosPrueba();
             jc.iniciarVista();
         }
         if(e.getSource() == vista.jM_salir) {
             System.exit(0);
         }
-    }
-
-    public void iniciarTrivia() {
-        try {
-            UIManager.setLookAndFeel(new FlatDarkLaf());
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Vista_Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Vista_Principal().setVisible(true);
-            }
-        });
     }
 }

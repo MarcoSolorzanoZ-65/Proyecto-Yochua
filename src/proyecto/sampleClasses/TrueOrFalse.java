@@ -69,11 +69,8 @@ public class TrueOrFalse extends Question{
 
     @Override
     public String toString() {
-        return super.toString();
+        return getQuestion() + "-" + getAnswer() + "-" + getCategory();
     }
     
-    public String toFileString() {
-        return getQuestion() + "-" + answer;
-    }
     
 }

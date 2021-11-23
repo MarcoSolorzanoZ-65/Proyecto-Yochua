@@ -12,6 +12,7 @@ import proyecto.sampleClasses.TrueOrFalse;
  * @date 2021-08-16 
  * @time 10:13:20
 */
+
 public class WriterManager {
     private BufferedWriter writer;
     TrueOrFalseList lista = ClasePrueba.lista; // atributo statico de la lista de preguntas    
@@ -21,11 +22,11 @@ public class WriterManager {
     }
 
     public void write(TrueOrFalse p) throws IOException {
-        writer.write(p.toFileString() + "\n");
+        writer.write(p.toString() + "\n");
     }
     
     public void writeAll() throws IOException {
-        for (int i = 0; i < lista.TAMANO; i++) {
+        for (int i = 0; i < 3; i++) {
             TrueOrFalse e = lista.getElemento(i);
             if (e != null){
                 write(e);

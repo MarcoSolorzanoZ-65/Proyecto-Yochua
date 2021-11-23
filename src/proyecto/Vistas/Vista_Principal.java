@@ -21,6 +21,7 @@ public class Vista_Principal extends javax.swing.JFrame {
         this.setResizable(false);
         this.setBackground(col);
         this.setTitle("Manager");
+        this.setVisible(true);
     }
 
     /**
