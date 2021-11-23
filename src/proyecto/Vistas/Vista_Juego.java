@@ -117,8 +117,8 @@ public class Vista_Juego extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JButton jb_mc;
-    private javax.swing.JButton jb_sc;
-    private javax.swing.JButton jb_tf;
+    public javax.swing.JButton jb_mc;
+    public javax.swing.JButton jb_sc;
+    public javax.swing.JButton jb_tf;
     // End of variables declaration//GEN-END:variables
 }
