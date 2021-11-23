@@ -6,7 +6,7 @@ import java.awt.event.ActionListener;
 import javax.swing.UIManager;
 import proyecto.Vistas.Vista_Juego;
 import proyecto.Vistas.Vista_Principal;
-import proyecto.DAO.Dao_MC;
+import proyecto.DAO.Dao_TF;
 
 /**
  * @author Marco Zumbado Solorzano carne C18736
@@ -16,9 +16,9 @@ import proyecto.DAO.Dao_MC;
 public class Principal_Controler implements ActionListener {
 
     private Vista_Principal vista;
-    private Dao_MC modelo;
+    private Dao_TF modelo;
 
-    public Principal_Controler(Vista_Principal vista, Dao_MC modelo) {
+    public Principal_Controler(Vista_Principal vista, Dao_TF modelo) {
         this.vista = vista;
         this.modelo = modelo;
 

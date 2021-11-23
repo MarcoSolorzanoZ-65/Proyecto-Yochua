@@ -5,7 +5,7 @@ import com.formdev.flatlaf.icons.FlatAbstractIcon;
 import javax.swing.UIManager;
 import proyecto.Lists.TrueOrFalseList;
 import proyecto.Vistas.Vista_Principal;
-import proyecto.DAO.Dao_MC;
+import proyecto.DAO.Dao_TF;
 import proyecto.Controlers.Principal_Controler;
 import proyecto.sampleClasses.TrueOrFalse;
 /**
@@ -27,7 +27,7 @@ public class ClasePrueba {
 
         Vista_Principal vista_Principal = new Vista_Principal();
         
-        Dao_MC dao_MC = new Dao_MC();
+        Dao_TF dao_MC = new Dao_TF();
         
         dao_MC.insertar(new TrueOrFalse(true, "other", "Joe mama's lama?"));
         dao_MC.insertar(new TrueOrFalse(true, "other", "Joe mama is gay?"));

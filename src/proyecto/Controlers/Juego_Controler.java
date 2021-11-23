@@ -5,7 +5,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.UIManager;
 import proyecto.Vistas.Vista_Juego;
-import proyecto.DAO.Dao_MC;
+import proyecto.DAO.Dao_TF;
 import proyecto.Lists.MultipleSelectionList;
 import proyecto.Lists.TrueOrFalseList;
 import proyecto.Lists.UniqueSelectionList;
@@ -23,9 +23,9 @@ import proyecto.ClasePrueba;
 public class Juego_Controler implements ActionListener {
 
     private Vista_Juego vista;
-    private Dao_MC modelo;
+    private Dao_TF modelo;
 
-    public Juego_Controler(Vista_Juego vista, Dao_MC modelo) {
+    public Juego_Controler(Vista_Juego vista, Dao_TF modelo) {
         this.vista = vista;
         this.modelo = modelo;
         this.vista.jb_mc.addActionListener(this);

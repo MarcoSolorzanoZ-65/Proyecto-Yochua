@@ -9,7 +9,7 @@ import proyecto.ClasePrueba;
  * @date 2021-08-16 
  * @time 10:13:20
 */
-public class Dao_MC {
+public class Dao_TF {
     TrueOrFalseList lista = ClasePrueba.lista; // atributo statico de la lista de preguntas
     WriterManager writer = new WriterManager();
     ReaderManager reader = new ReaderManager();
