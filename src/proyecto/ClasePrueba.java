@@ -1,5 +1,6 @@
 package proyecto;
 
+import proyecto.Lists.MultipleSelectionList;
 import proyecto.Lists.TrueOrFalseList;
 
 /**
@@ -9,7 +10,10 @@ import proyecto.Lists.TrueOrFalseList;
  */
 public class ClasePrueba {
 
+    public static MultipleSelectionList lista = new MultipleSelectionList();
+    
     public static void main(String[] args) {
+        
         TrueOrFalseList trueOrFalseList = new TrueOrFalseList();
         Maintenance maintenance = new Maintenance();
         

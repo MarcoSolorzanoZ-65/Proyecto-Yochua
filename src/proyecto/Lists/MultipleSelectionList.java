@@ -65,7 +65,13 @@ public class MultipleSelectionList {
     public String getSpecificQuestion(int i) {
         return multipleSelectionList[i].getQuestion();
     }
-
+    
+    public MultipleSelection getElemento() {
+        int elementoRandom = (int) (Math.random() * index); 
+        
+        return multipleSelectionList[elementoRandom]; // falta validaciones (null, etc.. )
+    }
+    
     public String getSpecificAnswer(int i) {
         return multipleSelectionList[i].getAnswer();
     }
