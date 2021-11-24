@@ -37,7 +37,7 @@ public class MultipleSelectionList {
         String text = "";
         for (MultipleSelection element : multipleSelectionList) {
             if (element != null) {
-                text += element + "-";
+                text += element + "\n";
             }
         }
         return text;
