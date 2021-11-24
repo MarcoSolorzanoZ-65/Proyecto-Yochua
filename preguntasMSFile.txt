@@ -1,0 +1,6 @@
+Cual de estos son colores primarios?-Lima-false-Turquesa-false-Azul-true-Rojo-true-Arte
+
+Cuales de estos generos son reales?-Femenino-true-Masculino-true-Lesbiano-false-Transexual-false-Cultura General
+
+Cuales de estas palabras son costarricenses-Parce-false-Pura vida-true-Mae-true-Joe-false-Cultura General
+

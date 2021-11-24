@@ -46,14 +46,14 @@ public class Vista_Juego extends javax.swing.JDialog {
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jLabel1.setText("Juego Trivia");
 
-        jb_mc.setText("Multiple Choice");
+        jb_mc.setText("Multiple Selection");
         jb_mc.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jb_mcActionPerformed(evt);
             }
         });
 
-        jb_sc.setText("Single Choice");
+        jb_sc.setText("Unique Selection");
         jb_sc.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jb_scActionPerformed(evt);
@@ -73,7 +73,7 @@ public class Vista_Juego extends javax.swing.JDialog {
                 .addComponent(jb_tf)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jb_mc)
-                .addGap(34, 34, 34)
+                .addGap(18, 18, 18)
                 .addComponent(jb_sc)
                 .addGap(17, 17, 17))
         );

@@ -1,0 +1,3 @@
+Es la antartida fria?-true-Geografia
+Es el desierto del Sahara caliente?-true-Geografia
+Es el color verde, azul?-false-Arte

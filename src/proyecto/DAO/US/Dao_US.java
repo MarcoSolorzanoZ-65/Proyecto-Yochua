@@ -1,30 +1,31 @@
-package proyecto.DAO;
+package proyecto.DAO.US;
 
 import java.io.IOException;
-import proyecto.Lists.TrueOrFalseList;
+import proyecto.sampleClasses.UniqueSelection;
 import proyecto.sampleClasses.TrueOrFalse;
 import proyecto.ClasePrueba;
+import proyecto.Lists.UniqueSelectionList;
 /**
  * @author Marco Zumbado Solorzano carne C18736
  * @date 2021-08-16 
  * @time 10:13:20
 */
-public class Dao_TF {
-    TrueOrFalseList lista = ClasePrueba.lista; // atributo statico de la lista de preguntas
-    WriterManager_TF writer = new WriterManager_TF();
-    ReaderManager_TF reader = new ReaderManager_TF();
+public class Dao_US {
+    UniqueSelectionList lista = ClasePrueba.lista_UniqueSelectionList; // atributo statico de la lista de preguntas
+    WriterManager_US writer = new WriterManager_US();
+    ReaderManager_US reader = new ReaderManager_US();
     
-    public static final String FILE_NAME = "preguntaFile.txt";
+    public static final String FILE_NAME = "preguntasUSFile.txt";
 
        
-    public boolean insertar(TrueOrFalse p){
+    public boolean insertar(UniqueSelection p){
         lista.agregar(p);
         guardarLista(p);
         return true;
     }
 
-    public TrueOrFalse generarPreguntaRandom(){
-        TrueOrFalse p = lista.getElemento();
+    public UniqueSelection generarPreguntaRandom(){
+        UniqueSelection p = lista.getElemento();
         return p;
     }
     
@@ -40,7 +41,7 @@ public class Dao_TF {
         }
     }
 
-    public void guardarLista(TrueOrFalse p){ // se agregar datos de prueba            
+    public void guardarLista(UniqueSelection p){ // se agregar datos de prueba            
         try {
             writer.open(FILE_NAME);  
             writer.writeAll();

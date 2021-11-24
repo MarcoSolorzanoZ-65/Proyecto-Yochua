@@ -1,5 +1,6 @@
 package proyecto.Lists;
 
+import proyecto.sampleClasses.TrueOrFalse;
 import proyecto.sampleClasses.UniqueSelection;
 
 /**
@@ -11,14 +12,15 @@ public class UniqueSelectionList {
 
     private UniqueSelection[] uniqueSelections;
     private int index = 0;
+    private final static int TAMANO = 3;
 
     public UniqueSelectionList() {
-        this.uniqueSelections = new UniqueSelection[3];
+        this.uniqueSelections = new UniqueSelection[TAMANO];
     }
 
     public UniqueSelectionList(UniqueSelection[] questionVector) {
         if (questionVector == null) {
-            this.uniqueSelections = new UniqueSelection[10];
+            this.uniqueSelections = new UniqueSelection[TAMANO];
         } else {
             this.uniqueSelections = questionVector;
         }
@@ -26,7 +28,7 @@ public class UniqueSelectionList {
 
     public UniqueSelectionList(int size) {
         if (size < 0) {
-            uniqueSelections = new UniqueSelection[10];
+            uniqueSelections = new UniqueSelection[TAMANO];
         } else {
             uniqueSelections = new UniqueSelection[size];
         }
@@ -59,7 +61,24 @@ public class UniqueSelectionList {
         }
         return text;
     }
-
+    
+    public UniqueSelection getElemento() {
+        int elementoRandom = (int) (Math.random() * index); 
+        
+        return uniqueSelections[elementoRandom]; // falta validaciones (null, etc.. )
+    }
+    
+    public UniqueSelection getElemento(int index) {
+        return uniqueSelections[index]; // falta validaciones (null, etc.. )
+    }
+    
+    public void agregar(UniqueSelection e) {
+        if (index < TAMANO) {
+            uniqueSelections[index] = e;
+            index++;
+        }
+    }
+    
     public String getSpecificQuestion(int i) {
         return uniqueSelections[i].getQuestion();
     }

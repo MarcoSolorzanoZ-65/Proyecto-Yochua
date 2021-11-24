@@ -1,6 +1,8 @@
 package proyecto.Lists;
 
 import proyecto.sampleClasses.MultipleSelection;
+import proyecto.sampleClasses.TrueOrFalse;
+import proyecto.sampleClasses.UniqueSelection;
 
 /**
  * @author Marco Zumbado Solorzano C18736
@@ -11,14 +13,15 @@ public class MultipleSelectionList {
 
     private MultipleSelection[] multipleSelectionList;
     private int index = 0;
+    private final int TAMANO = 3;
 
     public MultipleSelectionList() {
-        this.multipleSelectionList = new MultipleSelection[3];
+        this.multipleSelectionList = new MultipleSelection[TAMANO];
     }
 
     public MultipleSelectionList(MultipleSelection[] questionVector) {
         if (questionVector == null) {
-            this.multipleSelectionList = new MultipleSelection[10];
+            this.multipleSelectionList = new MultipleSelection[TAMANO];
         } else {
             this.multipleSelectionList = questionVector;
         }
@@ -26,7 +29,7 @@ public class MultipleSelectionList {
 
     public MultipleSelectionList(int size) {
         if (size < 0) {
-            multipleSelectionList = new MultipleSelection[10];
+            multipleSelectionList = new MultipleSelection[TAMANO];
         } else {
             multipleSelectionList = new MultipleSelection[size];
         }
@@ -36,40 +39,42 @@ public class MultipleSelectionList {
         String text = "";
         for (MultipleSelection element : multipleSelectionList) {
             if (element != null) {
-                text += element + "\n";
+                text += element + "-";
             }
         }
         return text;
     }
 
-    public void setMultipleSelection(String answer1, String answer2, String answer3, String answer4, String category, String Question) {
-        multipleSelectionList[index] = new MultipleSelection(answer1, answer2, answer3, answer4, category, Question);
+    public void setMultipleSelection(String answer1, boolean correct1, String answer2, boolean correct2,
+            String answer3, boolean correct3, String answer4, boolean correct4, String category,
+            String Question) {
+
+        multipleSelectionList[index] = new MultipleSelection(answer1, correct1, answer2, correct2,
+            answer3, correct3, answer4, correct4, category, Question);
+        
         index++;
     }
-
-    public String getQuestions() {
-        String text = "";
-        int cont = 1;
-        for (int i = 0; i < 3; i++) {
-            if (multipleSelectionList[i].getQuestion() != null) {
-                text += cont + ") " + multipleSelectionList[i].getQuestion();
-                cont++;
-            }
-        }
-        return text;
+    
+    public MultipleSelection getElemento(int index) {
+        return multipleSelectionList[index]; // falta validaciones (null, etc.. )
     }
-
+    
+    public void agregar(MultipleSelection e) {
+        if (index < TAMANO) {
+            multipleSelectionList[index] = e;
+            index++;
+        }
+    }
+    
     public String getSpecificQuestion(int i) {
         return multipleSelectionList[i].getQuestion();
     }
-    
+
     public MultipleSelection getElemento() {
-        int elementoRandom = (int) (Math.random() * index); 
-        
+        int elementoRandom = (int) (Math.random() * index);
+
         return multipleSelectionList[elementoRandom]; // falta validaciones (null, etc.. )
     }
     
-    public String getSpecificAnswer(int i) {
-        return multipleSelectionList[i].getAnswer();
-    }
+    
 }

@@ -1,4 +1,4 @@
-package proyecto.DAO;
+package proyecto.DAO.TF;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -16,7 +16,7 @@ import proyecto.sampleClasses.TrueOrFalse;
 public class ReaderManager_TF {
 
     private BufferedReader reader;
-    TrueOrFalseList lista = ClasePrueba.lista; // atributo statico de la lista de preguntas
+    TrueOrFalseList lista = ClasePrueba.lista_TFalseList; // atributo statico de la lista de preguntas
 
     public void open(String fileName) throws FileNotFoundException {
         reader = new BufferedReader(new FileReader(fileName));

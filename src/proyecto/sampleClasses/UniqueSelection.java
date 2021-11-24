@@ -100,7 +100,7 @@ public class UniqueSelection extends Question {
 
     @Override
     public String toString() {
-        return super.toString();
+        return getAnswer() + "-" + getIncAnswer1() + "-" + getIncAnswer2() + "-" + getIncAnswer3() + "-" + getQuestion() + "-" + getCategory();
     }
 
 }

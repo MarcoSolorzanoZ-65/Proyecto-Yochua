@@ -1,11 +1,11 @@
-package proyecto.DAO;
+package proyecto.DAO.US;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import proyecto.ClasePrueba;
-import proyecto.Lists.TrueOrFalseList;
-import proyecto.sampleClasses.TrueOrFalse;
+import proyecto.Lists.UniqueSelectionList;
+import proyecto.sampleClasses.UniqueSelection;
 
 /**
  * @author Marco Zumbado Solorzano carne C18736
@@ -13,21 +13,21 @@ import proyecto.sampleClasses.TrueOrFalse;
  * @time 10:13:20
 */
 
-public class WriterManager_TF {
+public class WriterManager_US {
     private BufferedWriter writer;
-    TrueOrFalseList lista = ClasePrueba.lista; // atributo statico de la lista de preguntas    
+    UniqueSelectionList lista = ClasePrueba.lista_UniqueSelectionList; // atributo statico de la lista de preguntas    
 
     public void open(String fileName) throws IOException {
         writer = new BufferedWriter(new FileWriter(fileName));
     }
 
-    public void write(TrueOrFalse p) throws IOException {
+    public void write(UniqueSelection p) throws IOException {
         writer.write(p.toString() + "\n");
     }
     
     public void writeAll() throws IOException {
         for (int i = 0; i < 3; i++) {
-            TrueOrFalse e = lista.getElemento(i);
+            UniqueSelection e = lista.getElemento(i);
             if (e != null){
                 write(e);
             }           

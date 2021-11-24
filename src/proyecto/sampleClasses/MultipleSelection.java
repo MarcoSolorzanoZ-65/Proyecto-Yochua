@@ -1,5 +1,6 @@
 package proyecto.sampleClasses;
 
+import proyecto.Lists.MS_AnswerList;
 import proyecto.Question;
 
 /**
@@ -9,20 +10,19 @@ import proyecto.Question;
  */
 public class MultipleSelection extends Question {
 
-    private String answer1;
-    private String answer2;
-    private String answer3;
-    private String answer4;
+    MS_AnswerList mS_AnswerList = new MS_AnswerList();
 
     public MultipleSelection() {
     }
 
-    public MultipleSelection(String answer1, String answer2, String answer3, String answer4, String category, String Question) {
+    public MultipleSelection(String answer1, boolean correct1, String answer2, boolean correct2,
+            String answer3, boolean correct3, String answer4, boolean correct4, String category,
+            String Question) {
         super(category, Question, "Multiple Selection");
-        this.answer1 = answer1;
-        this.answer2 = answer2;
-        this.answer3 = answer3;
-        this.answer4 = answer4;
+        mS_AnswerList.setMS_Answers(answer1, correct1);
+        mS_AnswerList.setMS_Answers(answer2, correct2);
+        mS_AnswerList.setMS_Answers(answer3, correct3);
+        mS_AnswerList.setMS_Answers(answer4, correct4);
     }
 
     // set
@@ -41,40 +41,10 @@ public class MultipleSelection extends Question {
         super.setType(Type); //To change body of generated methods, choose Tools | Templates.
     }
 
-    public void setAnswer4(String answer4) {
-        this.answer4 = answer4;
-    }
-
-    public void setAnswer3(String answer3) {
-        this.answer3 = answer3;
-    }
-
-    public void setAnswer2(String answer2) {
-        this.answer2 = answer2;
-    }
-
-    public void setAnswer1(String answer1) {
-        this.answer1 = answer1;
+    public MS_AnswerList getmS_AnswerList() {
+        return mS_AnswerList;
     }
     
-    
-    // get
-    public String getAnswer1() {
-        return answer1;
-    }
-
-    public String getAnswer2() {
-        return answer2;
-    }
-
-    public String getAnswer3() {
-        return answer3;
-    }
-
-    public String getAnswer4() {
-        return answer4;
-    }
-
     @Override
     public String getCategory() {
         return super.getCategory(); //To change body of generated methods, choose Tools | Templates.
@@ -97,7 +67,7 @@ public class MultipleSelection extends Question {
     
     @Override
     public String toString() {
-        return super.toString();
+        return getQuestion() + "-" + getmS_AnswerList().getVectorString() + getCategory() + "\n";
     }
     
 }
