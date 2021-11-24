@@ -6,7 +6,6 @@ import java.io.FileReader;
 import java.io.IOException;
 import proyecto.ClasePrueba;
 import proyecto.Lists.UniqueSelectionList;
-import proyecto.sampleClasses.TrueOrFalse;
 import proyecto.sampleClasses.UniqueSelection;
 
 /**
@@ -33,8 +32,8 @@ public class ReaderManager_US {
             p.setQuestion(datos[0]); // lee el enunciado
             p.setAnswer((datos[1]));
             p.setIncAnswer1(datos[1]);
-            p.setIncAnswer1(datos[2]);
-            p.setIncAnswer1(datos[3]);// lee la respuesta
+            p.setIncAnswer2(datos[2]);
+            p.setIncAnswer3(datos[3]);// lee la respuesta
         }
         return p;
     }

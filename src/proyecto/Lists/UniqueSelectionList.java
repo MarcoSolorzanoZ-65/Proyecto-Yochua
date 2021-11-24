@@ -1,6 +1,5 @@
 package proyecto.Lists;
 
-import proyecto.sampleClasses.TrueOrFalse;
 import proyecto.sampleClasses.UniqueSelection;
 
 /**

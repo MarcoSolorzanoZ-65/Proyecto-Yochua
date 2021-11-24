@@ -1,7 +1,6 @@
 package proyecto.Lists;
 
 import proyecto.sampleClasses.MS_Answers;
-import proyecto.sampleClasses.MultipleSelection;
 
 /**
  * @author Marco Zumbado Solorzano carne C18736

@@ -67,7 +67,7 @@ public class MultipleSelection extends Question {
     
     @Override
     public String toString() {
-        return getQuestion() + "-" + getmS_AnswerList().getVectorString() + getCategory() + "\n";
+        return getQuestion() + "-" + getmS_AnswerList().getVectorString() + getCategory();
     }
     
 }

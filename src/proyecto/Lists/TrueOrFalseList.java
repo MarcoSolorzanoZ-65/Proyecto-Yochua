@@ -1,6 +1,5 @@
 package proyecto.Lists;
 
-import proyecto.sampleClasses.MultipleSelection;
 import proyecto.sampleClasses.TrueOrFalse;
 
 /**

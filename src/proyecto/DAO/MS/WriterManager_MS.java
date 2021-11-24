@@ -1,6 +1,5 @@
 package proyecto.DAO.MS;
 
-import proyecto.DAO.US.*;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;

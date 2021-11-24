@@ -1,8 +1,6 @@
 package proyecto.Lists;
 
 import proyecto.sampleClasses.MultipleSelection;
-import proyecto.sampleClasses.TrueOrFalse;
-import proyecto.sampleClasses.UniqueSelection;
 
 /**
  * @author Marco Zumbado Solorzano C18736

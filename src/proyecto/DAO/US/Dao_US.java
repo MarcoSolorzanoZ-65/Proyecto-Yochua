@@ -2,7 +2,6 @@ package proyecto.DAO.US;
 
 import java.io.IOException;
 import proyecto.sampleClasses.UniqueSelection;
-import proyecto.sampleClasses.TrueOrFalse;
 import proyecto.ClasePrueba;
 import proyecto.Lists.UniqueSelectionList;
 /**

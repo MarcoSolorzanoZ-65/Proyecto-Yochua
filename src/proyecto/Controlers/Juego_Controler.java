@@ -28,7 +28,7 @@ public class Juego_Controler implements ActionListener {
     private Dao_TF modelo;
     private Dao_US modelo2;
     private Dao_MS modelo3;
-    
+
     public Juego_Controler(Vista_Juego vista, Dao_TF modelo, Dao_US modelo2, Dao_MS modelo3) {
         this.vista = vista;
         this.modelo = modelo;
@@ -42,7 +42,7 @@ public class Juego_Controler implements ActionListener {
 
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == vista.jb_tf) {
-           TrueOrFalseList list_tf = ClasePrueba.lista_TFalseList;
+            TrueOrFalseList list_tf = ClasePrueba.lista_TFalseList;
             System.out.println(list_tf.getVectorString());
         }
 
