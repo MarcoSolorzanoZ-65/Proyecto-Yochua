@@ -43,5 +43,10 @@ public class Principal_Controler implements ActionListener {
         if(e.getSource() == vista.jM_salir) {
             System.exit(0);
         }
+        if (e.getSource() == vista.jM_agregar) {
+            modelo.cargarDatosPrueba();
+            modelo2.cargarDatosPrueba();
+            modelo3.cargarDatosPrueba();
+        }
     }
 }
