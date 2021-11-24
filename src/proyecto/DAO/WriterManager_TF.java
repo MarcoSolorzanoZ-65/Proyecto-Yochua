@@ -13,7 +13,7 @@ import proyecto.sampleClasses.TrueOrFalse;
  * @time 10:13:20
 */
 
-public class WriterManager {
+public class WriterManager_TF {
     private BufferedWriter writer;
     TrueOrFalseList lista = ClasePrueba.lista; // atributo statico de la lista de preguntas    
 

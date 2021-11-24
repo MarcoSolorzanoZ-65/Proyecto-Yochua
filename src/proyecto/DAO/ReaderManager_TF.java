@@ -13,7 +13,7 @@ import proyecto.sampleClasses.TrueOrFalse;
  * @date 2021-08-16 
  * @time 10:13:20
 */
-public class ReaderManager {
+public class ReaderManager_TF {
 
     private BufferedReader reader;
     TrueOrFalseList lista = ClasePrueba.lista; // atributo statico de la lista de preguntas

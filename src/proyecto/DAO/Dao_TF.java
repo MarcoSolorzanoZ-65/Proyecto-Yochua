@@ -11,8 +11,8 @@ import proyecto.ClasePrueba;
 */
 public class Dao_TF {
     TrueOrFalseList lista = ClasePrueba.lista; // atributo statico de la lista de preguntas
-    WriterManager writer = new WriterManager();
-    ReaderManager reader = new ReaderManager();
+    WriterManager_TF writer = new WriterManager_TF();
+    ReaderManager_TF reader = new ReaderManager_TF();
     
     public static final String FILE_NAME = "preguntaFile.txt";
 
