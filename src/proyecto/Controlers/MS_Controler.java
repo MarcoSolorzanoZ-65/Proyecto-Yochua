@@ -33,9 +33,7 @@ public class MS_Controler implements ActionListener{
     public MS_Controler(Vista_MS vista, Dao_MS modelo3) {
         this.vista = vista;
         this.modelo3 = modelo3;
-        this.vista.jb_mc.addActionListener(this);
-        this.vista.jb_sc.addActionListener(this);
-        this.vista.jb_tf.addActionListener(this);
+        this.vista.jB_Añadir.addActionListener(this);
         iniciarVista();
     }
 
