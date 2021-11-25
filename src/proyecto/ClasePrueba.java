@@ -39,9 +39,9 @@ public class ClasePrueba {
         Dao_US dao_US = new Dao_US();
         Dao_MS dao_MS = new Dao_MS();
         
-        dao_TF.insertar(new TrueOrFalse(true, "Geografia", "Es la antartida fria?"));
-        dao_TF.insertar(new TrueOrFalse(true, "Geografia", "Es el desierto del Sahara caliente?"));
-        dao_TF.insertar(new TrueOrFalse(false, "Arte", "Es el color verde, azul?"));
+        //dao_TF.insertar(new TrueOrFalse(true, "Geografia", "Es la antartida fria?"));
+        //dao_TF.insertar(new TrueOrFalse(true, "Geografia", "Es el desierto del Sahara caliente?"));
+        //dao_TF.insertar(new TrueOrFalse(false, "Arte", "Es el color verde, azul?"));
         dao_US.insertar(new UniqueSelection("Alajuela", "Cartago", "Limon", "Guanacaste", "Geografia", "En que provincia queda la calle ancha?"));
         dao_US.insertar(new UniqueSelection("La liga", "Limon FC", "Joe Mama", "Saprissa", "Deportes", "Cual es el mejor equipo de Costa Rica?"));
         dao_US.insertar(new UniqueSelection("Canal 7", "Canal 11", "Canal 8", "Canal 24", "Entretenimiento", "En que canal se transmitia La Pension originalmente?"));

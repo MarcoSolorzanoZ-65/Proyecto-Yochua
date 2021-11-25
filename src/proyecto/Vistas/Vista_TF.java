@@ -18,7 +18,7 @@ public class Vista_TF extends javax.swing.JDialog {
     /**
      * Creates new form Vista_TF
      */
-    public Vista_TF(java.awt.Frame parent, boolean modal) {
+    public Vista_TF(java.awt.Dialog parent, boolean modal) {
         super(parent, modal);
         this.setLocationRelativeTo(null);
         this.pack();
@@ -42,7 +42,9 @@ public class Vista_TF extends javax.swing.JDialog {
         jLabel2 = new javax.swing.JLabel();
         jRadioButton_True = new javax.swing.JRadioButton();
         jRadioButton_False = new javax.swing.JRadioButton();
-        jButton1 = new javax.swing.JButton();
+        jB_Añadir = new javax.swing.JButton();
+        jcb_TFC = new javax.swing.JComboBox<>();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -52,11 +54,6 @@ public class Vista_TF extends javax.swing.JDialog {
 
         jTextField_Pregunta.setForeground(new java.awt.Color(255, 255, 255));
         jTextField_Pregunta.setText("Pregunta...");
-        jTextField_Pregunta.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField_PreguntaActionPerformed(evt);
-            }
-        });
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -65,38 +62,35 @@ public class Vista_TF extends javax.swing.JDialog {
         jRadioButton_True.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jRadioButton_True.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton_True.setText("True");
-        jRadioButton_True.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton_TrueActionPerformed(evt);
-            }
-        });
 
         jRadioButton_False.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jRadioButton_False.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton_False.setText("False");
-        jRadioButton_False.addActionListener(new java.awt.event.ActionListener() {
+
+        jB_Añadir.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jB_Añadir.setText("Añadir");
+        jB_Añadir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton_FalseActionPerformed(evt);
+                jB_AñadirActionPerformed(evt);
             }
         });
 
-        jButton1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jButton1.setText("Añadir");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jcb_TFC.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jcb_TFC.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jcb_TFCActionPerformed(evt);
             }
         });
+
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("Categoría:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(99, 99, 99)
-                .addComponent(jLabel2)
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(41, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -106,13 +100,22 @@ public class Vista_TF extends javax.swing.JDialog {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jRadioButton_False)
                             .addComponent(jRadioButton_True))
-                        .addGap(183, 183, 183))
+                        .addGap(180, 180, 180))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jButton1)
+                        .addComponent(jB_Añadir)
                         .addGap(172, 172, 172))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jTextField_Pregunta, javax.swing.GroupLayout.PREFERRED_SIZE, 354, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(32, 32, 32))))
+                        .addGap(32, 32, 32))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(19, 19, 19)
+                                .addComponent(jLabel3)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jcb_TFC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel2))
+                        .addGap(88, 88, 88))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -121,35 +124,31 @@ public class Vista_TF extends javax.swing.JDialog {
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18)
                 .addComponent(jTextField_Pregunta, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel2)
-                .addGap(13, 13, 13)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jRadioButton_True)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jRadioButton_False)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton1)
-                .addContainerGap(42, Short.MAX_VALUE))
+                .addGap(15, 15, 15)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jcb_TFC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3))
+                .addGap(11, 11, 11)
+                .addComponent(jB_Añadir)
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField_PreguntaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_PreguntaActionPerformed
+    private void jB_AñadirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB_AñadirActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField_PreguntaActionPerformed
+    }//GEN-LAST:event_jB_AñadirActionPerformed
 
-    private void jRadioButton_TrueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton_TrueActionPerformed
+    private void jcb_TFCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcb_TFCActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton_TrueActionPerformed
-
-    private void jRadioButton_FalseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton_FalseActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton_FalseActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_jcb_TFCActionPerformed
 
     /**
      * @param args the command line arguments
@@ -181,7 +180,7 @@ public class Vista_TF extends javax.swing.JDialog {
         /* Create and display the dialog */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                Vista_TF dialog = new Vista_TF(new javax.swing.JFrame(), true);
+                Vista_TF dialog = new Vista_TF(new javax.swing.JDialog(), true);
                 dialog.addWindowListener(new java.awt.event.WindowAdapter() {
                     @Override
                     public void windowClosing(java.awt.event.WindowEvent e) {
@@ -194,11 +193,13 @@ public class Vista_TF extends javax.swing.JDialog {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    public javax.swing.JButton jB_Añadir;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     public javax.swing.JRadioButton jRadioButton_False;
     public javax.swing.JRadioButton jRadioButton_True;
     public javax.swing.JTextField jTextField_Pregunta;
+    public javax.swing.JComboBox<String> jcb_TFC;
     // End of variables declaration//GEN-END:variables
 }

@@ -18,6 +18,7 @@ import proyecto.Lists.MultipleSelectionList;
 import proyecto.Lists.TrueOrFalseList;
 import proyecto.Lists.UniqueSelectionList;
 import proyecto.Vistas.Vista_US;
+import proyecto.sampleClasses.TrueOrFalse;
 
 /**
  * @author Luis Edo. Hodgson Quesada C13822
@@ -31,38 +32,35 @@ public class US_Controler implements ActionListener{
     private Dao_US modelo2;
     private Dao_MS modelo3;
 
-    public US_Controler(Vista_US vista, Dao_TF modelo, Dao_US modelo2, Dao_MS modelo3) {
+    public US_Controler(Vista_US vista,Dao_US modelo2) {
         this.vista = vista;
         this.modelo = modelo;
         this.modelo2 = modelo2;
         this.modelo3 = modelo3;
-        this.vista.jb_mc.addActionListener(this);
-        this.vista.jb_sc.addActionListener(this);
-        this.vista.jb_tf.addActionListener(this);
+        this.vista.jB_Añadir.addActionListener(this);
         iniciarVista();
     }
 
     public void actionPerformed(ActionEvent e) {
-        if (e.getSource() == vista.jb_tf) {
-            TrueOrFalseList list_tf = ClasePrueba.lista_TFalseList;
-            System.out.println(list_tf.getVectorString());
+        
+        if (e.getSource() == vista.jB_Añadir) {
+            boolean tf = false;
+            if (vista.jRadioButton_True.isSelected()) {
+                tf = true;
+            } else if (vista.jRadioButton_False.isSelected()) {
+                tf = false;
+            }
+            modelo.insertar(new TrueOrFalse(tf, vista.jcb_TFC.getSelectedItem().toString(),vista.jTextField_Pregunta.getText()));
+            vista.dispose();
         }
-
-        if (e.getSource() == vista.jb_mc) {
-            MultipleSelectionList list_MS = ClasePrueba.lista_MultipleSelectionList;
-            System.out.println(list_MS.getVectorString());
-        }
-        if (e.getSource() == vista.jb_sc) {
-            UniqueSelectionList list_SC = ClasePrueba.lista_UniqueSelectionList;
-            System.out.println(list_SC.getVectorString());
-        }
+        
     }
 
     public void iniciarVista() {
         try {
             UIManager.setLookAndFeel(new FlatDarkLaf());
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Vista_Juego.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Vista_US.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
 
         java.awt.EventQueue.invokeLater(new Runnable() {

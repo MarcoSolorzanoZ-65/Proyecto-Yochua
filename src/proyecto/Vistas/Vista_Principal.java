@@ -54,6 +54,11 @@ public class Vista_Principal extends javax.swing.JFrame {
         jMenu5.setText("Manager");
 
         jM_agregar.setText("Añadir Pregunta");
+        jM_agregar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jM_agregarActionPerformed(evt);
+            }
+        });
         jMenu5.add(jM_agregar);
 
         jM_salir.setText("Salir");
@@ -101,6 +106,10 @@ public class Vista_Principal extends javax.swing.JFrame {
     private void jM_salirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jM_salirActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jM_salirActionPerformed
+
+    private void jM_agregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jM_agregarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jM_agregarActionPerformed
 
     /**
      * @param args the command line arguments

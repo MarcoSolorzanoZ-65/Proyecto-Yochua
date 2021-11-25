@@ -28,12 +28,11 @@ public class Principal_Controler implements ActionListener{
         this.modelo = modelo;
         this.modelo2 = modelo2;
         this.modelo3 = modelo3;
-
         this.vista.jM_agregar.addActionListener(this);
         this.vista.jM_jugar.addActionListener(this);
         this.vista.jM_salir.addActionListener(this);
     }
-
+    
     public void actionPerformed(ActionEvent e) {
         if(e.getSource() == vista.jM_jugar){
             Vista_Juego vista_Juego = new Vista_Juego(vista, false);
@@ -45,11 +44,12 @@ public class Principal_Controler implements ActionListener{
             System.exit(0);
         }
         if (e.getSource() == vista.jM_agregar) {
-            Vista_Añadir va = new Vista_Añadir(vista, false);
+            Vista_Añadir vista_Añadir = new Vista_Añadir(vista, false);
+            Añadir_Controler ac = new Añadir_Controler(vista_Añadir,modelo);
             modelo.cargarDatosPrueba();
             modelo2.cargarDatosPrueba();
             modelo3.cargarDatosPrueba();
-            va.iniciarVista();
+            ac.iniciarVista();
         }
     }
 }

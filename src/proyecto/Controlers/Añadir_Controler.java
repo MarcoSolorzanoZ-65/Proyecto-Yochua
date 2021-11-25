@@ -18,6 +18,9 @@ import proyecto.Lists.MultipleSelectionList;
 import proyecto.Lists.TrueOrFalseList;
 import proyecto.Lists.UniqueSelectionList;
 import proyecto.Vistas.Vista_Añadir;
+import proyecto.Vistas.Vista_MS;
+import proyecto.Vistas.Vista_TF;
+import proyecto.Vistas.Vista_US;
 
 
 /**
@@ -28,11 +31,19 @@ import proyecto.Vistas.Vista_Añadir;
 public class Añadir_Controler implements  ActionListener{
     
     private Vista_Añadir vista;
+    private Vista_TF vistaTF;
+    private Vista_MS vistaMS;
+    private Vista_US vistaUS;
+    private TF_Controler controlerTF;
+    private MS_Controler controlerMS;
+    private US_Controler controlerUS;
     private Dao_TF modelo;
     private Dao_US modelo2;
     private Dao_MS modelo3;
+    
 
-    public Añadir_Controler(Vista_Añadir vista, Dao_TF modelo, Dao_US modelo2, Dao_MS modelo3) {
+    
+    public Añadir_Controler(Vista_Añadir vista, Dao_TF modelo) {
         this.vista = vista;
         this.modelo = modelo;
         this.modelo2 = modelo2;
@@ -42,20 +53,20 @@ public class Añadir_Controler implements  ActionListener{
         this.vista.jButton_AUS.addActionListener(this);
         iniciarVista();
     }
+    
 
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == vista.jButton_ATF) {
-            TrueOrFalseList list_tf = ClasePrueba.lista_TFalseList;
-            System.out.println(list_tf.getVectorString());
+            Vista_TF vista_TF = new Vista_TF(vistaTF, false);
+            TF_Controler ctf = new TF_Controler(vista_TF, modelo);
         }
-
         if (e.getSource() == vista.jButton_AMS) {
-            MultipleSelectionList list_MS = ClasePrueba.lista_MultipleSelectionList;
-            System.out.println(list_MS.getVectorString());
+            Vista_MS vista_MS = new Vista_MS(vistaMS, false);
+            MS_Controler cms = new MS_Controler(vista_MS, modelo3);
         }
         if (e.getSource() == vista.jButton_AUS) {
-            UniqueSelectionList list_SC = ClasePrueba.lista_UniqueSelectionList;
-            System.out.println(list_SC.getVectorString());
+            Vista_US vista_US = new Vista_US(vistaUS, false);
+            US_Controler cus = new US_Controler(vista_US, modelo2);
         }
     }
 

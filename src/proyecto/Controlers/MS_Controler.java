@@ -28,14 +28,10 @@ import proyecto.Lists.UniqueSelectionList;
 public class MS_Controler implements ActionListener{
     
     private Vista_MS vista;
-    private Dao_TF modelo;
-    private Dao_US modelo2;
     private Dao_MS modelo3;
 
-    public MS_Controler(Vista_MS vista, Dao_TF modelo, Dao_US modelo2, Dao_MS modelo3) {
+    public MS_Controler(Vista_MS vista, Dao_MS modelo3) {
         this.vista = vista;
-        this.modelo = modelo;
-        this.modelo2 = modelo2;
         this.modelo3 = modelo3;
         this.vista.jb_mc.addActionListener(this);
         this.vista.jb_sc.addActionListener(this);
@@ -63,7 +59,7 @@ public class MS_Controler implements ActionListener{
         try {
             UIManager.setLookAndFeel(new FlatDarkLaf());
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Vista_Juego.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Vista_MS.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
 
         java.awt.EventQueue.invokeLater(new Runnable() {
