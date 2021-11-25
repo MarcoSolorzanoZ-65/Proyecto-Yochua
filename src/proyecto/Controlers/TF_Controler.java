@@ -10,13 +10,7 @@ import com.formdev.flatlaf.FlatDarkLaf;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.UIManager;
-import proyecto.ClasePrueba;
-import proyecto.DAO.MS.Dao_MS;
 import proyecto.DAO.TF.Dao_TF;
-import proyecto.DAO.US.Dao_US;
-import proyecto.Lists.MultipleSelectionList;
-import proyecto.Lists.TrueOrFalseList;
-import proyecto.Lists.UniqueSelectionList;
 import proyecto.Vistas.Vista_TF;
 import proyecto.sampleClasses.TrueOrFalse;
 

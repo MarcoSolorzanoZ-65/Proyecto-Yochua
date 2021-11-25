@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package proyecto.Controlers;
 
 import com.formdev.flatlaf.FlatDarkLaf;
@@ -16,14 +15,15 @@ import proyecto.DAO.MS.Dao_MS;
 import proyecto.Lists.MultipleSelectionList;
 import proyecto.Lists.TrueOrFalseList;
 import proyecto.Lists.UniqueSelectionList;
+import proyecto.sampleClasses.MultipleSelection;
 
 /**
  * @author Luis Edo. Hodgson Quesada C13822
  * @time 19:16:39
  * @date 24 nov. 2021
  */
-public class MS_Controler implements ActionListener{
-    
+public class MS_Controler implements ActionListener {
+
     private Vista_MS vista;
     private Dao_MS modelo;
 
@@ -35,20 +35,43 @@ public class MS_Controler implements ActionListener{
     }
 
     public void actionPerformed(ActionEvent e) {
-        if (e.getSource() == vista.jb_tf) {
-            TrueOrFalseList list_tf = ClasePrueba.lista_TFalseList;
-            System.out.println(list_tf.getVectorString());
-        }
+        String opcion1 = "";
+        String opcion2 = "";
+        String opcion3 = "";
+        String opcion4 = "";
+        Boolean correcto1 = false;
+        Boolean correcto2 = false;
+        Boolean correcto3 = false;
+        Boolean correcto4 = false;
 
-        if (e.getSource() == vista.jb_mc) {
-            MultipleSelectionList list_MS = ClasePrueba.lista_MultipleSelectionList;
-            System.out.println(list_MS.getVectorString());
-        }
-        if (e.getSource() == vista.jb_sc) {
-            UniqueSelectionList list_SC = ClasePrueba.lista_UniqueSelectionList;
-            System.out.println(list_SC.getVectorString());
+        if (e.getSource() == vista.jB_Añadir) {
+
+            if (vista.jB_Opcion1.isSelected()) {
+                correcto1 = true;
+            }
+            
+            if (vista.jB_Opcion2.isSelected()) {
+                correcto2 = true;
+            }
+            
+            if (vista.jB_Opcion3.isSelected()) {
+                correcto3 = true;
+            }
+            
+            if (vista.jB_Opcion4.isSelected()) {
+                correcto4 = true;
+            }
+            
+            opcion1 = vista.jB_Opcion1.getText();
+            opcion2 = vista.jB_Opcion2.getText();
+            opcion3 = vista.jB_Opcion3.getText();
+            opcion4 = vista.jB_Opcion4.getText();
+            
+            modelo.insertar(new MultipleSelection(opcion1, correcto1, opcion2, correcto2, opcion3, correcto3, opcion4, correcto4, 
+                    vista.jcb_MSC.getSelectedItem().toString(), vista.jTextField_Pregunta.getText()));
         }
     }
+    
 
     public void iniciarVista() {
         try {

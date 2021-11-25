@@ -44,7 +44,7 @@ public class Vista_MS extends javax.swing.JDialog {
         jTF_Opcion4 = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jcb_TFC = new javax.swing.JComboBox<>();
+        jcb_MSC = new javax.swing.JComboBox<>();
         jB_Opcion1 = new javax.swing.JRadioButton();
         jB_Opcion2 = new javax.swing.JRadioButton();
         jB_Opcion3 = new javax.swing.JRadioButton();
@@ -83,10 +83,10 @@ public class Vista_MS extends javax.swing.JDialog {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("La o las respuestas correctas son:");
 
-        jcb_TFC.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jcb_TFC.addActionListener(new java.awt.event.ActionListener() {
+        jcb_MSC.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jcb_MSC.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jcb_TFCActionPerformed(evt);
+                jcb_MSCActionPerformed(evt);
             }
         });
 
@@ -161,7 +161,7 @@ public class Vista_MS extends javax.swing.JDialog {
                                 .addGap(42, 42, 42)
                                 .addComponent(jLabel3)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jcb_TFC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(jcb_MSC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(73, 73, 73)
                         .addComponent(jLabel2)))
@@ -198,7 +198,7 @@ public class Vista_MS extends javax.swing.JDialog {
                         .addComponent(jTF_Opcion4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(4, 4, 4)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jcb_TFC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jcb_MSC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jB_Añadir)
@@ -212,9 +212,9 @@ public class Vista_MS extends javax.swing.JDialog {
         // TODO add your handling code here:
     }//GEN-LAST:event_jB_AñadirActionPerformed
 
-    private void jcb_TFCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcb_TFCActionPerformed
+    private void jcb_MSCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcb_MSCActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jcb_TFCActionPerformed
+    }//GEN-LAST:event_jcb_MSCActionPerformed
 
     private void jB_Opcion1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB_Opcion1ActionPerformed
         // TODO add your handling code here:
@@ -288,6 +288,6 @@ public class Vista_MS extends javax.swing.JDialog {
     public javax.swing.JTextField jTF_Opcion3;
     public javax.swing.JTextField jTF_Opcion4;
     public javax.swing.JTextField jTextField_Pregunta;
-    public javax.swing.JComboBox<String> jcb_TFC;
+    public javax.swing.JComboBox<String> jcb_MSC;
     // End of variables declaration//GEN-END:variables
 }

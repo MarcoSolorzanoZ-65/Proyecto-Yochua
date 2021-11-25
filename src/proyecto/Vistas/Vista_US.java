@@ -37,6 +37,7 @@ public class Vista_US extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        opcionCorrecta = new javax.swing.ButtonGroup();
         jLabel1 = new javax.swing.JLabel();
         jTextField_Pregunta = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
@@ -70,6 +71,7 @@ public class Vista_US extends javax.swing.JDialog {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("La respuesta correcta es:");
 
+        opcionCorrecta.add(jB_Opcion1);
         jB_Opcion1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jB_Opcion1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -77,6 +79,7 @@ public class Vista_US extends javax.swing.JDialog {
             }
         });
 
+        opcionCorrecta.add(jB_Opcion2);
         jB_Opcion2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jB_Opcion2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -84,6 +87,7 @@ public class Vista_US extends javax.swing.JDialog {
             }
         });
 
+        opcionCorrecta.add(jB_Opcion3);
         jB_Opcion3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jB_Opcion3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -91,6 +95,7 @@ public class Vista_US extends javax.swing.JDialog {
             }
         });
 
+        opcionCorrecta.add(jB_Opcion4);
         jB_Opcion4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jB_Opcion4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -134,7 +139,7 @@ public class Vista_US extends javax.swing.JDialog {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(165, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jB_Añadir)
                 .addGap(163, 163, 163))
             .addGroup(layout.createSequentialGroup()
@@ -147,28 +152,29 @@ public class Vista_US extends javax.swing.JDialog {
                                 .addComponent(jTextField_Pregunta, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18))))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(69, 69, 69)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(30, 30, 30)
-                                .addComponent(jLabel2))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jB_Opcion1)
-                                    .addComponent(jB_Opcion2)
-                                    .addComponent(jB_Opcion3)
-                                    .addComponent(jB_Opcion4))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jTF_Opcion2, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTF_Opcion1, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTF_Opcion3, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTF_Opcion4, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(111, 111, 111)
                         .addComponent(jLabel3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jcb_USC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(20, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(69, 69, 69)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addComponent(jLabel2))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jB_Opcion1)
+                            .addComponent(jB_Opcion2)
+                            .addComponent(jB_Opcion3)
+                            .addComponent(jB_Opcion4))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTF_Opcion2, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTF_Opcion1, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTF_Opcion3, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTF_Opcion4, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -297,5 +303,6 @@ public class Vista_US extends javax.swing.JDialog {
     public javax.swing.JTextField jTF_Opcion4;
     public javax.swing.JTextField jTextField_Pregunta;
     public javax.swing.JComboBox<String> jcb_USC;
+    public static javax.swing.ButtonGroup opcionCorrecta;
     // End of variables declaration//GEN-END:variables
 }
