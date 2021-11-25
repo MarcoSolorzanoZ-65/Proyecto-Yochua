@@ -32,7 +32,7 @@ public class ClasePrueba {
         try { 
         UIManager.setLookAndFeel(new FlatDarkLaf()); 
         } catch(Exception ignored){}
-
+        
         Vista_Principal vista_Principal = new Vista_Principal();
         
         Dao_TF dao_TF = new Dao_TF();

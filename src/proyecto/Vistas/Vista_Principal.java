@@ -39,6 +39,7 @@ public class Vista_Principal extends javax.swing.JFrame {
         jMenuBar3 = new javax.swing.JMenuBar();
         jMenu5 = new javax.swing.JMenu();
         jM_agregar = new javax.swing.JMenuItem();
+        jM_mostrar = new javax.swing.JMenuItem();
         jM_salir = new javax.swing.JMenuItem();
         jMenu6 = new javax.swing.JMenu();
         jM_jugar = new javax.swing.JMenuItem();
@@ -60,6 +61,9 @@ public class Vista_Principal extends javax.swing.JFrame {
             }
         });
         jMenu5.add(jM_agregar);
+
+        jM_mostrar.setText("Mostrar");
+        jMenu5.add(jM_mostrar);
 
         jM_salir.setText("Salir");
         jM_salir.addActionListener(new java.awt.event.ActionListener() {
@@ -140,6 +144,7 @@ public class Vista_Principal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JMenuItem jM_agregar;
     public javax.swing.JMenuItem jM_jugar;
+    public javax.swing.JMenuItem jM_mostrar;
     public javax.swing.JMenuItem jM_salir;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
