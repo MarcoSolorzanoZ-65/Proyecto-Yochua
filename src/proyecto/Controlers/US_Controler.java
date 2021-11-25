@@ -19,6 +19,7 @@ import proyecto.Lists.TrueOrFalseList;
 import proyecto.Lists.UniqueSelectionList;
 import proyecto.Vistas.Vista_US;
 import proyecto.sampleClasses.TrueOrFalse;
+import proyecto.sampleClasses.UniqueSelection;
 
 /**
  * @author Luis Edo. Hodgson Quesada C13822
@@ -28,15 +29,12 @@ import proyecto.sampleClasses.TrueOrFalse;
 public class US_Controler implements ActionListener{
     
     private Vista_US vista;
-    private Dao_TF modelo;
-    private Dao_US modelo2;
-    private Dao_MS modelo3;
+    private Dao_US modelo;
 
-    public US_Controler(Vista_US vista,Dao_US modelo2) {
+
+    public US_Controler(Vista_US vista,Dao_US modelo) {
         this.vista = vista;
         this.modelo = modelo;
-        this.modelo2 = modelo2;
-        this.modelo3 = modelo3;
         this.vista.jB_Añadir.addActionListener(this);
         iniciarVista();
     }
@@ -44,13 +42,33 @@ public class US_Controler implements ActionListener{
     public void actionPerformed(ActionEvent e) {
         
         if (e.getSource() == vista.jB_Añadir) {
-            boolean tf = false;
-            if (vista.jRadioButton_True.isSelected()) {
-                tf = true;
-            } else if (vista.jRadioButton_False.isSelected()) {
-                tf = false;
+            String opcionCorrecta = "";
+            String opcioIncorrecta1 = "";
+            String opcioIncorrecta2 = "";
+            String opcioIncorrecta3 = "";
+            if (vista.jB_Opcion1.isSelected()) {
+                opcionCorrecta = vista.jTF_Opcion1.getText();
+                opcioIncorrecta1 = vista.jTF_Opcion2.getText();
+                opcioIncorrecta2 = vista.jTF_Opcion3.getText();
+                opcioIncorrecta3 = vista.jTF_Opcion3.getText();
+            } else if (vista.jB_Opcion2.isSelected()) {
+                opcionCorrecta = vista.jTF_Opcion2.getText();
+                opcioIncorrecta1 = vista.jTF_Opcion1.getText();
+                opcioIncorrecta2 = vista.jTF_Opcion3.getText();
+                opcioIncorrecta3 = vista.jTF_Opcion4.getText();
+            } else if (vista.jB_Opcion3.isSelected()) {
+                opcionCorrecta = vista.jTF_Opcion3.getText();
+                opcioIncorrecta1 = vista.jTF_Opcion1.getText();
+                opcioIncorrecta2 = vista.jTF_Opcion2.getText();
+                opcioIncorrecta3 = vista.jTF_Opcion4.getText();
+                
+            } else if (vista.jB_Opcion4.isSelected()) {
+                opcionCorrecta = vista.jTF_Opcion4.getText();
+                opcioIncorrecta1 = vista.jTF_Opcion1.getText();
+                opcioIncorrecta2 = vista.jTF_Opcion2.getText();
+                opcioIncorrecta3 = vista.jTF_Opcion3.getText();
             }
-            modelo.insertar(new TrueOrFalse(tf, vista.jcb_TFC.getSelectedItem().toString(),vista.jTextField_Pregunta.getText()));
+            modelo.insertar(new UniqueSelection(opcionCorrecta, opcioIncorrecta1, opcioIncorrecta2, opcioIncorrecta3, vista.jcb_USC.getSelectedItem().toString(), vista.jTextField_Pregunta.getText()));
             vista.dispose();
         }
         
