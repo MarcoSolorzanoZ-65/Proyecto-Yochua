@@ -70,8 +70,7 @@ public class US_Controler implements ActionListener{
             }
             modelo.insertar(new UniqueSelection(opcionCorrecta, opcioIncorrecta1, opcioIncorrecta2, opcioIncorrecta3, vista.jcb_USC.getSelectedItem().toString(), vista.jTextField_Pregunta.getText()));
             vista.dispose();
-        }
-        
+        } 
     }
 
     public void iniciarVista() {

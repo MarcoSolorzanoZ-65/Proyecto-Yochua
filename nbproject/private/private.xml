@@ -2,32 +2,23 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-<<<<<<< Updated upstream
         <group>
-            <file>file:/C:/Users/Joshu/Documents/GitHub/Proyecto-Yochua/src/proyecto/Lists/TrueOrFalseList.java</file>
-            <file>file:/C:/Users/Joshu/Documents/GitHub/Proyecto-Yochua/src/proyecto/DAO/MS/Dao_MS.java</file>
-            <file>file:/C:/Users/Joshu/Documents/GitHub/Proyecto-Yochua/src/proyecto/DAO/US/Dao_US.java</file>
-            <file>file:/C:/Users/Joshu/Documents/GitHub/Proyecto-Yochua/src/proyecto/Question.java</file>
-            <file>file:/C:/Users/Joshu/Documents/GitHub/Proyecto-Yochua/src/proyecto/DAO/US/WriterManager_US.java</file>
-            <file>file:/C:/Users/Joshu/Documents/GitHub/Proyecto-Yochua/src/proyecto/DAO/MS/WriterManager_MS.java</file>
-            <file>file:/C:/Users/Joshu/Documents/GitHub/Proyecto-Yochua/src/proyecto/sampleClasses/TrueOrFalse.java</file>
-            <file>file:/C:/Users/Joshu/Documents/GitHub/Proyecto-Yochua/src/proyecto/Lists/UniqueSelectionList.java</file>
-            <file>file:/C:/Users/Joshu/Documents/GitHub/Proyecto-Yochua/src/proyecto/Controlers/Juego_Controler.java</file>
-            <file>file:/C:/Users/Joshu/Documents/GitHub/Proyecto-Yochua/src/proyecto/Controlers/Principal_Controler.java</file>
-            <file>file:/C:/Users/Joshu/Documents/GitHub/Proyecto-Yochua/src/proyecto/DAO/US/ReaderManager_US.java</file>
-            <file>file:/C:/Users/Joshu/Documents/GitHub/Proyecto-Yochua/src/proyecto/DAO/TF/WriterManager_TF.java</file>
-            <file>file:/C:/Users/Joshu/Documents/GitHub/Proyecto-Yochua/src/proyecto/ClasePrueba.java</file>
-            <file>file:/C:/Users/Joshu/Documents/GitHub/Proyecto-Yochua/src/proyecto/DAO/TF/Dao_TF.java</file>
-            <file>file:/C:/Users/Joshu/Documents/GitHub/Proyecto-Yochua/src/proyecto/Lists/MultipleSelectionList.java</file>
-            <file>file:/C:/Users/Joshu/Documents/GitHub/Proyecto-Yochua/src/proyecto/sampleClasses/MultipleSelection.java</file>
-            <file>file:/C:/Users/Joshu/Documents/GitHub/Proyecto-Yochua/src/proyecto/DAO/MS/ReaderManager_MS.java</file>
-            <file>file:/C:/Users/Joshu/Documents/GitHub/Proyecto-Yochua/src/proyecto/sampleClasses/MS_Answers.java</file>
-            <file>file:/C:/Users/Joshu/Documents/GitHub/Proyecto-Yochua/src/proyecto/sampleClasses/UniqueSelection.java</file>
-            <file>file:/C:/Users/Joshu/Documents/GitHub/Proyecto-Yochua/src/proyecto/Lists/MS_AnswerList.java</file>
-            <file>file:/C:/Users/Joshu/Documents/GitHub/Proyecto-Yochua/src/proyecto/DAO/TF/ReaderManager_TF.java</file>
+            <file>file:/C:/Users/luise/Documents/GitHub/Proyecto-Yochua/src/proyecto/Controlers/Juego_Controler.java</file>
+            <file>file:/C:/Users/luise/Documents/GitHub/Proyecto-Yochua/src/proyecto/Vistas/Vista_Juego.java</file>
+            <file>file:/C:/Users/luise/Documents/GitHub/Proyecto-Yochua/src/proyecto/Vistas/Vista_Principal.java</file>
+            <file>file:/C:/Users/luise/Documents/GitHub/Proyecto-Yochua/src/proyecto/DAO/US/Dao_US.java</file>
+            <file>file:/C:/Users/luise/Documents/GitHub/Proyecto-Yochua/src/proyecto/Vistas/Vista_MS.java</file>
+            <file>file:/C:/Users/luise/Documents/GitHub/Proyecto-Yochua/src/proyecto/Vistas/Vista_Añadir.java</file>
+            <file>file:/C:/Users/luise/Documents/GitHub/Proyecto-Yochua/src/proyecto/ClasePrueba.java</file>
+            <file>file:/C:/Users/luise/Documents/GitHub/Proyecto-Yochua/src/proyecto/Vistas/Vista_US.java</file>
+            <file>file:/C:/Users/luise/Documents/GitHub/Proyecto-Yochua/src/proyecto/sampleClasses/MultipleSelection.java</file>
+            <file>file:/C:/Users/luise/Documents/GitHub/Proyecto-Yochua/src/proyecto/Controlers/Añadir_Controler.java</file>
+            <file>file:/C:/Users/luise/Documents/GitHub/Proyecto-Yochua/src/proyecto/Vistas/Vista_TF.java</file>
+            <file>file:/C:/Users/luise/Documents/GitHub/Proyecto-Yochua/src/proyecto/Controlers/MS_Controler.java</file>
+            <file>file:/C:/Users/luise/Documents/GitHub/Proyecto-Yochua/src/proyecto/Controlers/TF_Controler.java</file>
+            <file>file:/C:/Users/luise/Documents/GitHub/Proyecto-Yochua/src/proyecto/Controlers/US_Controler.java</file>
+            <file>file:/C:/Users/luise/Documents/GitHub/Proyecto-Yochua/src/proyecto/sampleClasses/UniqueSelection.java</file>
+            <file>file:/C:/Users/luise/Documents/GitHub/Proyecto-Yochua/src/proyecto/Controlers/Principal_Controler.java</file>
         </group>
-=======
-        <group/>
->>>>>>> Stashed changes
     </open-files>
 </project-private>

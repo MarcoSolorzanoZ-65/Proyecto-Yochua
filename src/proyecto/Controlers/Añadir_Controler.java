@@ -43,7 +43,7 @@ public class Añadir_Controler implements  ActionListener{
     
 
     
-    public Añadir_Controler(Vista_Añadir vista, Dao_TF modelo) {
+    public Añadir_Controler(Vista_Añadir vista, Dao_TF modelo, Dao_US modelo2, Dao_MS modelo3) {
         this.vista = vista;
         this.modelo = modelo;
         this.modelo2 = modelo2;

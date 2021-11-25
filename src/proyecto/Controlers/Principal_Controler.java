@@ -45,7 +45,7 @@ public class Principal_Controler implements ActionListener{
         }
         if (e.getSource() == vista.jM_agregar) {
             Vista_Añadir vista_Añadir = new Vista_Añadir(vista, false);
-            Añadir_Controler ac = new Añadir_Controler(vista_Añadir,modelo);
+            Añadir_Controler ac = new Añadir_Controler(vista_Añadir,modelo, modelo2, modelo3);
             modelo.cargarDatosPrueba();
             modelo2.cargarDatosPrueba();
             modelo3.cargarDatosPrueba();

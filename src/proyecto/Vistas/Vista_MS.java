@@ -275,7 +275,7 @@ public class Vista_MS extends javax.swing.JDialog {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jB_Añadir;
+    public javax.swing.JButton jB_Añadir;
     public javax.swing.JRadioButton jB_Opcion1;
     public javax.swing.JRadioButton jB_Opcion2;
     public javax.swing.JRadioButton jB_Opcion3;
