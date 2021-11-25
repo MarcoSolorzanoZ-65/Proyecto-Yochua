@@ -8,8 +8,9 @@ package proyecto.Vistas;
 import java.awt.Color;
 
 /**
- *
- * @author luise
+ * @author Luis Edo. Hodgson Quesada C13822
+ * @time 14:33:08
+ * @date 24 nov. 2021
  */
 public class Vista_Añadir extends javax.swing.JDialog {
 
@@ -43,6 +44,7 @@ public class Vista_Añadir extends javax.swing.JDialog {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
+        jButton_AMS.setForeground(new java.awt.Color(255, 255, 255));
         jButton_AMS.setText("Multiple Selection");
         jButton_AMS.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -50,6 +52,7 @@ public class Vista_Añadir extends javax.swing.JDialog {
             }
         });
 
+        jButton_ATF.setForeground(new java.awt.Color(255, 255, 255));
         jButton_ATF.setText("True/False");
         jButton_ATF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -58,10 +61,12 @@ public class Vista_Añadir extends javax.swing.JDialog {
         });
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Que tipo de pregunta desea añadir:");
         jLabel1.setAlignmentY(0.0F);
 
+        jButton_AUS.setForeground(new java.awt.Color(255, 255, 255));
         jButton_AUS.setText("Unique Selection");
         jButton_AUS.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

@@ -18,7 +18,7 @@ import proyecto.Lists.MultipleSelectionList;
 import proyecto.Lists.TrueOrFalseList;
 import proyecto.Lists.UniqueSelectionList;
 import proyecto.Vistas.Vista_Añadir;
-import proyecto.Vistas.Vista_Juego;
+
 
 /**
  * @author Luis Edo. Hodgson Quesada C13822
@@ -63,7 +63,7 @@ public class Añadir_Controler implements  ActionListener{
         try {
             UIManager.setLookAndFeel(new FlatDarkLaf());
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Vista_Juego.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Vista_Añadir.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
 
         java.awt.EventQueue.invokeLater(new Runnable() {
