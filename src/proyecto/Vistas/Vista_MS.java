@@ -5,6 +5,8 @@
  */
 package proyecto.Vistas;
 
+import java.awt.Color;
+
 /**
  * @author Luis Edo. Hodgson Quesada C13822
  * @time 14:33:08
@@ -17,7 +19,13 @@ public class Vista_MS extends javax.swing.JDialog {
      */
     public Vista_MS(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
+        this.setLocationRelativeTo(null);
+        this.pack();
         initComponents();
+        Color col = new Color(61,61,61);
+        this.setResizable(false);
+        this.setBackground(col);
+        this.setTitle("Añadir Selección Unica");
     }
 
     /**
@@ -226,14 +234,14 @@ public class Vista_MS extends javax.swing.JDialog {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton3;
-    private javax.swing.JRadioButton jRadioButton4;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField_Pregunta;
+    public javax.swing.JRadioButton jRadioButton1;
+    public javax.swing.JRadioButton jRadioButton2;
+    public javax.swing.JRadioButton jRadioButton3;
+    public javax.swing.JRadioButton jRadioButton4;
+    public javax.swing.JTextField jTextField1;
+    public javax.swing.JTextField jTextField2;
+    public javax.swing.JTextField jTextField3;
+    public javax.swing.JTextField jTextField4;
+    public javax.swing.JTextField jTextField_Pregunta;
     // End of variables declaration//GEN-END:variables
 }

@@ -5,6 +5,8 @@
  */
 package proyecto.Vistas;
 
+import java.awt.Color;
+
 /**
  * 
  * @author Luis Edo. Hodgson Quesada C13822
@@ -18,9 +20,14 @@ public class Vista_TF extends javax.swing.JDialog {
      */
     public Vista_TF(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
+        this.setLocationRelativeTo(null);
+        this.pack();
         initComponents();
+        Color col = new Color(61,61,61);
+        this.setResizable(false);
+        this.setBackground(col);
+        this.setTitle("Añadir True/False");
     }
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -190,8 +197,8 @@ public class Vista_TF extends javax.swing.JDialog {
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JRadioButton jRadioButton_False;
-    private javax.swing.JRadioButton jRadioButton_True;
-    private javax.swing.JTextField jTextField_Pregunta;
+    public javax.swing.JRadioButton jRadioButton_False;
+    public javax.swing.JRadioButton jRadioButton_True;
+    public javax.swing.JTextField jTextField_Pregunta;
     // End of variables declaration//GEN-END:variables
 }

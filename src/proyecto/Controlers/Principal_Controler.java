@@ -6,6 +6,7 @@ import java.awt.event.ActionListener;
 import javax.swing.UIManager;
 import proyecto.Vistas.Vista_Juego;
 import proyecto.Vistas.Vista_Principal;
+import proyecto.Vistas.Vista_Añadir;
 import proyecto.DAO.TF.Dao_TF;
 import proyecto.DAO.US.Dao_US;
 import proyecto.DAO.MS.Dao_MS;
@@ -15,7 +16,7 @@ import proyecto.DAO.MS.Dao_MS;
  * @date 2021-08-16
  * @time 10:13:20
  */
-public class Principal_Controler implements ActionListener {
+public class Principal_Controler implements ActionListener{
 
     private Vista_Principal vista;
     private Dao_TF modelo;
@@ -44,9 +45,11 @@ public class Principal_Controler implements ActionListener {
             System.exit(0);
         }
         if (e.getSource() == vista.jM_agregar) {
+            Vista_Añadir va = new Vista_Añadir(vista, false);
             modelo.cargarDatosPrueba();
             modelo2.cargarDatosPrueba();
             modelo3.cargarDatosPrueba();
+            va.iniciarVista();
         }
     }
 }
