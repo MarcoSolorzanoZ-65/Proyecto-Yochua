@@ -11,7 +11,7 @@ public class UniqueSelectionList {
 
     private UniqueSelection[] uniqueSelections;
     private int index = 0;
-    private final int TAMANO = 10;
+    private final int TAMANO = 5;
 
     public UniqueSelectionList() {
         this.uniqueSelections = new UniqueSelection[TAMANO];
