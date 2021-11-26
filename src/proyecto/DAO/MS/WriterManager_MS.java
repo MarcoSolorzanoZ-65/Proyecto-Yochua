@@ -9,11 +9,11 @@ import proyecto.sampleClasses.MultipleSelection;
 
 /**
  * @author Marco Zumbado Solorzano carne C18736
- * @date 2021-08-16 
+ * @date 2021-08-16
  * @time 10:13:20
-*/
-
+ */
 public class WriterManager_MS {
+
     private BufferedWriter writer;
     MultipleSelectionList lista = ClasePrueba.lista_MultipleSelectionList; // atributo statico de la lista de preguntas    
 
@@ -24,13 +24,13 @@ public class WriterManager_MS {
     public void write(MultipleSelection p) throws IOException {
         writer.write(p.toString() + "\n");
     }
-    
+
     public void writeAll() throws IOException {
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < lista.getTAMANO(); i++) {
             MultipleSelection e = lista.getElemento(i);
-            if (e != null){
+            if (e != null) {
                 write(e);
-            }           
+            }
         }
     }
 

@@ -1,0 +1,8 @@
+Es la antartida fria?-true-Geografia
+Es el desierto del Sahara caliente?-true-Geografia
+Es el color verde, azul?-false-Arte
+Es la antartida fria?-true-null
+Es el desierto del Sahara caliente?-true-null
+Es el color verde, azul?-false-null
+luis?-true-Item 2
+marco?-false-Item 3

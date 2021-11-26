@@ -7,11 +7,10 @@ import proyecto.Question;
  * @time 8:01:56 PM
  * @date Oct 21, 2021
  */
-public class TrueOrFalse extends Question{
-    
+public class TrueOrFalse extends Question {
 
     private Boolean answer;
-    
+
     public TrueOrFalse() {
     }
 
@@ -21,10 +20,9 @@ public class TrueOrFalse extends Question{
     }
 
     //set
-
     public void setAnswer(Boolean answer) {
         this.answer = answer;
-    }    
+    }
 
     @Override
     public void setCategory(String category) {
@@ -40,9 +38,8 @@ public class TrueOrFalse extends Question{
     public void setType(String type) {
         super.setType(type); //To change body of generated methods, choose Tools | Templates.
     }
-    
-    //get
 
+    //get
     public Boolean getAnswer() {
         return answer;
     }
@@ -71,6 +68,5 @@ public class TrueOrFalse extends Question{
     public String toString() {
         return getQuestion() + "-" + getAnswer() + "-" + getCategory();
     }
-    
-    
+
 }

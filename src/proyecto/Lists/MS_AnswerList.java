@@ -4,12 +4,11 @@ import proyecto.sampleClasses.MS_Answers;
 
 /**
  * @author Marco Zumbado Solorzano carne C18736
- * @date 2021-08-16 
+ * @date 2021-08-16
  * @time 10:13:20
-*/
+ */
 public class MS_AnswerList {
 
-    
     private MS_Answers[] mS_Answerses;
     private int index = 0;
     private final int TAMANO = 4;
@@ -49,17 +48,14 @@ public class MS_AnswerList {
         index++;
     }
 
-
     public String getSpecificAnswer(int i) {
         return mS_Answerses[i].getAnswer();
     }
-    
-    
-    
+
     public MS_Answers getElemento() {
-        int elementoRandom = (int) (Math.random() * index); 
-        
+        int elementoRandom = (int) (Math.random() * index);
+
         return mS_Answerses[elementoRandom]; // falta validaciones (null, etc.. )
     }
-    
+
 }

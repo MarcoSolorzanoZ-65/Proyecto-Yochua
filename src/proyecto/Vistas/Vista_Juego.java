@@ -36,6 +36,8 @@ public class Vista_Juego extends javax.swing.JDialog {
         jb_mc = new javax.swing.JButton();
         jb_sc = new javax.swing.JButton();
 
+        jb_tf.setBackground(new java.awt.Color(255, 255, 255));
+        jb_tf.setForeground(new java.awt.Color(0, 0, 0));
         jb_tf.setText("True/False");
         jb_tf.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -46,6 +48,8 @@ public class Vista_Juego extends javax.swing.JDialog {
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jLabel1.setText("Juego Trivia");
 
+        jb_mc.setBackground(new java.awt.Color(255, 255, 255));
+        jb_mc.setForeground(new java.awt.Color(0, 0, 0));
         jb_mc.setText("Multiple Selection");
         jb_mc.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -53,6 +57,8 @@ public class Vista_Juego extends javax.swing.JDialog {
             }
         });
 
+        jb_sc.setBackground(new java.awt.Color(255, 255, 255));
+        jb_sc.setForeground(new java.awt.Color(0, 0, 0));
         jb_sc.setText("Unique Selection");
         jb_sc.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

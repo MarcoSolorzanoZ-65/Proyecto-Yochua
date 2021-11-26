@@ -11,7 +11,7 @@ public class UniqueSelectionList {
 
     private UniqueSelection[] uniqueSelections;
     private int index = 0;
-    private final static int TAMANO = 3;
+    private final int TAMANO = 10;
 
     public UniqueSelectionList() {
         this.uniqueSelections = new UniqueSelection[TAMANO];
@@ -52,32 +52,32 @@ public class UniqueSelectionList {
     public String getQuestions() {
         String text = "";
         int cont = 1;
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < TAMANO; i++) {
             if (uniqueSelections[i].getQuestion() != null) {
-                text += cont + ") " + uniqueSelections[i].getQuestion();
+                text += cont + ") " + uniqueSelections[i].getQuestion() + "\n";
                 cont++;
             }
         }
         return text;
     }
-    
+
     public UniqueSelection getElemento() {
-        int elementoRandom = (int) (Math.random() * index); 
-        
+        int elementoRandom = (int) (Math.random() * index);
+
         return uniqueSelections[elementoRandom]; // falta validaciones (null, etc.. )
     }
-    
+
     public UniqueSelection getElemento(int index) {
         return uniqueSelections[index]; // falta validaciones (null, etc.. )
     }
-    
+
     public void agregar(UniqueSelection e) {
         if (index < TAMANO) {
             uniqueSelections[index] = e;
             index++;
         }
     }
-    
+
     public String getSpecificQuestion(int i) {
         return uniqueSelections[i].getQuestion();
     }
@@ -85,4 +85,10 @@ public class UniqueSelectionList {
     public String getSpecificAnswer(int i) {
         return uniqueSelections[i].getAnswer();
     }
+
+    public int getTAMANO() {
+        return TAMANO;
+    }
+    
+    
 }

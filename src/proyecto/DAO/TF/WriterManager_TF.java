@@ -9,11 +9,11 @@ import proyecto.sampleClasses.TrueOrFalse;
 
 /**
  * @author Marco Zumbado Solorzano carne C18736
- * @date 2021-08-16 
+ * @date 2021-08-16
  * @time 10:13:20
-*/
-
+ */
 public class WriterManager_TF {
+
     private BufferedWriter writer;
     TrueOrFalseList lista = ClasePrueba.lista_TFalseList; // atributo statico de la lista de preguntas    
 
@@ -24,13 +24,13 @@ public class WriterManager_TF {
     public void write(TrueOrFalse p) throws IOException {
         writer.write(p.toString() + "\n");
     }
-    
+
     public void writeAll() throws IOException {
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < lista.getTAMANO(); i++) {
             TrueOrFalse e = lista.getElemento(i);
-            if (e != null){
+            if (e != null) {
                 write(e);
-            }           
+            }
         }
     }
 

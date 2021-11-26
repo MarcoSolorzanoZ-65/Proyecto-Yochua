@@ -11,7 +11,7 @@ public class TrueOrFalseList {
 
     private TrueOrFalse[] trueOrFalse;
     private int index = 0;
-    public int TAMANO = 3;
+    public int TAMANO = 10;
 
     public TrueOrFalseList() {
         this.trueOrFalse = new TrueOrFalse[TAMANO];
@@ -51,9 +51,9 @@ public class TrueOrFalseList {
     public String getQuestions() {
         String text = "";
         int cont = 1;
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < TAMANO; i++) {
             if (trueOrFalse[i].getQuestion() != null) {
-                text += cont + ") " + trueOrFalse[i].getQuestion();
+                text += cont + ") " + trueOrFalse[i].getQuestion() + "\n";
                 cont++;
             }
         }
@@ -67,28 +67,30 @@ public class TrueOrFalseList {
     public Boolean getSpecificAnswer(int i) {
         return trueOrFalse[i].getAnswer();
     }
-    
+
     public TrueOrFalse getElemento() {
-        int elementoRandom = (int) (Math.random() * index); 
-        
+        int elementoRandom = (int) (Math.random() * index);
+
         return trueOrFalse[elementoRandom]; // falta validaciones (null, etc.. )
     }
-    
+
     public TrueOrFalse getElemento(int index) {
         return trueOrFalse[index]; // falta validaciones (null, etc.. )
     }
-    
+
     public void agregar(TrueOrFalse e) {
         if (index < TAMANO) {
             trueOrFalse[index] = e;
             index++;
         }
     }
-    
+
     public void setCategory(int i, String category) {
         trueOrFalse[i].setCategory(category);
     }
-    
-    
+
+    public int getTAMANO() {
+        return TAMANO;
+    }
 
 }

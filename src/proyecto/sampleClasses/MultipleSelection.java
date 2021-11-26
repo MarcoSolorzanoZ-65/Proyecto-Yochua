@@ -44,7 +44,7 @@ public class MultipleSelection extends Question {
     public MS_AnswerList getmS_AnswerList() {
         return mS_AnswerList;
     }
-    
+
     @Override
     public String getCategory() {
         return super.getCategory(); //To change body of generated methods, choose Tools | Templates.
@@ -64,10 +64,10 @@ public class MultipleSelection extends Question {
     public int getId() {
         return super.getId(); //To change body of generated methods, choose Tools | Templates.
     }
-    
+
     @Override
     public String toString() {
         return getQuestion() + "-" + getmS_AnswerList().getVectorString() + getCategory();
     }
-    
+
 }

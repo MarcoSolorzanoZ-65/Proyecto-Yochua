@@ -11,7 +11,7 @@ public class MultipleSelectionList {
 
     private MultipleSelection[] multipleSelectionList;
     private int index = 0;
-    private final int TAMANO = 3;
+    private final int TAMANO = 10;
 
     public MultipleSelectionList() {
         this.multipleSelectionList = new MultipleSelection[TAMANO];
@@ -42,28 +42,39 @@ public class MultipleSelectionList {
         }
         return text;
     }
+    public String getQuestions() {
+        String text = "";
+        int cont = 1;
+        for (int i = 0; i < TAMANO; i++) {
+            if (multipleSelectionList[i].getQuestion() != null) {
+                text += cont + ") " + multipleSelectionList[i].getQuestion() + "\n";
+                cont++;
+            }
+        }
+        return text;
+    }
 
     public void setMultipleSelection(String answer1, boolean correct1, String answer2, boolean correct2,
             String answer3, boolean correct3, String answer4, boolean correct4, String category,
             String Question) {
 
         multipleSelectionList[index] = new MultipleSelection(answer1, correct1, answer2, correct2,
-            answer3, correct3, answer4, correct4, category, Question);
-        
+                answer3, correct3, answer4, correct4, category, Question);
+
         index++;
     }
-    
+
     public MultipleSelection getElemento(int index) {
         return multipleSelectionList[index]; // falta validaciones (null, etc.. )
     }
-    
+
     public void agregar(MultipleSelection e) {
         if (index < TAMANO) {
             multipleSelectionList[index] = e;
             index++;
         }
     }
-    
+
     public String getSpecificQuestion(int i) {
         return multipleSelectionList[i].getQuestion();
     }
@@ -73,6 +84,10 @@ public class MultipleSelectionList {
 
         return multipleSelectionList[elementoRandom]; // falta validaciones (null, etc.. )
     }
-    
+
+    public int getTAMANO() {
+        return TAMANO;
+    }
+
     
 }

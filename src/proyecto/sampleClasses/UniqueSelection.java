@@ -25,24 +25,21 @@ public class UniqueSelection extends Question {
         this.incAnswer3 = incAnswer3;
     }
 
-
-
     // set
-
     public void setIncAnswer3(String incAnswer3) {
-        this.incAnswer3 = incAnswer3; 
+        this.incAnswer3 = incAnswer3;
     }
 
     public void setIncAnswer2(String incAnswer2) {
-        this.incAnswer2 = incAnswer2; 
+        this.incAnswer2 = incAnswer2;
     }
 
     public void setIncAnswer1(String incAnswer1) {
-        this.incAnswer1 = incAnswer1; 
+        this.incAnswer1 = incAnswer1;
     }
 
     public void setAnswer(String answer) {
-        this.answer = answer; 
+        this.answer = answer;
     }
 
     @Override
@@ -61,7 +58,6 @@ public class UniqueSelection extends Question {
     }
 
     // get
-
     public String getAnswer() {
         return answer;
     }

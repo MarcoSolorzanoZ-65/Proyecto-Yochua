@@ -34,9 +34,6 @@ public class Añadir_Controler implements  ActionListener{
     private Vista_TF vistaTF;
     private Vista_MS vistaMS;
     private Vista_US vistaUS;
-    private TF_Controler controlerTF;
-    private MS_Controler controlerMS;
-    private US_Controler controlerUS;
     private Dao_TF modelo;
     private Dao_US modelo2;
     private Dao_MS modelo3;

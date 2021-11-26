@@ -10,9 +10,9 @@ import proyecto.sampleClasses.MultipleSelection;
 
 /**
  * @author Marco Zumbado Solorzano carne C18736
- * @date 2021-08-16 
+ * @date 2021-08-16
  * @time 10:13:20
-*/
+ */
 public class ReaderManager_MS {
 
     private BufferedReader reader;
@@ -34,7 +34,7 @@ public class ReaderManager_MS {
             p.getmS_AnswerList().setMS_Answers(datos[3], Boolean.parseBoolean(datos[4]));
             p.getmS_AnswerList().setMS_Answers(datos[5], Boolean.parseBoolean(datos[6]));
             p.getmS_AnswerList().setMS_Answers(datos[7], Boolean.parseBoolean(datos[8]));
-            
+
         }
         return p;
     }
@@ -45,6 +45,7 @@ public class ReaderManager_MS {
             lista.agregar(p);
         }
     }
+
     public void close() throws IOException {
         reader.close();
     }
