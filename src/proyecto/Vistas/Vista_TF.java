@@ -54,6 +54,16 @@ public class Vista_TF extends javax.swing.JDialog {
 
         jTextField_Pregunta.setForeground(new java.awt.Color(255, 255, 255));
         jTextField_Pregunta.setText("Pregunta...");
+        jTextField_Pregunta.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTextField_PreguntaMouseClicked(evt);
+            }
+        });
+        jTextField_Pregunta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField_PreguntaActionPerformed(evt);
+            }
+        });
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -75,7 +85,7 @@ public class Vista_TF extends javax.swing.JDialog {
             }
         });
 
-        jcb_TFC.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jcb_TFC.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Arte", "Entretenimiento", "Deportes", "Historia", "Geografía", "Ciencia" }));
         jcb_TFC.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jcb_TFCActionPerformed(evt);
@@ -150,6 +160,14 @@ public class Vista_TF extends javax.swing.JDialog {
         // TODO add your handling code here:
     }//GEN-LAST:event_jcb_TFCActionPerformed
 
+    private void jTextField_PreguntaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_PreguntaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField_PreguntaActionPerformed
+
+    private void jTextField_PreguntaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField_PreguntaMouseClicked
+        jTextField_Pregunta.setText("");
+    }//GEN-LAST:event_jTextField_PreguntaMouseClicked
+                                                    
     /**
      * @param args the command line arguments
      */
