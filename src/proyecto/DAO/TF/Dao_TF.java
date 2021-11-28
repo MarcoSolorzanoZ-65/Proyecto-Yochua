@@ -23,6 +23,12 @@ public class Dao_TF {
         guardarLista(p);
         return true;
     }
+    
+    public boolean eliminar(int i) {
+        TrueOrFalse t = lista.eliminar(i--);
+        guardarLista(t);
+        return true;
+    }
 
     public TrueOrFalse generarPreguntaRandom() {
         TrueOrFalse p = lista.getElemento();

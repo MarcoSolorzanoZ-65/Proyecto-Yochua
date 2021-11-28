@@ -1,3 +1,5 @@
-Es la antartida fria?-true-Geografia
-Es el desierto del Sahara caliente?-true-Geografia
-Es el color verde, azul?-false-Arte
+Joshui guapo-false-Historia
+Marco es manco-true-null
+Marco es manco-true-null
+Marco es manco-true-null
+Marco es manco-true-null

@@ -50,11 +50,15 @@ public class TrueOrFalseList {
 
     public String getQuestions() {
         String text = "";
-        int cont = 1;
-        for (int i = 0; i < TAMANO; i++) {
-            if (trueOrFalse[i].getQuestion() != null) {
-                text += cont + ") " + trueOrFalse[i].getQuestion() + "\n";
-                cont++;
+        int cont = 0;
+        int num = 1;
+        for (TrueOrFalse element : trueOrFalse) {
+            if (element != null) {
+                if (cont < TAMANO) {
+                    text += num + ") " + trueOrFalse[cont].getQuestion() + "\n";
+                    num++;
+                    cont++;
+                }
             }
         }
         return text;
@@ -83,6 +87,14 @@ public class TrueOrFalseList {
             trueOrFalse[index] = e;
             index++;
         }
+    }
+
+    public TrueOrFalse eliminar(int i) {
+        trueOrFalse[i] = null;
+        if (trueOrFalse[i+1]!=null) {
+            trueOrFalse[i] = trueOrFalse[i+1];
+        }
+        return trueOrFalse[i];
     }
 
     public void setCategory(int i, String category) {

@@ -46,20 +46,23 @@ public class Mostrar_Controler implements ActionListener {
 
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == vista.jButtonTF) {
+            modelo.cargarDatosPrueba();
             vista.jTextArea1.setEditable(false);
             vista.jTextArea1.setText(modelo.getLista().getQuestions());
         }
         if (e.getSource() == vista.jButtonUS) {
+            modelo2.cargarDatosPrueba();
             vista.jTextArea1.setEditable(false);
             vista.jTextArea1.setText(modelo2.getLista().getQuestions());
         }
         if (e.getSource() == vista.jButtonMS) {
+            modelo3.cargarDatosPrueba();
             vista.jTextArea1.setEditable(false);
             vista.jTextArea1.setText(modelo3.getLista().getQuestions());
         }
         if (e.getSource() == vista.jB_Delete) {
             int index = Integer.parseInt(vista.jText_NumPregunta.getText());
-            
+            modelo.eliminar(index);
             
         }
     }
