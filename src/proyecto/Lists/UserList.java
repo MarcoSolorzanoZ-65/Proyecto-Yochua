@@ -11,40 +11,26 @@ public class UserList {
 
     private User[] userList;
     private int index = 0;
+    private int TAMANO = 10;
 
     public UserList() {
-        this.userList = new User[10];
+        this.userList = new User[TAMANO];
     }
 
     public UserList(User[] userVector) {
         if (userVector == null) {
-            this.userList = new User[10];
+            this.userList = new User[TAMANO];
         } else {
             this.userList = userVector;
         }
     }
     
-    public User[] aumentarVector() {
-        User[] userList2 = new User[userList.length + 10];
-        for (int i = 0; i < userList.length; i++) {
-            userList2[i] = userList[i];
-        }
-        return userList2;
-    }
     
     public void setUser(User user) {
-        
-        if (userList.length == 10) {
-            userList = aumentarVector();
+        if (index < TAMANO) {
+            userList[index] = user;
+            index++;
         }
-        for (int i = userList.length - 1; i > 0; i--) {
-            userList[i] = userList[i - 1];
-
-            if (userList.length == 10) {
-                userList = aumentarVector();
-            }
-        }
-        userList[0] = user;
     }
     
     public int getTAMANO(){
