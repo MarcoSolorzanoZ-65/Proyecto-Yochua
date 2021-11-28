@@ -1,16 +1,57 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package proyecto.Controlers;
+
+import com.formdev.flatlaf.FlatDarkLaf;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.UIManager;
+import proyecto.ClasePrueba;
+import proyecto.Lists.UserList;
+import com.formdev.flatlaf.FlatDarkLaf;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.UIManager;
+import proyecto.DAO.Users.Dao_User;
+import proyecto.Vistas.Vista_Registrar;
+import proyecto.sampleClasses.User;
+
+
 
 /**
  * @author Luis Edo. Hodgson Quesada C13822
- * @time 23:01:25
- * @date 26 nov. 2021
+ * @time 14:33:08
+ * @date 24 nov. 2021
  */
-public class Registrar_Controler {
+public class Registrar_Controler implements ActionListener{
 
+    private Vista_Registrar vista;
+    private Dao_User modelo;
+
+
+    public Registrar_Controler(Vista_Registrar vista, Dao_User modelo) {
+        this.vista = vista;
+        this.modelo = modelo;
+        this.vista.jButton_Registrar.addActionListener(this);
+        iniciarVista();
+    }
+
+    public void actionPerformed(ActionEvent e) {
+        if (e.getSource() == vista.jButton_Registrar) {
+            modelo.insertar(new User(vista.jText_Username.getText(), vista.jText_Password.getText()));
+            vista.dispose();
+        }
+    }
+
+    public void iniciarVista() {
+        try {
+            UIManager.setLookAndFeel(new FlatDarkLaf());
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(Vista_Registrar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                vista.setVisible(true);
+            }
+        });
+    }
 }

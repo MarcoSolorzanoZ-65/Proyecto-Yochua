@@ -1,9 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package proyecto.Controlers;
 
 /**
@@ -11,6 +5,47 @@ package proyecto.Controlers;
  * @time 23:01:04
  * @date 26 nov. 2021
  */
-public class Login_Controler {
+import com.formdev.flatlaf.FlatDarkLaf;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import com.formdev.flatlaf.FlatDarkLaf;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.UIManager;
+import proyecto.DAO.Users.Dao_User;
+import proyecto.Vistas.Vista_Login;
+import proyecto.sampleClasses.User;
 
+public class Login_Controler implements ActionListener {
+
+    private Vista_Login vista;
+    private Dao_User modelo;
+
+    public Login_Controler(Vista_Login vista, Dao_User modelo) {
+        this.vista = vista;
+        this.modelo = modelo;
+        this.vista.jButton_Login.addActionListener(this);
+        iniciarVista();
+    }
+
+    public void actionPerformed(ActionEvent e) {
+        if (e.getSource() == vista.jButton_Login) {
+
+            modelo.insertar(new User(vista.jText_Username.getText(), vista.jText_Password.getText()));
+        }
+    }
+
+    public void iniciarVista() {
+        try {
+            UIManager.setLookAndFeel(new FlatDarkLaf());
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(Vista_Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                vista.setVisible(true);
+            }
+        });
+    }
 }

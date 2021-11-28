@@ -50,6 +50,7 @@ public class Juego_Controler implements ActionListener {
             UniqueSelectionList list_SC = ClasePrueba.lista_UniqueSelectionList;
             System.out.println(list_SC.getVectorString());
         }
+        vista.dispose();
     }
 
     public void iniciarVista() {

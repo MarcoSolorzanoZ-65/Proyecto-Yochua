@@ -30,8 +30,8 @@ public class Vista_Registrar extends javax.swing.JDialog {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
+        jText_Username = new javax.swing.JTextField();
+        jText_Password = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jButton_Registrar = new javax.swing.JButton();
@@ -41,6 +41,7 @@ public class Vista_Registrar extends javax.swing.JDialog {
         jPanel1.setBackground(new java.awt.Color(102, 102, 102));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Registrar Usuario");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -60,19 +61,29 @@ public class Vista_Registrar extends javax.swing.JDialog {
                 .addContainerGap())
         );
 
-        jTextField1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jTextField1.setText("Digite su usuario...");
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        jText_Username.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jText_Username.setText("Digite su usuario...");
+        jText_Username.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jText_UsernameMouseClicked(evt);
+            }
+        });
+        jText_Username.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                jText_UsernameActionPerformed(evt);
             }
         });
 
-        jTextField2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jTextField2.setText("Digite su contraseña...");
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        jText_Password.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jText_Password.setText("Digite su contraseña...");
+        jText_Password.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jText_PasswordMouseClicked(evt);
+            }
+        });
+        jText_Password.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                jText_PasswordActionPerformed(evt);
             }
         });
 
@@ -99,8 +110,8 @@ public class Vista_Registrar extends javax.swing.JDialog {
                     .addComponent(jLabel3)
                     .addComponent(jLabel2)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jText_Username, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jText_Password, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(99, 99, 99))
             .addGroup(layout.createSequentialGroup()
                 .addGap(155, 155, 155)
@@ -114,11 +125,11 @@ public class Vista_Registrar extends javax.swing.JDialog {
                 .addGap(41, 41, 41)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jText_Username, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(21, 21, 21)
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jText_Password, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
                 .addComponent(jButton_Registrar)
                 .addGap(29, 29, 29))
@@ -127,17 +138,25 @@ public class Vista_Registrar extends javax.swing.JDialog {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void jText_UsernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jText_UsernameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_jText_UsernameActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void jText_PasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jText_PasswordActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_jText_PasswordActionPerformed
 
     private void jButton_RegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_RegistrarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton_RegistrarActionPerformed
+
+    private void jText_UsernameMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jText_UsernameMouseClicked
+        jText_Password.setText("");
+    }//GEN-LAST:event_jText_UsernameMouseClicked
+
+    private void jText_PasswordMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jText_PasswordMouseClicked
+        jText_Password.setText("");
+    }//GEN-LAST:event_jText_PasswordMouseClicked
 
     /**
      * @param args the command line arguments
@@ -187,7 +206,7 @@ public class Vista_Registrar extends javax.swing.JDialog {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
+    public javax.swing.JTextField jText_Password;
+    public javax.swing.JTextField jText_Username;
     // End of variables declaration//GEN-END:variables
 }

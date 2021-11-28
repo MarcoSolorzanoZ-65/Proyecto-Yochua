@@ -76,9 +76,19 @@ public class Vista_MS extends javax.swing.JDialog {
 
         jTF_Opcion3.setForeground(new java.awt.Color(255, 255, 255));
         jTF_Opcion3.setText("Respuesta3");
+        jTF_Opcion3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTF_Opcion3MouseClicked(evt);
+            }
+        });
 
         jTF_Opcion4.setForeground(new java.awt.Color(255, 255, 255));
         jTF_Opcion4.setText("Respuesta4");
+        jTF_Opcion4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTF_Opcion4MouseClicked(evt);
+            }
+        });
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
@@ -125,9 +135,19 @@ public class Vista_MS extends javax.swing.JDialog {
 
         jTF_Opcion1.setForeground(new java.awt.Color(255, 255, 255));
         jTF_Opcion1.setText("Respuesta1");
+        jTF_Opcion1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTF_Opcion1MouseClicked(evt);
+            }
+        });
 
         jTF_Opcion2.setForeground(new java.awt.Color(255, 255, 255));
         jTF_Opcion2.setText("Respuesta2");
+        jTF_Opcion2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTF_Opcion2MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -240,6 +260,22 @@ public class Vista_MS extends javax.swing.JDialog {
     private void jTextField_PreguntaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField_PreguntaMouseClicked
         jTextField_Pregunta.setText("");
     }//GEN-LAST:event_jTextField_PreguntaMouseClicked
+
+    private void jTF_Opcion1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTF_Opcion1MouseClicked
+        jTF_Opcion1.setText("");
+    }//GEN-LAST:event_jTF_Opcion1MouseClicked
+
+    private void jTF_Opcion2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTF_Opcion2MouseClicked
+        jTF_Opcion2.setText("");
+    }//GEN-LAST:event_jTF_Opcion2MouseClicked
+
+    private void jTF_Opcion3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTF_Opcion3MouseClicked
+        jTF_Opcion3.setText("");
+    }//GEN-LAST:event_jTF_Opcion3MouseClicked
+
+    private void jTF_Opcion4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTF_Opcion4MouseClicked
+        jTF_Opcion4.setText("");
+    }//GEN-LAST:event_jTF_Opcion4MouseClicked
 
     /**
      * @param args the command line arguments

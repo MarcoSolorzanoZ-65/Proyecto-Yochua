@@ -10,6 +10,8 @@ import proyecto.Lists.UniqueSelectionList;
 import proyecto.DAO.US.Dao_US;
 import proyecto.Lists.MultipleSelectionList;
 import proyecto.DAO.MS.Dao_MS;
+import proyecto.Lists.UserList;
+import proyecto.DAO.Users.Dao_User;
 import proyecto.sampleClasses.MultipleSelection;
 import proyecto.sampleClasses.TrueOrFalse;
 import proyecto.sampleClasses.UniqueSelection;
@@ -24,6 +26,7 @@ public class ClasePrueba {
     public static TrueOrFalseList lista_TFalseList = new TrueOrFalseList();
     public static UniqueSelectionList lista_UniqueSelectionList = new UniqueSelectionList();
     public static MultipleSelectionList lista_MultipleSelectionList = new MultipleSelectionList();
+    public static UserList lista_UserList = new UserList();
 
     public static void main(String[] args) {
 
@@ -37,6 +40,7 @@ public class ClasePrueba {
         Dao_TF dao_TF = new Dao_TF();
         Dao_US dao_US = new Dao_US();
         Dao_MS dao_MS = new Dao_MS();
+        Dao_User dao_User = new Dao_User();
 
         dao_TF.insertar(new TrueOrFalse(true, "Geografia", "Es la antartida fria?"));
         dao_TF.insertar(new TrueOrFalse(true, "Geografia", "Es el desierto del Sahara caliente?"));
@@ -47,7 +51,7 @@ public class ClasePrueba {
         dao_MS.insertar(new MultipleSelection("Lima", false, "Turquesa", false, "Azul", true, "Rojo", true, "Arte", "Cual de estos son colores primarios?"));
         dao_MS.insertar(new MultipleSelection("Femenino", true, "Masculino", true, "Lesbiano", false, "Transexual", false, "Cultura General", "Cuales de estos generos son reales?"));
         dao_MS.insertar(new MultipleSelection("Parce", false, "Pura vida", true, "Mae", true, "Joe", false, "Cultura General", "Cuales de estas palabras son costarricenses"));
-        Principal_Controler principal_Controler = new Principal_Controler(vista_Principal, dao_TF, dao_US, dao_MS);
+        Principal_Controler principal_Controler = new Principal_Controler(vista_Principal, dao_TF, dao_US, dao_MS, dao_User);
 
     }
 }

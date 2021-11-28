@@ -42,9 +42,9 @@ public class Vista_Principal extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jB_jugar = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        jB_Jugar = new javax.swing.JButton();
+        jB_Ingresar = new javax.swing.JButton();
+        jB_Registrar = new javax.swing.JButton();
         jMenuBar3 = new javax.swing.JMenuBar();
         jMenu5 = new javax.swing.JMenu();
         jM_agregar = new javax.swing.JMenuItem();
@@ -60,6 +60,7 @@ public class Vista_Principal extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Bienvenidos a Triviados");
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -74,17 +75,32 @@ public class Vista_Principal extends javax.swing.JFrame {
 
         jLabel6.setText("Luis Hodgson");
 
-        jB_jugar.setBackground(new java.awt.Color(255, 255, 255));
-        jB_jugar.setForeground(new java.awt.Color(0, 0, 0));
-        jB_jugar.setText("Jugar");
+        jB_Jugar.setBackground(new java.awt.Color(255, 255, 255));
+        jB_Jugar.setForeground(new java.awt.Color(0, 0, 0));
+        jB_Jugar.setText("Jugar");
+        jB_Jugar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jB_Jugar(evt);
+            }
+        });
 
-        jButton2.setBackground(new java.awt.Color(255, 255, 255));
-        jButton2.setForeground(new java.awt.Color(0, 0, 0));
-        jButton2.setText("Ingresar");
+        jB_Ingresar.setBackground(new java.awt.Color(255, 255, 255));
+        jB_Ingresar.setForeground(new java.awt.Color(0, 0, 0));
+        jB_Ingresar.setText("Ingresar");
+        jB_Ingresar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jB_Ingresar(evt);
+            }
+        });
 
-        jButton3.setBackground(new java.awt.Color(255, 255, 255));
-        jButton3.setForeground(new java.awt.Color(0, 0, 0));
-        jButton3.setText("Registrar");
+        jB_Registrar.setBackground(new java.awt.Color(255, 255, 255));
+        jB_Registrar.setForeground(new java.awt.Color(0, 0, 0));
+        jB_Registrar.setText("Registrar");
+        jB_Registrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jB_RegistrarActionPerformed(evt);
+            }
+        });
 
         jMenu5.setText("Manager");
 
@@ -136,11 +152,11 @@ public class Vista_Principal extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel1)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jButton3)
+                                .addComponent(jB_Registrar)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jButton2)
+                                .addComponent(jB_Ingresar)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jB_jugar)))
+                                .addComponent(jB_Jugar)))
                         .addGap(64, 64, 64))))
         );
         layout.setVerticalGroup(
@@ -150,9 +166,9 @@ public class Vista_Principal extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addGap(26, 26, 26)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jB_jugar)
-                    .addComponent(jButton2)
-                    .addComponent(jButton3))
+                    .addComponent(jB_Jugar)
+                    .addComponent(jB_Ingresar)
+                    .addComponent(jB_Registrar))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -176,6 +192,18 @@ public class Vista_Principal extends javax.swing.JFrame {
     private void jM_agregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jM_agregarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jM_agregarActionPerformed
+
+    private void jB_Ingresar(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB_Ingresar
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jB_Ingresar
+
+    private void jB_Jugar(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB_Jugar
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jB_Jugar
+
+    private void jB_RegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB_RegistrarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jB_RegistrarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -204,9 +232,9 @@ public class Vista_Principal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton jB_jugar;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    public javax.swing.JButton jB_Ingresar;
+    public javax.swing.JButton jB_Jugar;
+    public javax.swing.JButton jB_Registrar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

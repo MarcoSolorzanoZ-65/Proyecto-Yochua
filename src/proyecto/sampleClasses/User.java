@@ -15,6 +15,9 @@ public class User {
     
     private String Username;
     private String Password;
+    
+    public User(){
+    }
 
     public User(String Username, String Password) {
         this.Username = Username;

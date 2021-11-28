@@ -30,8 +30,8 @@ public class Vista_Login extends javax.swing.JDialog {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jTextField_Username = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
+        jText_Username = new javax.swing.JTextField();
+        jText_Password = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jButton_Login = new javax.swing.JButton();
@@ -60,19 +60,19 @@ public class Vista_Login extends javax.swing.JDialog {
                 .addContainerGap())
         );
 
-        jTextField_Username.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jTextField_Username.setText("Digite su usuario...");
-        jTextField_Username.addActionListener(new java.awt.event.ActionListener() {
+        jText_Username.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jText_Username.setText("Digite su usuario...");
+        jText_Username.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField_UsernameActionPerformed(evt);
+                jText_UsernameActionPerformed(evt);
             }
         });
 
-        jTextField2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jTextField2.setText("Digite su contraseña...");
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        jText_Password.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jText_Password.setText("Digite su contraseña...");
+        jText_Password.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                jText_PasswordActionPerformed(evt);
             }
         });
 
@@ -99,8 +99,8 @@ public class Vista_Login extends javax.swing.JDialog {
                     .addComponent(jLabel3)
                     .addComponent(jLabel2)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(jTextField_Username, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jText_Username, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jText_Password, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(99, 99, 99))
             .addGroup(layout.createSequentialGroup()
                 .addGap(163, 163, 163)
@@ -114,11 +114,11 @@ public class Vista_Login extends javax.swing.JDialog {
                 .addGap(41, 41, 41)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField_Username, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jText_Username, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(21, 21, 21)
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jText_Password, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
                 .addComponent(jButton_Login)
                 .addGap(30, 30, 30))
@@ -127,13 +127,13 @@ public class Vista_Login extends javax.swing.JDialog {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField_UsernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_UsernameActionPerformed
+    private void jText_UsernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jText_UsernameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField_UsernameActionPerformed
+    }//GEN-LAST:event_jText_UsernameActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void jText_PasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jText_PasswordActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_jText_PasswordActionPerformed
 
     private void jButton_LoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_LoginActionPerformed
         // TODO add your handling code here:
@@ -188,7 +188,7 @@ public class Vista_Login extends javax.swing.JDialog {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField2;
-    public javax.swing.JTextField jTextField_Username;
+    public javax.swing.JTextField jText_Password;
+    public javax.swing.JTextField jText_Username;
     // End of variables declaration//GEN-END:variables
 }
