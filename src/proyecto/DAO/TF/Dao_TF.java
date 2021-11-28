@@ -52,12 +52,9 @@ public class Dao_TF {
             System.err.println(ex.getMessage());
         }
     }
-    
-    
 
     //public boolean actualizar(Pregunta p);
     //public boolean eliminar(int id);
-
     public TrueOrFalseList getLista() {
         return lista;
     }
