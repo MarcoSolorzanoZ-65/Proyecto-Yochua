@@ -33,7 +33,11 @@ public class MS_Answers {
     public boolean getCorrect() {
         return correct;
     }
-
+    
+    public String mostrarDatos() {
+        return answer + " es " + correct;
+    }
+    
     @Override
     public String toString() {
         return answer + "-" + correct;

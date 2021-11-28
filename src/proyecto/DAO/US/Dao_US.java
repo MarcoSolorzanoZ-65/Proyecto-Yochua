@@ -4,6 +4,7 @@ import java.io.IOException;
 import proyecto.sampleClasses.UniqueSelection;
 import proyecto.ClasePrueba;
 import proyecto.Lists.UniqueSelectionList;
+import proyecto.sampleClasses.TrueOrFalse;
 
 /**
  * @author Marco Zumbado Solorzano carne C18736
@@ -23,7 +24,13 @@ public class Dao_US {
         guardarLista(p);
         return true;
     }
-
+    
+    public boolean eliminar(int i) {
+        UniqueSelection t = lista.eliminar(i--);
+        guardarLista(t);
+        return true;
+    }
+    
     public UniqueSelection generarPreguntaRandom() {
         UniqueSelection p = lista.getElemento();
         return p;
@@ -53,8 +60,13 @@ public class Dao_US {
         }
     }
 
-    //public boolean actualizar(Pregunta p);
-    //public boolean eliminar(int id);
+    public boolean edit(int i, String answer, String category, String incAnswer1, 
+            String incAnswer2, String incAnswer3, String question) {
+        lista.edit(i, answer, category, incAnswer1, incAnswer2, incAnswer3, question);
+        UniqueSelection s = lista.getElemento(i);
+        guardarLista(s);
+        return true;
+    }
 
     public UniqueSelectionList getLista() {
         return lista;

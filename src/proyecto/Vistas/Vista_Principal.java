@@ -2,6 +2,7 @@ package proyecto.Vistas;
 
 import com.formdev.flatlaf.FlatDarkLaf;
 import java.awt.Color;
+import javax.swing.JButton;
 import javax.swing.UIManager;
 
 /**
@@ -205,6 +206,11 @@ public class Vista_Principal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jB_RegistrarActionPerformed
 
+    public JButton getjB_Jugar() {
+        return jB_Jugar;
+    }
+    
+    
     /**
      * @param args the command line arguments
      */

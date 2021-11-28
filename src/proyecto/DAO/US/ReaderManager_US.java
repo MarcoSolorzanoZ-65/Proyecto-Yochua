@@ -28,12 +28,13 @@ public class ReaderManager_US {
         String datos[];
         if (line != null) {
             p = new UniqueSelection();
-            datos = line.split("-"); // separa el String en un array
-            p.setQuestion(datos[0]); // lee el enunciado
-            p.setAnswer((datos[1]));
+            datos = line.split("-");
+            p.setAnswer((datos[0]));
             p.setIncAnswer1(datos[1]);
             p.setIncAnswer2(datos[2]);
-            p.setIncAnswer3(datos[3]);// lee la respuesta
+            p.setIncAnswer3(datos[3]);
+            p.setQuestion(datos[4]);
+            p.setCategory(datos[5]);
         }
         return p;
     }

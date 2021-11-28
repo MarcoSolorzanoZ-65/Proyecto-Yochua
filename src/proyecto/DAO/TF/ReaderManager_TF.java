@@ -30,15 +30,17 @@ public class ReaderManager_TF {
             p = new TrueOrFalse();
             datos = line.split("-"); // separa el String en un array
             p.setQuestion(datos[0]); // lee el enunciado
-            p.setAnswer(Boolean.parseBoolean(datos[1])); // lee la respuesta
+            p.setAnswer(Boolean.parseBoolean(datos[1]));
+            p.setCategory(datos[2]);// lee la respuesta
         }
         return p;
     }
 
     public void readAll() throws IOException {
-        TrueOrFalse p;
-        while ((p = read()) != null) {
-            lista.agregar(p);
+        TrueOrFalse newtf = read();
+        while(newtf != null) {
+            lista.agregar(newtf);
+            newtf = read();
         }
     }
 

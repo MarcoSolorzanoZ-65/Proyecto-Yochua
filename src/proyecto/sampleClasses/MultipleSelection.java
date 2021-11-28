@@ -64,7 +64,11 @@ public class MultipleSelection extends Question {
     public int getId() {
         return super.getId(); //To change body of generated methods, choose Tools | Templates.
     }
-
+    
+    public String mostrarDatos() {
+        return "Pregunta: " + getQuestion() + "\nRespuestas: " + getmS_AnswerList().mostrarRespuestas() + "\nCategoria: " + getCategory();
+    }
+    
     @Override
     public String toString() {
         return getQuestion() + "-" + getmS_AnswerList().getVectorString() + getCategory();

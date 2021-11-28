@@ -5,6 +5,7 @@ import java.io.IOException;
 import proyecto.sampleClasses.User;
 import proyecto.ClasePrueba;
 import proyecto.Lists.UserList;
+import proyecto.sampleClasses.UniqueSelection;
 
 /**
  * @author Marco Zumbado Solorzano carne C18736
@@ -20,13 +21,16 @@ public class Dao_User {
     public static final String FILE_NAME = "userFile.txt";
 
     public boolean insertar(User u) {
+        System.out.println("holis");
         lista.setUser(u);
         guardarLista(u);
         return true;
     }
     
-    public void comparar(User u){
     
+    
+    public void comparar(User u){
+
     }
 
     public void cargarDatosPrueba() { // se agregar datos de prueba     

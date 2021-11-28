@@ -6,6 +6,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import proyecto.ClasePrueba;
 import proyecto.Lists.UserList;
+import proyecto.sampleClasses.UniqueSelection;
 import proyecto.sampleClasses.User;
 
 /**
@@ -28,9 +29,9 @@ public class WriterManager_US {
 
     public void writeAll() throws IOException {
         for (int i = 0; i < lista.getTAMANO(); i++) {
-            User u = lista.getElemento();
-            if (u != null) {
-                write(u);
+            User e = lista.getElemento(i);
+            if (e != null) {
+                write(e);
             }
         }
     }

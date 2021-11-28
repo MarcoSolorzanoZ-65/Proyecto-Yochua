@@ -93,7 +93,12 @@ public class UniqueSelection extends Question {
     public String getType() {
         return super.getType(); // To change body of generated methods, choose Tools | Templates.
     }
-
+    
+    public String mostrarDatos() {
+        return "Pregunta: " + getQuestion() + "\nRespuesta Correcta: " + getAnswer() + "\nCategoria: " + getCategory()
+                + "\nRespuestas incorrectas: " + "\n" + getIncAnswer1() + "\n" + getIncAnswer2() + "\n" + getIncAnswer3();
+    }
+    
     @Override
     public String toString() {
         return getAnswer() + "-" + getIncAnswer1() + "-" + getIncAnswer2() + "-" + getIncAnswer3() + "-" + getQuestion() + "-" + getCategory();

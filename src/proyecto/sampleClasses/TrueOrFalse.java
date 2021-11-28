@@ -63,10 +63,14 @@ public class TrueOrFalse extends Question {
     public String getType() {
         return super.getType(); //To change body of generated methods, choose Tools | Templates.
     }
-
+    
+    public String mostrarDatos() {
+        return "Pregunta: " + getQuestion() + "\nRespuesta: " + getAnswer() + "\nCategoria: " + getCategory();
+    }
+    
     @Override
     public String toString() {
         return getQuestion() + "-" + getAnswer() + "-" + getCategory();
     }
-
+    
 }

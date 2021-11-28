@@ -1,5 +1,6 @@
 package proyecto.Lists;
 
+import proyecto.sampleClasses.UniqueSelection;
 import proyecto.sampleClasses.User;
 
 /**
@@ -37,10 +38,9 @@ public class UserList {
       return userList.length;  
     }
     
-    public User getElemento() {
-        int elementoRandom = (int) (Math.random() * index);
-
-        return userList[elementoRandom]; // falta validaciones (null, etc.. )
+    public User getElemento(int index) {
+        return userList[index];
     }
+    
     
 }

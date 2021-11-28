@@ -49,19 +49,15 @@ public class TrueOrFalseList {
     }
 
     public String getQuestions() {
-        String text = "";
-        int cont = 0;
-        int num = 1;
-        for (TrueOrFalse element : trueOrFalse) {
-            if (element != null) {
-                if (cont < TAMANO) {
-                    text += num + ") " + trueOrFalse[cont].getQuestion() + "\n";
-                    num++;
-                    cont++;
-                }
+        String result = "";
+        int contador = 1;
+        for (int i = 0; i < trueOrFalse.length; i++) {
+            if (trueOrFalse[i] != null) {
+                result += (contador) + ")" + trueOrFalse[i].getQuestion() + "\n";
+                contador++;
             }
         }
-        return text;
+        return result;
     }
 
     public String getSpecificQuestion(int i) {
@@ -88,12 +84,17 @@ public class TrueOrFalseList {
             index++;
         }
     }
-
+    
+    public void edit(int i, String question, String category, boolean answer) {
+        trueOrFalse[i].setAnswer(answer);
+        trueOrFalse[i].setQuestion(question);
+        trueOrFalse[i].setCategory(category);
+        
+    }
+    
     public TrueOrFalse eliminar(int i) {
-        trueOrFalse[i] = null;
-        if (trueOrFalse[i+1]!=null) {
-            trueOrFalse[i] = trueOrFalse[i+1];
-        }
+        trueOrFalse[i-1] = null;
+        orderByLastQuestionAscendingly();
         return trueOrFalse[i];
     }
 
@@ -104,5 +105,34 @@ public class TrueOrFalseList {
     public int getTAMANO() {
         return TAMANO;
     }
+    
+    public void orderByLastQuestionAscendingly() {
+        for (int i = 1; i < trueOrFalse.length; i++) {
+            for (int j = 0; j < trueOrFalse.length - i; j++) {
+                if (trueOrFalse[j] != null && trueOrFalse[j + 1] != null) {
+                    if (trueOrFalse[j].getQuestion().compareTo(trueOrFalse[j + 1].getQuestion()) > 0) {
+                        TrueOrFalse aux = trueOrFalse[j];
+                        trueOrFalse[j] = trueOrFalse[j + 1];
+                        trueOrFalse[j + 1] = aux;
+                    } else {
+                        if (trueOrFalse[j].getQuestion().compareTo(trueOrFalse[j + 1].getQuestion()) == 0) {
+                            if (trueOrFalse[j].getAnswer().compareTo(trueOrFalse[j + 1].getAnswer()) > 0) {
+                                TrueOrFalse aux = trueOrFalse[j];
+                                trueOrFalse[j] = trueOrFalse[j + 1];
+                                trueOrFalse[j + 1] = aux;
+                            }
 
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+    
+    
+    
+    public int getLenght() {
+        return trueOrFalse.length;
+    }
 }

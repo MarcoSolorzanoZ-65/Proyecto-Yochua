@@ -43,6 +43,18 @@ public class MS_AnswerList {
         return text;
     }
 
+    public String mostrarRespuestas() {
+        String result = "";
+        int contador = 1;
+        for (int i = 0; i < mS_Answerses.length; i++) {
+            if (mS_Answerses[i] != null) {
+                result += (contador) + ")" + mS_Answerses[i].mostrarDatos() + "\n";
+                contador++;
+            }
+        }
+        return result;
+    }
+
     public void setMS_Answers(String answer, boolean correct) {
         mS_Answerses[index] = new MS_Answers(answer, correct);
         index++;
@@ -50,6 +62,11 @@ public class MS_AnswerList {
 
     public String getSpecificAnswer(int i) {
         return mS_Answerses[i].getAnswer();
+    }
+
+    public void setSpecificAnswer(int i, String answer, boolean correct) {
+        mS_Answerses[i].setAnswer(answer);
+        mS_Answerses[i].setCorrect(correct);
     }
 
     public MS_Answers getElemento() {

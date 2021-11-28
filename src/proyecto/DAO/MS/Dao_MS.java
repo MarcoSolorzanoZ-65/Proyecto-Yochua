@@ -4,6 +4,7 @@ import java.io.IOException;
 import proyecto.sampleClasses.MultipleSelection;
 import proyecto.ClasePrueba;
 import proyecto.Lists.MultipleSelectionList;
+import proyecto.sampleClasses.UniqueSelection;
 
 /**
  * @author Marco Zumbado Solorzano carne C18736
@@ -27,6 +28,12 @@ public class Dao_MS {
     public MultipleSelection generarPreguntaRandom() {
         MultipleSelection p = lista.getElemento();
         return p;
+    }
+
+    public boolean eliminar(int i) {
+        MultipleSelection t = lista.eliminar(i--);
+        guardarLista(t);
+        return true;
     }
 
     public void cargarDatosPrueba() { // se agregar datos de prueba     
@@ -53,9 +60,15 @@ public class Dao_MS {
         }
     }
 
-    //public boolean actualizar(Pregunta p);
-    //public boolean eliminar(int id);
-
+    public boolean editar(int i, String question, String category, String answer1, boolean correct1 ,String answer2, boolean correct2,
+            String answer3,  boolean correct3,  String answer4, boolean correct4){
+        lista.edit(i, question, category, answer1, correct1, answer2, correct2,
+            answer3, correct3, answer4, correct4);
+        MultipleSelection s = lista.getElemento(i);
+        guardarLista(s);
+        return true;
+    }
+    
     public MultipleSelectionList getLista() {
         return lista;
     }

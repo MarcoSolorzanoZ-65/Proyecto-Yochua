@@ -1,5 +1,7 @@
 package proyecto.Lists;
 
+import proyecto.sampleClasses.MultipleSelection;
+import proyecto.sampleClasses.TrueOrFalse;
 import proyecto.sampleClasses.UniqueSelection;
 
 /**
@@ -50,15 +52,15 @@ public class UniqueSelectionList {
     }
 
     public String getQuestions() {
-        String text = "";
-        int cont = 1;
-        for (int i = 0; i < TAMANO; i++) {
-            if (uniqueSelections[i].getQuestion() != null) {
-                text += cont + ") " + uniqueSelections[i].getQuestion() + "\n";
-                cont++;
+        String result = "";
+        int contador = 1;
+        for (int i = 0; i < uniqueSelections.length; i++) {
+            if (uniqueSelections[i] != null) {
+                result += (contador) + ")" + uniqueSelections[i].getQuestion() + "\n";
+                contador++;
             }
         }
-        return text;
+        return result;
     }
 
     public UniqueSelection getElemento() {
@@ -86,9 +88,51 @@ public class UniqueSelectionList {
         return uniqueSelections[i].getAnswer();
     }
 
+    public void edit(int i, String answer, String category, String incAnswer1,
+            String incAnswer2, String incAnswer3, String question) {
+        uniqueSelections[i].setAnswer(answer);
+        uniqueSelections[i].setCategory(category);
+        uniqueSelections[i].setIncAnswer1(incAnswer1);
+        uniqueSelections[i].setIncAnswer2(incAnswer2);
+        uniqueSelections[i].setIncAnswer3(incAnswer3);
+        uniqueSelections[i].setQuestion(question);
+    }
+
+    public UniqueSelection eliminar(int i) {
+        uniqueSelections[i - 1] = null;
+        orderByLastQuestionAscendingly();
+        return uniqueSelections[i];
+    }
+
     public int getTAMANO() {
         return TAMANO;
     }
-    
-    
+
+    public void orderByLastQuestionAscendingly() {
+        for (int i = 1; i < uniqueSelections.length; i++) {
+            for (int j = 0; j < uniqueSelections.length - i; j++) {
+                if (uniqueSelections[j] != null && uniqueSelections[j + 1] != null) {
+                    if (uniqueSelections[j].getQuestion().compareTo(uniqueSelections[j + 1].getQuestion()) > 0) {
+                        UniqueSelection aux = uniqueSelections[j];
+                        uniqueSelections[j] = uniqueSelections[j + 1];
+                        uniqueSelections[j + 1] = aux;
+                    } else {
+                        if (uniqueSelections[j].getQuestion().compareTo(uniqueSelections[j + 1].getQuestion()) == 0) {
+                            if (uniqueSelections[j].getAnswer().compareTo(uniqueSelections[j + 1].getAnswer()) > 0) {
+                                UniqueSelection aux = uniqueSelections[j];
+                                uniqueSelections[j] = uniqueSelections[j + 1];
+                                uniqueSelections[j + 1] = aux;
+                            }
+
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+
+    public int getLenght() {
+        return uniqueSelections.length;
+    }
 }

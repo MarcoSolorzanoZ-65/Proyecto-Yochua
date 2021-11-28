@@ -15,6 +15,7 @@ public class User {
     
     private String Username;
     private String Password;
+    private int wins;
     
     public User(){
     }
@@ -32,6 +33,14 @@ public class User {
         this.Username = Username;
     }
 
+    public void setWins(int wins) {
+        this.wins = wins;
+    }
+
+    public int getWins() {
+        return wins;
+    }
+
     public String getPassword() {
         return Password;
     }
@@ -40,8 +49,9 @@ public class User {
         return Username;
     }
 
+    @Override
     public String toString() {
-        return "Username: " + Username + "\nPassword: " + Password; 
+        return Username + "-" + Password + "-" + wins; 
     }
     
     

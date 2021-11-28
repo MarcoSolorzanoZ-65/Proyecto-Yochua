@@ -33,7 +33,6 @@ public class Juego_Controler implements ActionListener {
         this.vista.jb_mc.addActionListener(this);
         this.vista.jb_sc.addActionListener(this);
         this.vista.jb_tf.addActionListener(this);
-        iniciarVista();
     }
 
     public void actionPerformed(ActionEvent e) {

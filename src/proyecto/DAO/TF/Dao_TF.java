@@ -59,8 +59,12 @@ public class Dao_TF {
         }
     }
 
-    //public boolean actualizar(Pregunta p);
-    //public boolean eliminar(int id);
+    public void edit(int i, String question, String category, boolean answer) {
+        lista.edit(i, question, category, answer);
+        TrueOrFalse s = lista.getElemento(i);
+        guardarLista(s);
+    }
+    
     public TrueOrFalseList getLista() {
         return lista;
     }

@@ -11,6 +11,7 @@ import java.awt.event.ActionListener;
 import com.formdev.flatlaf.FlatDarkLaf;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 import proyecto.DAO.Users.Dao_User;
 import proyecto.Vistas.Vista_Login;
@@ -20,19 +21,38 @@ public class Login_Controler implements ActionListener {
 
     private Vista_Login vista;
     private Dao_User modelo;
+    private boolean login = false;
 
     public Login_Controler(Vista_Login vista, Dao_User modelo) {
         this.vista = vista;
         this.modelo = modelo;
         this.vista.jButton_Login.addActionListener(this);
-        iniciarVista();
     }
 
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == vista.jButton_Login) {
-
-            modelo.insertar(new User(vista.jText_Username.getText(), vista.jText_Password.getText()));
+            for (int i = 0; i < modelo.getLista().getTAMANO(); i++) {
+                    if (modelo.getLista().getElemento(i) != null) {
+                        String password = modelo.getLista().getElemento(i).getPassword();
+                        String username = modelo.getLista().getElemento(i).getUsername();
+                        String inputPassword = vista.jText_Password.getText();
+                        String inputUsername = vista.jText_Username.getText();
+                        if (password.equals(inputPassword) && username.equals(inputUsername)) {
+                            login = true;
+                        }
+                    }
+            }
+            if (login == true) {
+                JOptionPane.showMessageDialog(null, "Te has loggeado correctamente");
+                vista.dispose();
+            } else {
+                JOptionPane.showMessageDialog(null, "Usuario Incorrecto");
+            }
         }
+    }
+
+    public boolean getLogin() {
+        return login;
     }
 
     public void iniciarVista() {
