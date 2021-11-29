@@ -3,6 +3,7 @@ package proyecto.Controlers;
 import com.formdev.flatlaf.FlatDarkLaf;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 import proyecto.ClasePrueba;
 import proyecto.DAO.MS.Dao_MS;
@@ -54,6 +55,9 @@ public class JuegoTF_Controler implements ActionListener {
                             if (modelo.getLista().getElemento(j) != null) {
                                 if (modelo.getLista().getSpecificAnswer(j) == tf) {
                                     modeloUser.sumarPuntos(i);
+                                    JOptionPane.showMessageDialog(null, "Respuesta Correcta");
+                                } else {
+                                    JOptionPane.showMessageDialog(null, "Respuesta Incorrecta");
                                 }
                             }
                         }

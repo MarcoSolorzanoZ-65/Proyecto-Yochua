@@ -27,17 +27,63 @@ public class Vista_JuegoUS extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jl_question = new javax.swing.JLabel();
+        jr_answer1 = new javax.swing.JRadioButton();
+        jr_answer2 = new javax.swing.JRadioButton();
+        jr_answer3 = new javax.swing.JRadioButton();
+        jr_answer4 = new javax.swing.JRadioButton();
+        jb_respond = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+
+        jl_question.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jl_question.setText("jLabel1");
+
+        jr_answer1.setText("jRadioButton1");
+
+        jr_answer2.setText("jRadioButton2");
+
+        jr_answer3.setText("jRadioButton3");
+
+        jr_answer4.setText("jRadioButton4");
+
+        jb_respond.setText("Responder");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(49, 49, 49)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jr_answer4)
+                            .addComponent(jr_answer3)
+                            .addComponent(jr_answer2)
+                            .addComponent(jr_answer1)
+                            .addComponent(jl_question)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(155, 155, 155)
+                        .addComponent(jb_respond)))
+                .addContainerGap(159, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(58, 58, 58)
+                .addComponent(jl_question)
+                .addGap(18, 18, 18)
+                .addComponent(jr_answer1)
+                .addGap(18, 18, 18)
+                .addComponent(jr_answer2)
+                .addGap(18, 18, 18)
+                .addComponent(jr_answer3)
+                .addGap(18, 18, 18)
+                .addComponent(jr_answer4)
+                .addGap(18, 18, 18)
+                .addComponent(jb_respond)
+                .addContainerGap(25, Short.MAX_VALUE))
         );
 
         pack();
@@ -86,5 +132,11 @@ public class Vista_JuegoUS extends javax.swing.JDialog {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JButton jb_respond;
+    public javax.swing.JLabel jl_question;
+    public javax.swing.JRadioButton jr_answer1;
+    public javax.swing.JRadioButton jr_answer2;
+    public javax.swing.JRadioButton jr_answer3;
+    public javax.swing.JRadioButton jr_answer4;
     // End of variables declaration//GEN-END:variables
 }

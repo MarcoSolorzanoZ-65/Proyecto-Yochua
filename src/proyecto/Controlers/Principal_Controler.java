@@ -2,6 +2,8 @@ package proyecto.Controlers;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
+import proyecto.ClasePrueba;
 import proyecto.Vistas.Vista_Juego;
 import proyecto.Vistas.Vista_Principal;
 import proyecto.Vistas.Vista_Añadir;
@@ -42,9 +44,13 @@ public class Principal_Controler implements ActionListener {
 
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == vista.jB_Jugar) {
-            Vista_Juego vista_Juego = new Vista_Juego(vista, false);
-            Juego_Controler jc = new Juego_Controler(vista_Juego, modelo, modelo2, modelo3, modelo4);
-            jc.iniciarVista();
+            if (ClasePrueba.UserLogged != "") {
+                Vista_Juego vista_Juego = new Vista_Juego(vista, false);
+                Juego_Controler jc = new Juego_Controler(vista_Juego, modelo, modelo2, modelo3, modelo4);
+                jc.iniciarVista();
+            } else {
+                JOptionPane.showMessageDialog(null, "Debes loggearte primero para jugar");
+            }
         }
         if (e.getSource() == vista.jM_salir) {
             System.exit(0);
@@ -71,7 +77,6 @@ public class Principal_Controler implements ActionListener {
             Login_Controler lg = new Login_Controler(vista_Login, modelo4);
             lg.iniciarVista();
         }
-        
 
     }
 
