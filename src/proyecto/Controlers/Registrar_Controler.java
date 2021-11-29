@@ -29,16 +29,23 @@ public class Registrar_Controler implements ActionListener {
         this.vista = vista;
         this.modelo = modelo;
         this.vista.jButton_Registrar.addActionListener(this);
+        this.vista.jm_volver.addActionListener(this);
         iniciarVista();
     }
 
     public void actionPerformed(ActionEvent e) {
+        if (e.getSource() == vista.jm_volver) {
+            vista.dispose();
+        }
         if (e.getSource() == vista.jButton_Registrar) {
             boolean caractPass = false;
             boolean caractUser = false;
 
             if (vista.jText_Password.getText().length() <= 10 && vista.jText_Password.getText().length() >= 3) {
                 caractPass = true;
+            }
+            if (e.getSource() == vista.jm_volver) {
+                vista.dispose();
             }
 
             if (vista.jText_Username.getText().length() <= 10 && vista.jText_Username.getText().length() >= 3) {

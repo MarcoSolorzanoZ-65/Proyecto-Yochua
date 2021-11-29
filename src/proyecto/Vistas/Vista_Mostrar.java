@@ -43,6 +43,9 @@ public class Vista_Mostrar extends javax.swing.JDialog {
         jb_Mostrar = new javax.swing.JButton();
         jB_Delete = new javax.swing.JButton();
         jc_tipo = new javax.swing.JComboBox<>();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        jm_volver = new javax.swing.JMenuItem();
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel1.setText("jLabel1");
@@ -124,6 +127,15 @@ public class Vista_Mostrar extends javax.swing.JDialog {
 
         jc_tipo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "True Or False", "Unique Selection", "Multiple Selection" }));
 
+        jMenu1.setText("File");
+
+        jm_volver.setText("Volver");
+        jMenu1.add(jm_volver);
+
+        jMenuBar1.add(jMenu1);
+
+        setJMenuBar(jMenuBar1);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -172,7 +184,7 @@ public class Vista_Mostrar extends javax.swing.JDialog {
                     .addComponent(jButtonTF, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButtonUS, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(27, 27, 27)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 129, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 117, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -185,7 +197,7 @@ public class Vista_Mostrar extends javax.swing.JDialog {
                         .addGap(12, 12, 12))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jb_Editar, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
+                            .addComponent(jb_Editar, javax.swing.GroupLayout.DEFAULT_SIZE, 49, Short.MAX_VALUE)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jb_Mostrar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGap(2, 2, 2)))
@@ -283,11 +295,14 @@ public class Vista_Mostrar extends javax.swing.JDialog {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JScrollPane jScrollPane1;
     public javax.swing.JTextArea jTextArea1;
     public javax.swing.JTextField jText_NumPregunta;
     public javax.swing.JButton jb_Editar;
     public javax.swing.JButton jb_Mostrar;
     public javax.swing.JComboBox<String> jc_tipo;
+    public javax.swing.JMenuItem jm_volver;
     // End of variables declaration//GEN-END:variables
 }

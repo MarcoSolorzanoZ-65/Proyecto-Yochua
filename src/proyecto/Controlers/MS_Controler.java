@@ -27,6 +27,7 @@ public class MS_Controler implements ActionListener {
         this.vista = vista;
         this.modelo = modelo3;
         this.vista.jB_Añadir.addActionListener(this);
+        this.vista.jm_volver.addActionListener(this);
         iniciarVista();
     }
 
@@ -39,35 +40,38 @@ public class MS_Controler implements ActionListener {
         Boolean correcto2 = false;
         Boolean correcto3 = false;
         Boolean correcto4 = false;
+        if (e.getSource() == vista.jm_volver) {
+            vista.dispose();
+        }
 
         if (e.getSource() == vista.jB_Añadir) {
 
             if (vista.jB_Opcion1.isSelected()) {
                 correcto1 = true;
             }
-            
+
             if (vista.jB_Opcion2.isSelected()) {
                 correcto2 = true;
             }
-            
+
             if (vista.jB_Opcion3.isSelected()) {
                 correcto3 = true;
             }
-            
+
             if (vista.jB_Opcion4.isSelected()) {
                 correcto4 = true;
             }
-            
+
             opcion1 = vista.jTF_Opcion1.getText();
             opcion2 = vista.jTF_Opcion2.getText();
             opcion3 = vista.jTF_Opcion3.getText();
             opcion4 = vista.jTF_Opcion4.getText();
-            
-            modelo.insertar(new MultipleSelection(opcion1, correcto1, opcion2, correcto2, opcion3, correcto3, opcion4, correcto4, 
+
+            modelo.insertar(new MultipleSelection(opcion1, correcto1, opcion2, correcto2, opcion3, correcto3, opcion4, correcto4,
                     vista.jcb_MSC.getSelectedItem().toString(), vista.jTextField_Pregunta.getText()));
+            vista.dispose();
         }
     }
-    
 
     public void iniciarVista() {
         try {

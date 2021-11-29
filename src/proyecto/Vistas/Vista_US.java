@@ -52,6 +52,9 @@ public class Vista_US extends javax.swing.JDialog {
         jB_Añadir = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jcb_USC = new javax.swing.JComboBox<>();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        jm_volver = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -134,6 +137,15 @@ public class Vista_US extends javax.swing.JDialog {
             }
         });
 
+        jMenu1.setText("File");
+
+        jm_volver.setText("Volver");
+        jMenu1.add(jm_volver);
+
+        jMenuBar1.add(jMenu1);
+
+        setJMenuBar(jMenuBar1);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -214,7 +226,7 @@ public class Vista_US extends javax.swing.JDialog {
                         .addComponent(jcb_USC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jB_Añadir)
-                .addContainerGap(8, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -299,12 +311,15 @@ public class Vista_US extends javax.swing.JDialog {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    public javax.swing.JMenu jMenu1;
+    private javax.swing.JMenuBar jMenuBar1;
     public javax.swing.JTextField jTF_Opcion1;
     public javax.swing.JTextField jTF_Opcion2;
     public javax.swing.JTextField jTF_Opcion3;
     public javax.swing.JTextField jTF_Opcion4;
     public javax.swing.JTextField jTextField_Pregunta;
     public javax.swing.JComboBox<String> jcb_USC;
+    public javax.swing.JMenuItem jm_volver;
     public static javax.swing.ButtonGroup opcionCorrecta;
     // End of variables declaration//GEN-END:variables
 }

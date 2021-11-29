@@ -11,17 +11,16 @@ import proyecto.sampleClasses.UniqueSelection;
 
 /**
  * @author Marco Zumbado Solorzano carne C18736
- * @date 2021-08-16 
+ * @date 2021-08-16
  * @time 10:13:20
-*/
+ */
 public class USEdit_Controler implements ActionListener {
-    
+
     private Vista_EditUS vista;
     private Dao_US modelo;
     private int index;
 
-
-    public USEdit_Controler(Vista_EditUS vista,Dao_US modelo, int index) {
+    public USEdit_Controler(Vista_EditUS vista, Dao_US modelo, int index) {
         this.vista = vista;
         this.modelo = modelo;
         this.index = index;
@@ -31,7 +30,9 @@ public class USEdit_Controler implements ActionListener {
     }
 
     public void actionPerformed(ActionEvent e) {
-        
+        if (e.getSource() == vista.jm_volver) {
+            vista.dispose();
+        }
         if (e.getSource() == vista.jB_Guardar) {
             String opcionCorrecta = "";
             String opcioIncorrecta1 = "";
@@ -52,7 +53,7 @@ public class USEdit_Controler implements ActionListener {
                 opcioIncorrecta1 = vista.jTF_Opcion1.getText();
                 opcioIncorrecta2 = vista.jTF_Opcion2.getText();
                 opcioIncorrecta3 = vista.jTF_Opcion4.getText();
-                
+
             } else if (vista.jB_Opcion4.isSelected()) {
                 opcionCorrecta = vista.jTF_Opcion4.getText();
                 opcioIncorrecta1 = vista.jTF_Opcion1.getText();
@@ -60,9 +61,6 @@ public class USEdit_Controler implements ActionListener {
                 opcioIncorrecta3 = vista.jTF_Opcion3.getText();
             }
             modelo.edit(index, opcionCorrecta, vista.jcb_USC.getSelectedItem().toString(), opcioIncorrecta1, opcioIncorrecta2, opcioIncorrecta3, vista.jTextField_Pregunta.getText());
-            vista.dispose();
-        }
-        if (e.getSource() == vista.jm_volver) {
             vista.dispose();
         }
     }

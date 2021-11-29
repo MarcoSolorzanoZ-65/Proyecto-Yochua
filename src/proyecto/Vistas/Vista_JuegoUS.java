@@ -27,6 +27,7 @@ public class Vista_JuegoUS extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        opcionUnica = new javax.swing.ButtonGroup();
         jl_question = new javax.swing.JLabel();
         jr_answer1 = new javax.swing.JRadioButton();
         jr_answer2 = new javax.swing.JRadioButton();
@@ -42,12 +43,16 @@ public class Vista_JuegoUS extends javax.swing.JDialog {
         jl_question.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jl_question.setText("jLabel1");
 
+        opcionUnica.add(jr_answer1);
         jr_answer1.setText("jRadioButton1");
 
+        opcionUnica.add(jr_answer2);
         jr_answer2.setText("jRadioButton2");
 
+        opcionUnica.add(jr_answer3);
         jr_answer3.setText("jRadioButton3");
 
+        opcionUnica.add(jr_answer4);
         jr_answer4.setText("jRadioButton4");
 
         jb_respond.setText("Responder");
@@ -153,5 +158,6 @@ public class Vista_JuegoUS extends javax.swing.JDialog {
     public javax.swing.JRadioButton jr_answer2;
     public javax.swing.JRadioButton jr_answer3;
     public javax.swing.JRadioButton jr_answer4;
+    private javax.swing.ButtonGroup opcionUnica;
     // End of variables declaration//GEN-END:variables
 }

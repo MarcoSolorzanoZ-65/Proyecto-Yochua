@@ -37,6 +37,7 @@ public class Vista_TF extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jMenu1 = new javax.swing.JMenu();
         jLabel1 = new javax.swing.JLabel();
         jTextField_Pregunta = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
@@ -45,6 +46,11 @@ public class Vista_TF extends javax.swing.JDialog {
         jB_Añadir = new javax.swing.JButton();
         jcb_TFC = new javax.swing.JComboBox<>();
         jLabel3 = new javax.swing.JLabel();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu2 = new javax.swing.JMenu();
+        jm_volver = new javax.swing.JMenuItem();
+
+        jMenu1.setText("jMenu1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -96,6 +102,15 @@ public class Vista_TF extends javax.swing.JDialog {
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Categoría:");
 
+        jMenu2.setText("File");
+
+        jm_volver.setText("Volver");
+        jMenu2.add(jm_volver);
+
+        jMenuBar1.add(jMenu2);
+
+        setJMenuBar(jMenuBar1);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -146,7 +161,7 @@ public class Vista_TF extends javax.swing.JDialog {
                     .addComponent(jLabel3))
                 .addGap(11, 11, 11)
                 .addComponent(jB_Añadir)
-                .addContainerGap(15, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -215,9 +230,13 @@ public class Vista_TF extends javax.swing.JDialog {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenuBar jMenuBar1;
     public javax.swing.JRadioButton jRadioButton_False;
     public javax.swing.JRadioButton jRadioButton_True;
     public javax.swing.JTextField jTextField_Pregunta;
     public javax.swing.JComboBox<String> jcb_TFC;
+    public javax.swing.JMenuItem jm_volver;
     // End of variables declaration//GEN-END:variables
 }

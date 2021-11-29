@@ -49,6 +49,7 @@ public class Mostrar_Controler implements ActionListener {
         this.vista.jB_Delete.addActionListener(this);
         this.vista.jb_Editar.addActionListener(this);
         this.vista.jb_Mostrar.addActionListener(this);
+        this.vista.jm_volver.addActionListener(this);
         iniciarVista();
     }
 
@@ -64,6 +65,9 @@ public class Mostrar_Controler implements ActionListener {
         if (e.getSource() == vista.jButtonMS) {
             vista.jTextArea1.setEditable(false);
             vista.jTextArea1.setText(modelo3.getLista().getQuestions());
+        }
+        if (e.getSource() == vista.jm_volver) {
+            vista.dispose();
         }
         if (e.getSource() == vista.jB_Delete) {
             String tipo = vista.jc_tipo.getSelectedItem().toString();

@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package proyecto.Controlers;
 
 import com.formdev.flatlaf.FlatDarkLaf;
@@ -19,8 +18,8 @@ import proyecto.sampleClasses.TrueOrFalse;
  * @time 19:17:19
  * @date 24 nov. 2021
  */
-public class TF_Controler implements ActionListener{
-    
+public class TF_Controler implements ActionListener {
+
     private Vista_TF vista;
     private Dao_TF modelo;
 
@@ -30,11 +29,15 @@ public class TF_Controler implements ActionListener{
         this.vista.jRadioButton_True.addActionListener(this);
         this.vista.jRadioButton_False.addActionListener(this);
         this.vista.jB_Añadir.addActionListener(this);
+        this.vista.jm_volver.addActionListener(this);
         iniciarVista();
     }
 
     public void actionPerformed(ActionEvent e) {
-        
+        if (e.getSource() == vista.jm_volver) {
+            vista.dispose();
+        }
+
         if (e.getSource() == vista.jB_Añadir) {
             boolean tf = false;
             if (vista.jRadioButton_True.isSelected()) {
@@ -42,10 +45,10 @@ public class TF_Controler implements ActionListener{
             } else if (vista.jRadioButton_False.isSelected()) {
                 tf = false;
             }
-            modelo.insertar(new TrueOrFalse(tf, vista.jcb_TFC.getSelectedItem().toString(),vista.jTextField_Pregunta.getText()));
+            modelo.insertar(new TrueOrFalse(tf, vista.jcb_TFC.getSelectedItem().toString(), vista.jTextField_Pregunta.getText()));
             vista.dispose();
         }
-        
+
     }
 
     public void iniciarVista() {

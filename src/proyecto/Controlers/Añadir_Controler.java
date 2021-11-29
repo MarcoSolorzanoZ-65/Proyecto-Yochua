@@ -48,7 +48,7 @@ public class Añadir_Controler implements  ActionListener{
     
 
     public void actionPerformed(ActionEvent e) {
-        if (e.getSource() == vista.jButton_ATF) {
+        if (e.getSource() == vista.jm_volver) {
             vista.dispose();
         }
         if (e.getSource() == vista.jButton_ATF) {
