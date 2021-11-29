@@ -1,6 +1,7 @@
 package proyecto.Lists;
 
 import proyecto.sampleClasses.MS_Answers;
+import proyecto.sampleClasses.MultipleSelection;
 
 /**
  * @author Marco Zumbado Solorzano carne C18736
@@ -67,6 +68,14 @@ public class MS_AnswerList {
     public void setSpecificAnswer(int i, String answer, boolean correct) {
         mS_Answerses[i].setAnswer(answer);
         mS_Answerses[i].setCorrect(correct);
+    }
+
+    public int getTAMANO() {
+        return TAMANO;
+    }
+    
+    public MS_Answers getElemento(int index) {
+        return mS_Answerses[index];
     }
 
     public MS_Answers getElemento() {

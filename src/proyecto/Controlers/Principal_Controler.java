@@ -43,7 +43,7 @@ public class Principal_Controler implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == vista.jB_Jugar) {
             Vista_Juego vista_Juego = new Vista_Juego(vista, false);
-            Juego_Controler jc = new Juego_Controler(vista_Juego, modelo, modelo2, modelo3);
+            Juego_Controler jc = new Juego_Controler(vista_Juego, modelo, modelo2, modelo3, modelo4);
             jc.iniciarVista();
         }
         if (e.getSource() == vista.jM_salir) {

@@ -89,25 +89,31 @@ public class MultipleSelectionList {
 
     public MultipleSelection getElemento() {
         int elementoRandom = (int) (Math.random() * index);
-
-        return multipleSelectionList[elementoRandom]; // falta validaciones (null, etc.. )
+        boolean loop = false;
+        while (loop == false) {
+            if (multipleSelectionList[elementoRandom] != null) {
+                loop = true;
+                return multipleSelectionList[elementoRandom];
+            }
+        }
+        return multipleSelectionList[elementoRandom];
     }
 
     public int getTAMANO() {
         return TAMANO;
     }
-    
-    public void edit(int i, String question, String category, String answer1, boolean correct1 ,String answer2, boolean correct2,
-            String answer3,  boolean correct3,  String answer4, boolean correct4) {
+
+    public void edit(int i, String question, String category, String answer1, boolean correct1, String answer2, boolean correct2,
+            String answer3, boolean correct3, String answer4, boolean correct4) {
         multipleSelectionList[i].setCategory(category);
         multipleSelectionList[i].setQuestion(question);
         multipleSelectionList[i].getmS_AnswerList().setSpecificAnswer(1, answer1, correct1);
         multipleSelectionList[i].getmS_AnswerList().setSpecificAnswer(2, answer2, correct2);
         multipleSelectionList[i].getmS_AnswerList().setSpecificAnswer(3, answer3, correct3);
         multipleSelectionList[i].getmS_AnswerList().setSpecificAnswer(4, answer4, correct4);
-        
+
     }
-    
+
     public void orderByLastQuestionAscendingly() {
         for (int i = 1; i < multipleSelectionList.length; i++) {
             for (int j = 0; j < multipleSelectionList.length - i; j++) {
@@ -132,6 +138,7 @@ public class MultipleSelectionList {
             }
         }
     }
+
     public int getLenght() {
         return multipleSelectionList.length;
     }

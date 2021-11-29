@@ -43,7 +43,8 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jM_mostrar">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Mostrar"/>
+                <Property name="text" type="java.lang.String" value="Manager De Preguntas"/>
+                <Property name="actionCommand" type="java.lang.String" value="Manager De Preguntas"/>
               </Properties>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>

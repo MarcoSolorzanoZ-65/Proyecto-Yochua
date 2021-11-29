@@ -1,10 +1,10 @@
 package proyecto.DAO.Users;
 
-
 import java.io.IOException;
 import proyecto.sampleClasses.User;
 import proyecto.ClasePrueba;
 import proyecto.Lists.UserList;
+import proyecto.sampleClasses.TrueOrFalse;
 import proyecto.sampleClasses.UniqueSelection;
 
 /**
@@ -26,10 +26,8 @@ public class Dao_User {
         guardarLista(u);
         return true;
     }
-    
-    
-    
-    public void comparar(User u){
+
+    public void comparar(User u) {
 
     }
 
@@ -43,6 +41,12 @@ public class Dao_User {
             System.err.println("error de archivo");
             System.err.println(ex.getMessage());
         }
+    }
+
+    public void sumarPuntos(int i) {
+        lista.getElemento(i).setWins(lista.getElemento(i).getWins() + 1);
+        User s = lista.getElemento(i);
+        guardarLista(s);
     }
 
     public void guardarLista(User u) { // se agregar datos de prueba            
@@ -59,9 +63,8 @@ public class Dao_User {
 
     //public boolean actualizar(Pregunta p);
     //public boolean eliminar(int id);
-
     public UserList getLista() {
         return lista;
     }
-    
+
 }

@@ -58,10 +58,10 @@ public class MS_Controler implements ActionListener {
                 correcto4 = true;
             }
             
-            opcion1 = vista.jB_Opcion1.getText();
-            opcion2 = vista.jB_Opcion2.getText();
-            opcion3 = vista.jB_Opcion3.getText();
-            opcion4 = vista.jB_Opcion4.getText();
+            opcion1 = vista.jTF_Opcion1.getText();
+            opcion2 = vista.jTF_Opcion2.getText();
+            opcion3 = vista.jTF_Opcion3.getText();
+            opcion4 = vista.jTF_Opcion4.getText();
             
             modelo.insertar(new MultipleSelection(opcion1, correcto1, opcion2, correcto2, opcion3, correcto3, opcion4, correcto4, 
                     vista.jcb_MSC.getSelectedItem().toString(), vista.jTextField_Pregunta.getText()));

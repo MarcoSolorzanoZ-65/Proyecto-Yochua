@@ -113,7 +113,8 @@ public class Vista_Principal extends javax.swing.JFrame {
         });
         jMenu5.add(jM_agregar);
 
-        jM_mostrar.setText("Mostrar");
+        jM_mostrar.setText("Manager De Preguntas");
+        jM_mostrar.setActionCommand("Manager De Preguntas");
         jMenu5.add(jM_mostrar);
 
         jM_salir.setText("Salir");

@@ -32,6 +32,7 @@ public class ReaderManager_US {
             datos = line.split("-"); // separa el String en un array
             u.setUsername(datos[0]); // lee el enunciado
             u.setPassword((datos[1]));
+            u.setWins(Integer.parseInt(datos[2]));
 
         }
         return u;

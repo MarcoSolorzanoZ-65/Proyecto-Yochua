@@ -16,6 +16,7 @@ import javax.swing.UIManager;
 import proyecto.DAO.Users.Dao_User;
 import proyecto.Vistas.Vista_Login;
 import proyecto.sampleClasses.User;
+import proyecto.ClasePrueba;
 
 public class Login_Controler implements ActionListener {
 
@@ -39,6 +40,7 @@ public class Login_Controler implements ActionListener {
                         String inputUsername = vista.jText_Username.getText();
                         if (password.equals(inputPassword) && username.equals(inputUsername)) {
                             login = true;
+                            ClasePrueba.UserLogged = inputUsername;
                         }
                     }
             }

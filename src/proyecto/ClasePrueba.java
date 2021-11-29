@@ -28,7 +28,8 @@ public class ClasePrueba {
     public static UniqueSelectionList lista_UniqueSelectionList = new UniqueSelectionList();
     public static MultipleSelectionList lista_MultipleSelectionList = new MultipleSelectionList();
     public static UserList lista_UserList = new UserList();
-
+    public static String UserLogged = "";
+    
     public static void main(String[] args) {
 
         try {
@@ -42,6 +43,7 @@ public class ClasePrueba {
         Dao_US dao_US = new Dao_US();
         Dao_MS dao_MS = new Dao_MS();
         Dao_User dao_User = new Dao_User();
+        
         
         //dao_TF.insertar(new TrueOrFalse(true, "Geografia", "Es la antartida fria?"));
         //dao_TF.insertar(new TrueOrFalse(true, "Geografia", "Es el desierto del Sahara caliente?"));
