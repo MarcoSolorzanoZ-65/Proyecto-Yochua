@@ -2,6 +2,7 @@ package proyecto.Controlers;
 
 import com.formdev.flatlaf.FlatDarkLaf;
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 import proyecto.ClasePrueba;
@@ -19,7 +20,7 @@ import proyecto.sampleClasses.UniqueSelection;
  * @date 2021-08-16
  * @time 10:13:20
  */
-public class JuegoUS_Controler {
+public class JuegoUS_Controler implements ActionListener {
 
     private Vista_JuegoUS vista;
     private Dao_US modelo;
@@ -30,6 +31,9 @@ public class JuegoUS_Controler {
         this.vista = vista;
         this.modelo = modelo;
         this.modeloUser = modeloUser;
+        pregunta = modelo.getLista().getElemento();
+        this.vista.jb_respond.addActionListener(this);
+        this.vista.jm_volver.addActionListener(this);
         this.vista.jl_question.setText(pregunta.getQuestion());
         this.vista.jr_answer1.setText(pregunta.getAnswer());
         this.vista.jr_answer2.setText(pregunta.getIncAnswer1());
@@ -40,21 +44,9 @@ public class JuegoUS_Controler {
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == vista.jb_respond) {
             String correct1 = "";
-            String incAns = "";
-            String incAns2 = "";
-            String incAns3 = "";
 
             if (vista.jr_answer1.isSelected()) {
                 correct1 = vista.jr_answer1.getText();
-            }
-            if (vista.jr_answer2.isSelected()) {
-                incAns = vista.jr_answer2.getText();
-            }
-            if (vista.jr_answer3.isSelected()) {
-                incAns2 = vista.jr_answer3.getText();
-            }
-            if (vista.jr_answer4.isSelected()) {
-                incAns3 = vista.jr_answer4.getText();
             }
 
             boolean loggin = false;
@@ -64,18 +56,24 @@ public class JuegoUS_Controler {
                         String username = modeloUser.getLista().getElemento(i).getUsername();
                         String inputUsername = ClasePrueba.UserLogged;
                         if (username.equals(inputUsername)) {
-                            if (correct1.equals(pregunta.getCategory()) && incAns.equals(pregunta.getIncAnswer1()) &&
-                                    incAns2.equals(pregunta.getIncAnswer2()) && incAns3.equals(pregunta.getIncAnswer3())) {
-                                modeloUser.sumarPuntos(i);
+                            if (correct1.equals(pregunta.getAnswer())) {
+                                modeloUser.sumarWins(i);
+                                modeloUser.sumarWins_US(i);
                                 loggin = true;
                                 JOptionPane.showMessageDialog(null, "Respuesta Correcta");
                             } else {
                                 JOptionPane.showMessageDialog(null, "Respuesta Incorrecta");
+                                modeloUser.sumarLosses(i);
+                                modeloUser.sumarLosses_US(i);
                             }
                         }
                     }
                 }
             }
+            vista.dispose();
+        }
+        
+        if (e.getSource() == vista.jm_volver) {
             vista.dispose();
         }
 

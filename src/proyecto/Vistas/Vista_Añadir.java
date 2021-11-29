@@ -41,6 +41,9 @@ public class Vista_Añadir extends javax.swing.JDialog {
         jButton_ATF = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jButton_AUS = new javax.swing.JButton();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        jm_volver = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -74,6 +77,15 @@ public class Vista_Añadir extends javax.swing.JDialog {
             }
         });
 
+        jMenu1.setText("File");
+
+        jm_volver.setText("Volver");
+        jMenu1.add(jm_volver);
+
+        jMenuBar1.add(jMenu1);
+
+        setJMenuBar(jMenuBar1);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -96,7 +108,7 @@ public class Vista_Añadir extends javax.swing.JDialog {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(53, 53, 53)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 79, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton_AMS, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton_ATF, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -166,5 +178,8 @@ public class Vista_Añadir extends javax.swing.JDialog {
     public javax.swing.JButton jButton_ATF;
     public javax.swing.JButton jButton_AUS;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenuBar jMenuBar1;
+    public javax.swing.JMenuItem jm_volver;
     // End of variables declaration//GEN-END:variables
 }

@@ -25,22 +25,29 @@ public class UserList {
             this.userList = userVector;
         }
     }
-    
-    
+
     public void setUser(User user) {
         if (index < TAMANO) {
             userList[index] = user;
             index++;
         }
     }
-    
-    public int getTAMANO(){
-      return userList.length;  
+
+    public int getTAMANO() {
+        return userList.length;
     }
-    
+
+    public boolean searchByName(String username) {
+        for (int i = 0; i < userList.length; i++) {
+            if (userList[i] != null && userList[i].getUsername().equals(username)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     public User getElemento(int index) {
         return userList[index];
     }
-    
-    
+
 }

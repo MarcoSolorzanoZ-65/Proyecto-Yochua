@@ -17,7 +17,7 @@ import proyecto.sampleClasses.User;
 public class ReaderManager_US {
 
     private BufferedReader reader;
-    UserList lista = ClasePrueba.lista_UserList; // atributo statico de la lista de preguntas
+    UserList lista = ClasePrueba.lista_UserList;
 
     public void open(String fileName) throws FileNotFoundException {
         reader = new BufferedReader(new FileReader(fileName));
@@ -25,15 +25,21 @@ public class ReaderManager_US {
 
     public User read() throws IOException {
         User u = null;
-        String line = reader.readLine(); //retorna null cuando no hay más registros
+        String line = reader.readLine();
         String datos[];
         if (line != null) {
             u = new User();
-            datos = line.split("-"); // separa el String en un array
-            u.setUsername(datos[0]); // lee el enunciado
+            datos = line.split("-");
+            u.setUsername(datos[0]);
             u.setPassword((datos[1]));
             u.setWins(Integer.parseInt(datos[2]));
-
+            u.setWins_TF(Integer.parseInt(datos[3]));
+            u.setWins_US(Integer.parseInt(datos[4]));
+            u.setWins_MS(Integer.parseInt(datos[5]));
+            u.setLosses(Integer.parseInt(datos[6]));
+            u.setLosses_TF(Integer.parseInt(datos[7]));
+            u.setLosses_US(Integer.parseInt(datos[8]));
+            u.setLosses_MS(Integer.parseInt(datos[9]));
         }
         return u;
     }

@@ -13,7 +13,7 @@ public class Vista_JuegoUS extends javax.swing.JDialog {
     /**
      * Creates new form Vista_JuegoUS
      */
-    public Vista_JuegoUS(java.awt.Frame parent, boolean modal) {
+    public Vista_JuegoUS(java.awt.Dialog parent, boolean modal) {
         super(parent, modal);
         initComponents();
     }
@@ -33,6 +33,9 @@ public class Vista_JuegoUS extends javax.swing.JDialog {
         jr_answer3 = new javax.swing.JRadioButton();
         jr_answer4 = new javax.swing.JRadioButton();
         jb_respond = new javax.swing.JButton();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        jm_volver = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -48,6 +51,15 @@ public class Vista_JuegoUS extends javax.swing.JDialog {
         jr_answer4.setText("jRadioButton4");
 
         jb_respond.setText("Responder");
+
+        jMenu1.setText("File");
+
+        jm_volver.setText("Volver");
+        jMenu1.add(jm_volver);
+
+        jMenuBar1.add(jMenu1);
+
+        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -83,7 +95,7 @@ public class Vista_JuegoUS extends javax.swing.JDialog {
                 .addComponent(jr_answer4)
                 .addGap(18, 18, 18)
                 .addComponent(jb_respond)
-                .addContainerGap(25, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -119,7 +131,7 @@ public class Vista_JuegoUS extends javax.swing.JDialog {
         /* Create and display the dialog */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                Vista_JuegoUS dialog = new Vista_JuegoUS(new javax.swing.JFrame(), true);
+                Vista_JuegoUS dialog = new Vista_JuegoUS(new javax.swing.JDialog(), true);
                 dialog.addWindowListener(new java.awt.event.WindowAdapter() {
                     @Override
                     public void windowClosing(java.awt.event.WindowEvent e) {
@@ -132,8 +144,11 @@ public class Vista_JuegoUS extends javax.swing.JDialog {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenuBar jMenuBar1;
     public javax.swing.JButton jb_respond;
     public javax.swing.JLabel jl_question;
+    public javax.swing.JMenuItem jm_volver;
     public javax.swing.JRadioButton jr_answer1;
     public javax.swing.JRadioButton jr_answer2;
     public javax.swing.JRadioButton jr_answer3;

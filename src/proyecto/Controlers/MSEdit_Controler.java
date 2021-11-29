@@ -25,6 +25,7 @@ public class MSEdit_Controler implements ActionListener {
         this.modelo = modelo3;
         this.index = index;
         this.vista.jB_Guardar.addActionListener(this);
+        this.vista.jm_volver.addActionListener(this);
         iniciarVista();
     }
 
@@ -63,6 +64,10 @@ public class MSEdit_Controler implements ActionListener {
 
             modelo.editar(index, vista.jTextField_Pregunta.getText(), vista.jcb_MSC.getSelectedItem().toString(), opcion1,
                     correcto1, opcion2, correcto2, opcion3, correcto3, opcion4, correcto4);
+        }
+        
+        if (e.getSource() == vista.jm_volver) {
+            vista.dispose();
         }
     }
     

@@ -26,6 +26,7 @@ public class USEdit_Controler implements ActionListener {
         this.modelo = modelo;
         this.index = index;
         this.vista.jB_Guardar.addActionListener(this);
+        this.vista.jm_volver.addActionListener(this);
         iniciarVista();
     }
 
@@ -60,7 +61,10 @@ public class USEdit_Controler implements ActionListener {
             }
             modelo.edit(index, opcionCorrecta, vista.jcb_USC.getSelectedItem().toString(), opcioIncorrecta1, opcioIncorrecta2, opcioIncorrecta3, vista.jTextField_Pregunta.getText());
             vista.dispose();
-        } 
+        }
+        if (e.getSource() == vista.jm_volver) {
+            vista.dispose();
+        }
     }
 
     public void iniciarVista() {

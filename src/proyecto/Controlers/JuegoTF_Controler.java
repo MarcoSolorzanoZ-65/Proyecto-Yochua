@@ -27,38 +27,44 @@ public class JuegoTF_Controler implements ActionListener {
     private Vista_JuegoTF vista;
     private Dao_TF modelo;
     private Dao_User modeloUser;
+    private TrueOrFalse pregunta;
 
     public JuegoTF_Controler(Vista_JuegoTF vista, Dao_TF modelo, Dao_User modeloUser) {
         this.vista = vista;
         this.modelo = modelo;
         this.modeloUser = modeloUser;
+        this.pregunta = modelo.getLista().getElemento();
         this.vista.jr_respuesta2.addActionListener(this);
         this.vista.jr_respuesta1.addActionListener(this);
         this.vista.jb_respond.addActionListener(this);
+        this.vista.jm_volver.addActionListener(this);
         this.vista.lb_pregunta.setText(modelo.getLista().getElemento().getQuestion());
     }
 
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == vista.jb_respond) {
             boolean tf = false;
+            boolean answer = pregunta.getAnswer();
             if (vista.jr_respuesta1.isSelected()) {
                 tf = true;
             } else if (vista.jr_respuesta2.isSelected()) {
                 tf = false;
             }
+            boolean loggin = false;
             for (int i = 0; i < modeloUser.getLista().getTAMANO(); i++) {
-                if (modeloUser.getLista().getElemento(i) != null) {;
-                    String username = modeloUser.getLista().getElemento(i).getUsername();
-                    String inputUsername = ClasePrueba.UserLogged;
-                    if (username.equals(inputUsername)) {
-                        for (int j = 0; j < modelo.getLista().getLenght(); j++) {
-                            if (modelo.getLista().getElemento(j) != null) {
-                                if (modelo.getLista().getSpecificAnswer(j) == tf) {
-                                    modeloUser.sumarPuntos(i);
-                                    JOptionPane.showMessageDialog(null, "Respuesta Correcta");
-                                } else {
-                                    JOptionPane.showMessageDialog(null, "Respuesta Incorrecta");
-                                }
+                if (loggin == false) {
+                    if (modeloUser.getLista().getElemento(i) != null) {
+                        String username = modeloUser.getLista().getElemento(i).getUsername();
+                        String inputUsername = ClasePrueba.UserLogged;
+                        if (username.equals(inputUsername)) {
+                            if (tf == answer) {
+                                JOptionPane.showMessageDialog(null, "Respuesta Correcta");
+                                modeloUser.sumarWins(i);
+                                modeloUser.sumarWins_TF(i);
+                            } else {
+                                JOptionPane.showMessageDialog(null, "Respuesta Incorrecta");
+                                modeloUser.sumarLosses(i);
+                                modeloUser.sumarLosses_TF(i);
                             }
                         }
                     }
@@ -66,7 +72,9 @@ public class JuegoTF_Controler implements ActionListener {
             }
             vista.dispose();
         }
-
+        if (e.getSource() == vista.jm_volver) {
+            vista.dispose();
+        }
     }
 
     public void iniciarVista() {

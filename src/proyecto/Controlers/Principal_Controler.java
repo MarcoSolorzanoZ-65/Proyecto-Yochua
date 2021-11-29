@@ -35,7 +35,6 @@ public class Principal_Controler implements ActionListener {
         this.modelo3 = modelo3;
         this.modelo4 = modelo4;
         this.vista.jM_agregar.addActionListener(this);
-        this.vista.jB_Jugar.addActionListener(this);
         this.vista.jM_salir.addActionListener(this);
         this.vista.jM_mostrar.addActionListener(this);
         this.vista.jB_Registrar.addActionListener(this);
@@ -43,15 +42,6 @@ public class Principal_Controler implements ActionListener {
     }
 
     public void actionPerformed(ActionEvent e) {
-        if (e.getSource() == vista.jB_Jugar) {
-            if (ClasePrueba.UserLogged != "") {
-                Vista_Juego vista_Juego = new Vista_Juego(vista, false);
-                Juego_Controler jc = new Juego_Controler(vista_Juego, modelo, modelo2, modelo3, modelo4);
-                jc.iniciarVista();
-            } else {
-                JOptionPane.showMessageDialog(null, "Debes loggearte primero para jugar");
-            }
-        }
         if (e.getSource() == vista.jM_salir) {
             System.exit(0);
         }
@@ -74,7 +64,7 @@ public class Principal_Controler implements ActionListener {
 
         if (e.getSource() == vista.jB_Ingresar) {
             Vista_Login vista_Login = new Vista_Login(vista, false);
-            Login_Controler lg = new Login_Controler(vista_Login, modelo4);
+            Login_Controler lg = new Login_Controler(vista_Login, modelo4, modelo, modelo3, modelo2);
             lg.iniciarVista();
         }
 

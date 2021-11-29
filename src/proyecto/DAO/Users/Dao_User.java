@@ -21,7 +21,6 @@ public class Dao_User {
     public static final String FILE_NAME = "userFile.txt";
 
     public boolean insertar(User u) {
-        System.out.println("holis");
         lista.setUser(u);
         guardarLista(u);
         return true;
@@ -43,8 +42,50 @@ public class Dao_User {
         }
     }
 
-    public void sumarPuntos(int i) {
+    public void sumarWins(int i) {
         lista.getElemento(i).setWins(lista.getElemento(i).getWins() + 1);
+        User s = lista.getElemento(i);
+        guardarLista(s);
+    }
+
+    public void sumarWins_TF(int i) {
+        lista.getElemento(i).setWins_TF(lista.getElemento(i).getWins_TF() + 1);
+        User s = lista.getElemento(i);
+        guardarLista(s);
+    }
+
+    public void sumarWins_US(int i) {
+        lista.getElemento(i).setWins_US(lista.getElemento(i).getWins_US() + 1);
+        User s = lista.getElemento(i);
+        guardarLista(s);
+    }
+
+    public void sumarWins_MS(int i) {
+        lista.getElemento(i).setWins_MS(lista.getElemento(i).getWins_MS() + 1);
+        User s = lista.getElemento(i);
+        guardarLista(s);
+    }
+
+    public void sumarLosses(int i) {
+        lista.getElemento(i).setLosses(lista.getElemento(i).getLosses() + 1);
+        User s = lista.getElemento(i);
+        guardarLista(s);
+    }
+
+    public void sumarLosses_TF(int i) {
+        lista.getElemento(i).setLosses_TF(lista.getElemento(i).getLosses_TF() + 1);
+        User s = lista.getElemento(i);
+        guardarLista(s);
+    }
+
+    public void sumarLosses_US(int i) {
+        lista.getElemento(i).setLosses_US(lista.getElemento(i).getLosses_US() + 1);
+        User s = lista.getElemento(i);
+        guardarLista(s);
+    }
+
+    public void sumarLosses_MS(int i) {
+        lista.getElemento(i).setLosses_MS(lista.getElemento(i).getLosses_MS() + 1);
         User s = lista.getElemento(i);
         guardarLista(s);
     }

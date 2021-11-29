@@ -31,6 +31,9 @@ public class Vista_JuegoTF extends javax.swing.JDialog {
         jr_respuesta1 = new javax.swing.JRadioButton();
         jr_respuesta2 = new javax.swing.JRadioButton();
         jb_respond = new javax.swing.JButton();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        jm_volver = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -47,6 +50,15 @@ public class Vista_JuegoTF extends javax.swing.JDialog {
         jr_respuesta2.setText("Falso");
 
         jb_respond.setText("Responder");
+
+        jMenu1.setText("File");
+
+        jm_volver.setText("Volver");
+        jMenu1.add(jm_volver);
+
+        jMenuBar1.add(jMenu1);
+
+        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -131,7 +143,10 @@ public class Vista_JuegoTF extends javax.swing.JDialog {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenuBar jMenuBar1;
     public javax.swing.JButton jb_respond;
+    public javax.swing.JMenuItem jm_volver;
     public javax.swing.JRadioButton jr_respuesta1;
     public javax.swing.JRadioButton jr_respuesta2;
     public javax.swing.JLabel lb_pregunta;

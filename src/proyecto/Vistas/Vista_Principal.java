@@ -43,7 +43,6 @@ public class Vista_Principal extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jB_Jugar = new javax.swing.JButton();
         jB_Ingresar = new javax.swing.JButton();
         jB_Registrar = new javax.swing.JButton();
         jMenuBar3 = new javax.swing.JMenuBar();
@@ -75,15 +74,6 @@ public class Vista_Principal extends javax.swing.JFrame {
         jLabel5.setText("Joshua Sancho");
 
         jLabel6.setText("Luis Hodgson");
-
-        jB_Jugar.setBackground(new java.awt.Color(255, 255, 255));
-        jB_Jugar.setForeground(new java.awt.Color(0, 0, 0));
-        jB_Jugar.setText("Jugar");
-        jB_Jugar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jB_Jugar(evt);
-            }
-        });
 
         jB_Ingresar.setBackground(new java.awt.Color(255, 255, 255));
         jB_Ingresar.setForeground(new java.awt.Color(0, 0, 0));
@@ -155,10 +145,9 @@ public class Vista_Principal extends javax.swing.JFrame {
                             .addComponent(jLabel1)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jB_Registrar)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGap(80, 80, 80)
                                 .addComponent(jB_Ingresar)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jB_Jugar)))
+                                .addGap(16, 16, 16)))
                         .addGap(64, 64, 64))))
         );
         layout.setVerticalGroup(
@@ -168,7 +157,6 @@ public class Vista_Principal extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addGap(26, 26, 26)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jB_Jugar)
                     .addComponent(jB_Ingresar)
                     .addComponent(jB_Registrar))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
@@ -199,17 +187,10 @@ public class Vista_Principal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jB_Ingresar
 
-    private void jB_Jugar(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB_Jugar
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jB_Jugar
-
     private void jB_RegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB_RegistrarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jB_RegistrarActionPerformed
 
-    public JButton getjB_Jugar() {
-        return jB_Jugar;
-    }
     
     
     /**
@@ -240,7 +221,6 @@ public class Vista_Principal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton jB_Ingresar;
-    public javax.swing.JButton jB_Jugar;
     public javax.swing.JButton jB_Registrar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

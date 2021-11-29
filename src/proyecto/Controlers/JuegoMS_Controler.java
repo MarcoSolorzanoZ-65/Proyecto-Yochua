@@ -35,6 +35,7 @@ public class JuegoMS_Controler implements ActionListener {
         this.vista.jl_respuesta3.addActionListener(this);
         this.vista.jl_respuesta4.addActionListener(this);
         this.vista.jb_respond.addActionListener(this);
+        this.vista.jm_volver.addActionListener(this);
         this.pregunta = modelo.getLista().getElemento();
         this.vista.jl_question.setText(pregunta.getQuestion());
         this.vista.jl_respuesta1.setText(pregunta.getmS_AnswerList().getElemento(0).getAnswer());
@@ -54,7 +55,7 @@ public class JuegoMS_Controler implements ActionListener {
             boolean answ3 = pregunta.getmS_AnswerList().getElemento(2).getCorrect();
             boolean answ4 = pregunta.getmS_AnswerList().getElemento(3).getCorrect();
             
-
+            
             if (vista.jl_respuesta1.isSelected()) {
                 correct1 = true;
             }
@@ -75,16 +76,23 @@ public class JuegoMS_Controler implements ActionListener {
                         String inputUsername = ClasePrueba.UserLogged;
                         if (username.equals(inputUsername)) {
                             if (correct1 == answ1 && correct2 == answ2 && correct3 == answ3 && correct4 == answ4) {
-                                modeloUser.sumarPuntos(i);
+                                modeloUser.sumarWins(i);
+                                modeloUser.sumarWins_MS(i);
                                 loggin = true;
                                 JOptionPane.showMessageDialog(null, "Respuesta Correcta");
                             } else {
                                 JOptionPane.showMessageDialog(null, "Respuesta Incorrecta");
+                                modeloUser.sumarLosses(i);
+                                modeloUser.sumarLosses_MS(i);
                             }
                         }
                     }
                 }
             }
+            vista.dispose();
+        }
+        
+        if (e.getSource() == vista.jm_volver) {
             vista.dispose();
         }
 

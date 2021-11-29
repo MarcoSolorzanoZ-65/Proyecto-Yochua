@@ -11,7 +11,7 @@ import javax.swing.UIManager;
 public class Vista_Juego extends javax.swing.JDialog {
 
 
-    public Vista_Juego(java.awt.Frame parent, boolean modal) {
+    public Vista_Juego(java.awt.Dialog parent, boolean modal) {
         super(parent, modal);
         this.setLocationRelativeTo(null);
         this.pack();
@@ -35,10 +35,13 @@ public class Vista_Juego extends javax.swing.JDialog {
         jLabel1 = new javax.swing.JLabel();
         jb_mc = new javax.swing.JButton();
         jb_sc = new javax.swing.JButton();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        jm_volver = new javax.swing.JMenuItem();
 
         jb_tf.setBackground(new java.awt.Color(255, 255, 255));
         jb_tf.setForeground(new java.awt.Color(0, 0, 0));
-        jb_tf.setText("True/False");
+        jb_tf.setText("Facil");
         jb_tf.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jb_tfActionPerformed(evt);
@@ -50,7 +53,7 @@ public class Vista_Juego extends javax.swing.JDialog {
 
         jb_mc.setBackground(new java.awt.Color(255, 255, 255));
         jb_mc.setForeground(new java.awt.Color(0, 0, 0));
-        jb_mc.setText("Multiple Selection");
+        jb_mc.setText("Dificil");
         jb_mc.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jb_mcActionPerformed(evt);
@@ -59,12 +62,21 @@ public class Vista_Juego extends javax.swing.JDialog {
 
         jb_sc.setBackground(new java.awt.Color(255, 255, 255));
         jb_sc.setForeground(new java.awt.Color(0, 0, 0));
-        jb_sc.setText("Unique Selection");
+        jb_sc.setText("Medio");
         jb_sc.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jb_scActionPerformed(evt);
             }
         });
+
+        jMenu1.setText("File");
+
+        jm_volver.setText("Volver");
+        jMenu1.add(jm_volver);
+
+        jMenuBar1.add(jMenu1);
+
+        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -73,11 +85,11 @@ public class Vista_Juego extends javax.swing.JDialog {
             .addGroup(layout.createSequentialGroup()
                 .addGap(20, 20, 20)
                 .addComponent(jb_tf)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
-                .addComponent(jb_mc)
-                .addGap(18, 18, 18)
+                .addGap(71, 71, 71)
                 .addComponent(jb_sc)
-                .addGap(17, 17, 17))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 63, Short.MAX_VALUE)
+                .addComponent(jb_mc)
+                .addGap(40, 40, 40))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel1)
@@ -91,9 +103,9 @@ public class Vista_Juego extends javax.swing.JDialog {
                 .addGap(49, 49, 49)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jb_tf)
-                    .addComponent(jb_mc)
-                    .addComponent(jb_sc))
-                .addContainerGap(117, Short.MAX_VALUE))
+                    .addComponent(jb_sc)
+                    .addComponent(jb_mc))
+                .addContainerGap(94, Short.MAX_VALUE))
         );
 
         pack();
@@ -130,7 +142,7 @@ public class Vista_Juego extends javax.swing.JDialog {
         /* Create and display the dialog */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                Vista_Juego dialog = new Vista_Juego(new javax.swing.JFrame(), true);
+                Vista_Juego dialog = new Vista_Juego(new javax.swing.JDialog(), true);
                 dialog.addWindowListener(new java.awt.event.WindowAdapter() {
                     @Override
                     public void windowClosing(java.awt.event.WindowEvent e) {
@@ -144,8 +156,11 @@ public class Vista_Juego extends javax.swing.JDialog {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenuBar jMenuBar1;
     public javax.swing.JButton jb_mc;
     public javax.swing.JButton jb_sc;
     public javax.swing.JButton jb_tf;
+    public javax.swing.JMenuItem jm_volver;
     // End of variables declaration//GEN-END:variables
 }

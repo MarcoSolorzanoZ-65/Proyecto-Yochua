@@ -42,11 +42,15 @@ public class Añadir_Controler implements  ActionListener{
         this.vista.jButton_AMS.addActionListener(this);
         this.vista.jButton_ATF.addActionListener(this);
         this.vista.jButton_AUS.addActionListener(this);
+        this.vista.jm_volver.addActionListener(this);
         iniciarVista();
     }
     
 
     public void actionPerformed(ActionEvent e) {
+        if (e.getSource() == vista.jButton_ATF) {
+            vista.dispose();
+        }
         if (e.getSource() == vista.jButton_ATF) {
             Vista_TF vista_TF = new Vista_TF(vistaTF, false);
             TF_Controler ctf = new TF_Controler(vista_TF, modelo);

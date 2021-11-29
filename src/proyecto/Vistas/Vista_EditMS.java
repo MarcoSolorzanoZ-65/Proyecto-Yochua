@@ -51,6 +51,9 @@ public class Vista_EditMS extends javax.swing.JDialog {
         jB_Opcion4 = new javax.swing.JRadioButton();
         jTF_Opcion1 = new javax.swing.JTextField();
         jTF_Opcion2 = new javax.swing.JTextField();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        jm_volver = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -149,6 +152,15 @@ public class Vista_EditMS extends javax.swing.JDialog {
             }
         });
 
+        jMenu1.setText("File");
+
+        jm_volver.setText("Volver");
+        jMenu1.add(jm_volver);
+
+        jMenuBar1.add(jMenu1);
+
+        setJMenuBar(jMenuBar1);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -195,7 +207,7 @@ public class Vista_EditMS extends javax.swing.JDialog {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(14, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jTextField_Pregunta, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -329,11 +341,14 @@ public class Vista_EditMS extends javax.swing.JDialog {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenuBar jMenuBar1;
     public javax.swing.JTextField jTF_Opcion1;
     public javax.swing.JTextField jTF_Opcion2;
     public javax.swing.JTextField jTF_Opcion3;
     public javax.swing.JTextField jTF_Opcion4;
     public javax.swing.JTextField jTextField_Pregunta;
     public javax.swing.JComboBox<String> jcb_MSC;
+    public javax.swing.JMenuItem jm_volver;
     // End of variables declaration//GEN-END:variables
 }

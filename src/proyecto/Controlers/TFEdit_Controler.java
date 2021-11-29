@@ -27,6 +27,7 @@ public class TFEdit_Controler implements ActionListener {
         this.vista.jRadioButton_True.addActionListener(this);
         this.vista.jRadioButton_False.addActionListener(this);
         this.vista.jB_Guardar.addActionListener(this);
+        this.vista.jm_volver.addActionListener(this);
         iniciarVista();
     }
 
@@ -40,6 +41,10 @@ public class TFEdit_Controler implements ActionListener {
                 tf = false;
             }
             modelo.edit(index, vista.jcb_TFC.getSelectedItem().toString(),vista.jTextField_Pregunta.getText(), tf);
+            vista.dispose();
+        }
+        
+        if (e.getSource() == vista.jm_volver) {
             vista.dispose();
         }
         
