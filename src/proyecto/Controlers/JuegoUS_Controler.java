@@ -6,13 +6,10 @@ import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 import proyecto.ClasePrueba;
-import proyecto.DAO.MS.Dao_MS;
 import proyecto.DAO.US.Dao_US;
 import proyecto.DAO.Users.Dao_User;
 import proyecto.Vistas.Vista_Juego;
-import proyecto.Vistas.Vista_JuegoMS;
 import proyecto.Vistas.Vista_JuegoUS;
-import proyecto.sampleClasses.MultipleSelection;
 import proyecto.sampleClasses.UniqueSelection;
 
 /**

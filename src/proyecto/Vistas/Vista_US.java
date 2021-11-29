@@ -130,7 +130,7 @@ public class Vista_US extends javax.swing.JDialog {
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Categoría:");
 
-        jcb_USC.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Arte", "Entretenimiento", "Deportes", "Historia", "Geografía", "Ciencia" }));
+        jcb_USC.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Arte", "Entretenimiento", "Deportes" }));
         jcb_USC.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jcb_USCActionPerformed(evt);

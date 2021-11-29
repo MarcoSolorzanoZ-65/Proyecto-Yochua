@@ -101,7 +101,7 @@ public class Vista_EditMS extends javax.swing.JDialog {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("La o las respuestas correctas son:");
 
-        jcb_MSC.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Arte", "Entretenimiento", "Deportes", "Historia", "Geografía", "Ciencia" }));
+        jcb_MSC.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Arte", "Entretenimiento", "Deportes" }));
         jcb_MSC.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jcb_MSCActionPerformed(evt);

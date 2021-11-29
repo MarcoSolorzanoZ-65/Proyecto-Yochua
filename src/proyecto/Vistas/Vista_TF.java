@@ -91,7 +91,7 @@ public class Vista_TF extends javax.swing.JDialog {
             }
         });
 
-        jcb_TFC.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Arte", "Entretenimiento", "Deportes", "Historia", "Geografía", "Ciencia" }));
+        jcb_TFC.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Arte", "Entretenimiento", "Deportes" }));
         jcb_TFC.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jcb_TFCActionPerformed(evt);

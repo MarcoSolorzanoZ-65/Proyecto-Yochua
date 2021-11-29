@@ -2,9 +2,6 @@ package proyecto.Controlers;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javax.swing.JOptionPane;
-import proyecto.ClasePrueba;
-import proyecto.Vistas.Vista_Juego;
 import proyecto.Vistas.Vista_Principal;
 import proyecto.Vistas.Vista_Añadir;
 import proyecto.Vistas.Vista_Mostrar;

@@ -44,9 +44,6 @@ public class Registrar_Controler implements ActionListener {
             if (vista.jText_Password.getText().length() <= 10 && vista.jText_Password.getText().length() >= 3) {
                 caractPass = true;
             }
-            if (e.getSource() == vista.jm_volver) {
-                vista.dispose();
-            }
 
             if (vista.jText_Username.getText().length() <= 10 && vista.jText_Username.getText().length() >= 3) {
                 caractUser = true;

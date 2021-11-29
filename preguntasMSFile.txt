@@ -1,1 +1,15 @@
-gregewrgferg-Respuesta1-true-Respuesta2-true-Respuesta3-false-Respuesta4-false-Arte
+Dos obras de DaVinci son:-La ultima cena-true-El Grito-false-La Dama del Armiño-true-La Noche Estrellada-false-Arte
+Algunos Artistas Mexicanos son:-Frida Khalo-true-Diego Rivera-true-Mario Guadamuz-false-Antonio Velazquez Rodriguez-false-Arte
+Algunos cantantes costarricenses son:-Toledo-true-Malpais-true-Calle 13-false-El Alfa-false-Arte
+ ¿Qué ciudades describe Italo Calvino en "Las ciudades invisibles"?-Ciudades asiáticas -false-Las que Marco Polo visitó en sus viajes-false-Ciudades europeas-false-Ciudades imaginadas por Marco Polo-true-Arte
+Entre que años se pinto la ultima cena?-1450-false-1495-true-1653-false-1498-true-Arte
+Cuales son actores de Spider Man:-Andrew Garfield-true-Tobey Maguire-true-Tom Holland-true-Brad Pitt-false-Entretenimiento
+Quienes dirigieron la pelicula Avengers Endgame:-Anthony Russo-true-Joe Russo-true-John Travolta-false-Michael Bay-false-Entretenimiento
+Quienes son los principales de GTA5:-Franklin-true-Michael-true-Trevor-true-Chop-false-Entretenimiento
+Compositores de Banda Sonora de Kung Fu Panda:-Hans Zimmer-true-John Powell-true-Shakira-false-John Cena-false-Entretenimiento
+Juegos creados por Valve-Portal-true-Half Life-true-Valorant-false-Rainbow Six Siege-false-Entretenimiento
+Personajes de la WWE:-La Roca-true-John Cena-true-John Almuerza-false-La Piedra-false-Deportes
+Que campeonatos ha ganado Lewis Hamilton:-2020-true-2017-true-2007-false-2016-false-Deportes
+Que campeonatos ganaron los Chicago Bulls:-1996-true-2000-false-1998-true-1980-false-Deportes
+Años en los que ha ganado Bill Russel un campeonato:-1969-true-2008-false-1968-true-1940-false-Deportes
+Quienes han ganado el Balon de oro:-Messi-true-Cristiano Ronaldo-true-Iniesta-false-Chicky Brenes-false-Deportes

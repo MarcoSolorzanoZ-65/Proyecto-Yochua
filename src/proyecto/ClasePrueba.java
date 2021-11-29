@@ -2,7 +2,6 @@ package proyecto;
 
 import com.formdev.flatlaf.FlatDarkLaf;
 import javax.swing.UIManager;
-import proyecto.Controlers.Login_Controler;
 import proyecto.Lists.TrueOrFalseList;
 import proyecto.Vistas.Vista_Principal;
 import proyecto.DAO.TF.Dao_TF;
@@ -13,9 +12,6 @@ import proyecto.Lists.MultipleSelectionList;
 import proyecto.DAO.MS.Dao_MS;
 import proyecto.Lists.UserList;
 import proyecto.DAO.Users.Dao_User;
-import proyecto.sampleClasses.MultipleSelection;
-import proyecto.sampleClasses.TrueOrFalse;
-import proyecto.sampleClasses.UniqueSelection;
 
 /**
  * @author Marco Zumbado Solorzano C18736

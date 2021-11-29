@@ -12,7 +12,7 @@ public class UserList {
 
     private User[] userList;
     private int index = 0;
-    private int TAMANO = 10;
+    private int TAMANO = 100;
 
     public UserList() {
         this.userList = new User[TAMANO];

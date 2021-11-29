@@ -1,1 +1,14 @@
-osiengfownergo-true-Arte
+Costa Rica gano el mundial de 2018.-false-Deportes
+Cristiano Ronaldo juega en la Juventus.-false-Deportes
+El grafitti es un tipo de arte.-true-Arte
+El juego Forza Horizon 5 fue lanzado en 2021.-true-Entretenimiento
+En el año 2020 se celebraron unas olimpiadas.-true-Deportes
+La Noche Estrellada fue pintada por VanGogh?-true-Arte
+La estatua Venus de Milo fue hecha alrededor del año 130 A.C-true-Arte
+La serie de Rick and Morty tiene mas de 8 temporadas.-false-Entretenimiento
+La serie de videojuegos Grand Theft Auto es desarrollada por Activision.-false-Entretenimiento
+Leonardo DaVinci pinto el Grito?-false-Arte
+Leonardo DiCaprio tiene un Oscar.-true-Entretenimiento
+Messi juega en el Barca.-false-Deportes
+One piece tiene un total de 20 capitulos.-false-Entretenimiento
+Stephen Curry posee el record de tiros de 3 en la NBA.-true-Deportes

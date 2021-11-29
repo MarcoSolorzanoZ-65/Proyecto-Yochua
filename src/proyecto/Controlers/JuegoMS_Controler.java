@@ -7,11 +7,9 @@ import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 import proyecto.ClasePrueba;
 import proyecto.DAO.MS.Dao_MS;
-import proyecto.DAO.TF.Dao_TF;
 import proyecto.DAO.Users.Dao_User;
 import proyecto.Vistas.Vista_Juego;
 import proyecto.Vistas.Vista_JuegoMS;
-import proyecto.Vistas.Vista_JuegoTF;
 import proyecto.sampleClasses.MultipleSelection;
 
 /**

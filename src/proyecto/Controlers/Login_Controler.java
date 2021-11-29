@@ -15,7 +15,6 @@ import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 import proyecto.DAO.Users.Dao_User;
 import proyecto.Vistas.Vista_Login;
-import proyecto.sampleClasses.User;
 import proyecto.ClasePrueba;
 import proyecto.DAO.MS.Dao_MS;
 import proyecto.DAO.TF.Dao_TF;

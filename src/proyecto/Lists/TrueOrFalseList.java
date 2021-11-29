@@ -11,7 +11,7 @@ public class TrueOrFalseList {
 
     private TrueOrFalse[] trueOrFalse;
     private int index = 0;
-    public int TAMANO = 5;
+    public int TAMANO = 15;
 
     public TrueOrFalseList() {
         this.trueOrFalse = new TrueOrFalse[TAMANO];

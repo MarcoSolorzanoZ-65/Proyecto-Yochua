@@ -12,7 +12,7 @@ public class MultipleSelectionList {
 
     private MultipleSelection[] multipleSelectionList;
     private int index = 0;
-    private final int TAMANO = 5;
+    private final int TAMANO = 15;
 
     public MultipleSelectionList() {
         this.multipleSelectionList = new MultipleSelection[TAMANO];
